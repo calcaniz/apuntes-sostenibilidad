@@ -112,3 +112,148 @@
   height: auto;
   margin: 1.5rem auto;
 }
+
+/* Marcador invisible para insertar saltos manuales en el PDF */
+.md-typeset .salto-pagina-pdf {
+  display: none;
+}
+.md-typeset .admonition.salto-pagina-pdf {
+  display: none;
+}
+
+@media print {
+
+  /*
+   * Eliminar el salto automático que mkdocs-print-site
+   * introduce antes de cada archivo Markdown.
+   */
+  #print-site-page section.print-page {
+    break-before: auto !important;
+    page-break-before: auto !important;
+  }
+
+  /* Mantener el índice en una página independiente */
+  #print-site-page section.print-page:has(#print-page-toc) {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Comenzar el contenido después del índice */
+  #print-site-page > section.print-page.md-section {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /*
+   * Ocultar la página independiente que contiene únicamente
+   * el nombre de la UP.
+   */
+  #print-site-page section.print-page.md-section > h1 {
+    display: none;
+  }
+
+  /* Aplicar los saltos introducidos manualmente */
+  #print-site-page .salto-pagina-pdf {
+    display: block;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    break-after: page;
+    page-break-after: always;
+  }
+   #print-site-page .admonition.salto-pagina-pdf {
+    display: block !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-left: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+
+    break-after: page;
+    page-break-after: always;
+  }
+
+  #print-site-page .admonition.salto-pagina-pdf::before,
+  #print-site-page .admonition.salto-pagina-pdf::after {
+    display: none !important;
+    content: none !important;
+  }
+
+}
+
+/* =========================================================
+   CABECERA PERSONALIZADA PARA EL PDF
+   ========================================================= */
+@page {
+  size: A4 portrait;
+  margin: 19mm 15mm 18mm 15mm;
+
+  @top-left {
+    content: none;
+  }
+
+  @top-center {
+    content: url("../images/cabecera-pdf.png");
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  @top-right {
+    content: none;
+  }
+
+  @bottom-left {
+    content: "Curs 2026/2027";
+    font-family: "Roboto", sans-serif;
+    font-size: 7.5pt;
+    font-weight: 400;
+    color: #c8b88d;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  @bottom-center {
+    content: none;
+  }
+
+  @bottom-right {
+    content: "página " counter(page) " | " counter(pages);
+    font-family: "Roboto", sans-serif;
+    font-size: 7.5pt;
+    font-weight: 400;
+    color: #c8b88d;
+    text-align: right;
+    vertical-align: middle;
+  }
+}
+/* Portada sin cabecera ni pie */
+@page :first {
+  @top-left {
+    content: none;
+  }
+
+  @top-center {
+    content: none;
+  }
+
+  @top-right {
+    content: none;
+  }
+
+  @bottom-left {
+    content: none;
+  }
+
+  @bottom-center {
+    content: none;
+  }
+
+  @bottom-right {
+    content: none;
+  }
+}

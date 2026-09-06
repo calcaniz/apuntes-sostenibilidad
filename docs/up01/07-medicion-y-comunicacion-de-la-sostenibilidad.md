@@ -30,6 +30,8 @@ Además, debe acompañarse de tres elementos:
 >
 > Reducir el peso medio de las páginas web de 3M a 1,5MB antes de finalizar el curso.
 
+!!! salto-pagina-pdf ""
+
 ## 7.2. Ejemplos de indicadores en el sector digital
 
 | Dimensión {: .table-bg-principal .table-cl-secundario .table-text-bold .table-full-container .table-content .table-main-column } | Aspecto analizado {: .table-bg-principal .table-cl-secundario .table-text-bold } | Posible indicador {: .table-bg-principal .table-cl-secundario .table-text-bold } |
@@ -46,6 +48,8 @@ Además, debe acompañarse de tres elementos:
 
 Estos indicadores permiten detectar problemas, establecer objetivos y comprobar si las acciones realizadas producen mejoras reales.
 
+!!! salto-pagina-pdf ""
+
 ## 7.3. Estándares y marcos de referencia
 
 Para facilitar que la información sea comparable, existen estándares que orientan a las organizaciones sobre qué aspectos deben medir y comunicar.
@@ -60,9 +64,7 @@ No vamos a estudiar estas normas en profundidad. Lo más importante es comprende
 
 ## 7.4. Informes de sostenibilidad
 
-Un **informe de sostenibilidad** es un documento mediante el cual una organización comunica sus impactos, objetivos, actuaciones y resultados.
-
-Habitualmente puede incluir:
+Un **informe de sostenibilidad** es un documento mediante el cual una organización comunica sus impactos, objetivos, actuaciones y resultados. Habitualmente puede incluir:
 
 1. Una descripción de la organización.
 2. Los grupos de interés identificados.
@@ -95,6 +97,8 @@ Para evitarlo, la comunicación debe estar basada en datos, explicar el método 
 >
 > ¿Informar únicamente de los resultados positivos es comunicar sostenibilidad o hacer publicidad?
 
+!!! salto-pagina-pdf ""
+
 ## 7.6. Aplicación al desarrollo web
 
 En un proyecto web se puede aplicar un proceso sencillo:
@@ -120,3 +124,5 @@ Por ejemplo, un equipo puede medir el peso inicial de una página, optimizar sus
 | Resultado final {: .table-main-column .table-text-bold } | 1,3 MB |
 
 De esta manera, la afirmación "hemos mejorado la eficiencia de la página web" queda respaldada por datos concretos y comprobables.
+
+!!! salto-pagina-pdf ""

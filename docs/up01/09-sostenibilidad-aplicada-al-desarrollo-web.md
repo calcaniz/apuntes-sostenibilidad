@@ -16,6 +16,8 @@ Por ello, un profesional del desarrollo web debe valorar no solo si una aplicaci
 
 Estas dimensiones están relacionadas. Por ejemplo, optimizar una página puede reducir la transferencia de datos y el consumo de recursos, pero también mejorar su velocidad y facilitar el acceso desde dispositivos antiguos o conexiones lentas.
 
+!!! salto-pagina-pdf ""
+
 ## 9.2. Decisiones sostenibles durante el proyecto
 
 La sostenibilidad puede incorporarse en las diferentes fases de un proyecto web:

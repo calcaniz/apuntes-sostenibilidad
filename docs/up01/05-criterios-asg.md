@@ -25,17 +25,13 @@ En una empresa tecnológica deben analizarse el consumo energético de los equip
 
 ## 5.2. Dimensión social
 
-La dimensión social analiza los efectos de la actividad empresarial sobre las personas. Incluye tanto a quienes trabajan en la organización como a clientes, proveedores y al conjunto de la sociedad. 
-
-Algunos asuntos sociales son:
+La dimensión social analiza los efectos de la actividad empresarial sobre las personas. Incluye tanto a quienes trabajan en la organización como a clientes, proveedores y al conjunto de la sociedad. Algunos asuntos sociales son:
 
 - Condiciones laborales y estabilidad en el empleo.
 - Igualdad de oportunidades
 - Diversidad e inclusión
 - Salud y seguridad
 - Formación y desarrollo profesional
-
-En el desarrollo web, esta dimensión está relacionada con la creación de servicios accesibles, la reducción de la brecha digital, la protección de los datos personales y la prevención de diseños engañosos o discriminatorios
 
 ## 5.3. Dimensión de gobernanza
 

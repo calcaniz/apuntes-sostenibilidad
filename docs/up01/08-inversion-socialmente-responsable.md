@@ -26,6 +26,8 @@ Por tanto, antes de invertir en una empresa no se analiza únicamente su posible
 
 La inversión socialmente responsable no es una donación. Su objetivo continúa siendo obtener una rentabilidad, pero teniendo en cuenta los riesgos y los impactos asociados a la actividad financiada.
 
+!!! salto-pagina-pdf ""
+
 ## 8.2. Estrategias de inversión responsable
 
 Existen diferentes formas de incorporar la sostenibilidad a las decisiones de inversión.
@@ -38,6 +40,8 @@ Existen diferentes formas de incorporar la sostenibilidad a las decisiones de in
 | Inversión temática {: .table-main-column .table-text-bold } | Financiar actividades relacionadas con energías renovables, economía circular o inclusión social. |
 | Inversión de impacto {: .table-main-column .table-text-bold } | Buscar una rentabilidad económica y, al mismo tiempo, un impacto ambiental o social positivo y medible. |
 | Participación activa {: .table-main-column .table-text-bold } | Utilizar el diálogo y el derecho a voto para influir en las decisiones de una empresa. |
+
+!!! salto-pagina-pdf ""
 
 ## 8.3. Principales participantes.
 
@@ -56,6 +60,8 @@ Las calificaciones ASG deben interpretarse con precaución. Dos agencias pueden 
 
 Además, aparecer en un índice de sostenibilidad no garantiza que una empresa sea completamente sostenible.
 
+!!! salto-pagina-pdf ""
+
 ## 8.4. Riesgos y oportunidades
 
 La incorporación de criterios ASG ayuda a detectar riesgos que podrían pasar inadvertidos en un análisis exclusivamente económico.
@@ -69,8 +75,6 @@ La incorporación de criterios ASG ayuda a detectar riesgos que podrían pasar i
 | Incidentes de privacidad o seguridad | Aumento de la confianza de los clientes |
 | Pérdida de clientes o inversores | Anticipación a futuros cambios normativos |
 
-La sostenibilidad puede influir, por tanto, en la capacidad de una empresa para mantenerse, competir y obtener financiación a largo plazo.
-
 ## 8.5. Aplicación al sector tecnológico
 
 Un inversor que analiza una empresa tecnológica podría estudiar aspectos como:
@@ -81,8 +85,6 @@ Un inversor que analiza una empresa tecnológica podría estudiar aspectos como:
 - La accesibilidad de sus productos digitales.
 - La protección de los datos personales.
 - Las condiciones laborales de su plantilla.
-- La transparencia de sus algoritmos.
-- La gestión de sus proveedores.
 
 !!! bloque-descriptivo "Ejemplo"
     Dos empresas ofrecen servicios digitales similares y presentan una rentabilidad parecida. Sin embargo, una de ellas utiliza infraestructuras más eficientes, protege mejor los datos de sus usuarios y publica información verificable sobre sus impactos. Estos aspectos pueden hacer que resulte más atractiva para un inversor responsable.
@@ -94,3 +96,5 @@ La inversión socialmente responsable también presenta dificultades. Por ello, 
 > **Pregunta para reflexionar**
 >
 > Cuando elegimos dónde invertir nuestro dinero, ¿somos únicamente espectadores o también participamos en la construcción del modelo de sociedad que financiamos?
+
+!!! salto-pagina-pdf ""

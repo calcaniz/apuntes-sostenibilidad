@@ -2,6 +2,8 @@
 title: UP01 · Introducción a la sostenibilidad · Introducción
 ---
 
+# 2. Introducción
+
 Cuando pensamos en sostenibilidad, es habitual relacionarla únicamente con la protección del medioambiente, el reciclaje o la reducción de emisiones. Sin embargo, el concepto es mucho más amplio. Una actividad sostenible debe ser capaz de mantenerse en el tiempo sin agotar los recursos naturales, perjudicar a las personas o comprometer el bienestar de las generaciones futuras.
 
 Las organizaciones desarrollan su actividad dentro de un entorno económico, social y ambiental. Sus decisiones afectan a las personas trabajadoras, clientes, proveedores, administraciones públicas, comunidades locales y al conjunto del planeta. Por este motivo, una empresa no puede valorar su funcionamiento únicamente a partir de sus beneficios económicos, sino que también debe analizar los efectos ambientales y sociales que produce y la forma en que toma sus decisiones. Esta visión se concreta mediante los criterios ASG, correspondientes a los aspectos ambientales, sociales y de gobernanza. Estos criterios permiten analizar cuestiones como el consumo energético, las emisiones, las condiciones laborales, la igualdad, la accesibilidad, la privacidad, la transparencia o el comportamiento ético de una organización.
@@ -16,3 +18,4 @@ A lo largo de esta unidad estudiaremos el concepto de sostenibilidad, sus princi
 
 > ¿Podemos considerar progreso aquello que mejora nuestra vida hoy si, al mismo tiempo, limita las posibilidades de quienes vivirán mañana?
 
+!!! salto-pagina-pdf ""

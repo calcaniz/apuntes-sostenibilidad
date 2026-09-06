@@ -30,6 +30,8 @@ Una misma decisión puede producir efectos diferentes sobre cada grupo. Por ejem
 > **Pregunta para reflexionar:**
 > Si las decisiones de una empresa afectan a muchas personas, ¿debería responder únicamente ante quienes aportan el dinero?
 
+!!! salto-pagina-pdf ""
+
 ### 6.2. Identificación de los asuntos relevantes
 
 Una organización no puede actuar al mismo tiempo sobre todos los problemas ambientales, sociales y de gobernanza. Por ello, debe determinar cuáles son los asuntos más relevantes para su actividad y para sus grupos de interés.
@@ -63,6 +65,8 @@ Para valorar su importancia pueden utilizarse criterios como:
 5. Su importancia para los grupos de interés.
 6. Su efecto sobre la actividad de la empresa.
 
+!!! salto-pagina-pdf ""
+
 ### 6.4. La doble materialidad
 
 La **doble materialidad** estudia los asuntos de sostenibilidad desde dos perspectivas complementarias:
@@ -74,3 +78,4 @@ La **doble materialidad** estudia los asuntos de sostenibilidad desde dos perspe
 
 Por ejemplo, una aplicación web poco accesible puede excluir a determinados usuarios. Al mismo tiempo, puede provocar pérdida de clientes, daño reputacional o problemas legales para la empresa.
 
+!!! salto-pagina-pdf ""

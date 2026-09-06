@@ -11,6 +11,8 @@ title: UP01 · Introducción a la sostenibilidad · Relación curricular
 | **Resultado** { .table-main-column .table-bg-principal .table-cl-secundario } | RA01 |
 | **Criterios** { .table-main-column .table-bg-principal .table-cl-secundario } | CE01-a · CE01-b · CE01-c · CE01-d · CE01-e · CE01-f |
 
+!!! salto-pagina-pdf ""
+
 ### 1.2. Resultado de aprendizaje
 
 | RA01 { .table-full-container .table-content .table-bg-principal .table-cl-secundario} |
@@ -29,3 +31,4 @@ title: UP01 · Introducción a la sostenibilidad · Relación curricular
 | CE01-e { .table-cl-secundario .table-text-bold } | Se han identificado los principales estándares de métricas para evaluar el desempeño en sostenibilidad y su papel en la rendición de cuentas. |
 | CE01-f { .table-cl-secundario .table-text-bold } | Se ha descrito la inversión socialmente responsable y el papel de analistas, inversores, agencias e índices de sostenibilidad. |
 
+!!! salto-pagina-pdf ""

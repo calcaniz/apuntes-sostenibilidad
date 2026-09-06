@@ -26,6 +26,8 @@ El desarrollo sostenible es el modelo de progreso que permite mejorar la calidad
 
 Por tanto, el desarrollo sostenible no pretende detener el progreso, sino modificar la forma en que se produce. Una empresa puede seguir innovando y creciendo, pero debe hacerlo utilizando los recursos de manera eficiente y considerando las consecuencias de sus decisiones.
 
+!!! salto-pagina-pdf ""
+
 ## 3.3. Dimensiones de la sostenibilidad
 
 La sostenibilidad se apoya en tres dimensiones interrelacionadas:
@@ -36,7 +38,6 @@ La sostenibilidad se apoya en tres dimensiones interrelacionadas:
 | Social {.table-cl-secundario .table-bg-principal .table-text-bold } | Favorecer el bienestar, la igualdad y los derechos de las personas. | Crear aplicaciones accesibles y evitar la brecha digital. |
 | Económica {.table-cl-secundario .table-bg-principal .table-text-bold } | Garantizar que la actividad pueda mantenerse de forma viable a largo plazo. | Diseñar servicios digitales eficientes y sostenibles económicamente. |
 
-![Representación de las dimensiones](../assets/up01/4.3.png){ .imagen-contenido }
 
 *Figura 1. Dimensiones de la sostenibilidad.*
 
@@ -44,9 +45,7 @@ Una decisión no puede considerarse plenamente sostenible si solo atiende a una 
 
 ## 3.4. Sostenibilidad empresarial
 
-La sostenibilidad empresarial consiste en integrar estas tres dimensiones en las decisiones y actividades de una organización. La empresa debe buscar rentabilidad, pero también identificar y gestionar los efectos que produce sobre el entorno y las personas.
-
-En una empresa de desarrollo web, decisiones relacionadas con la sostenibilidad serían:
+La sostenibilidad empresarial consiste en integrar estas tres dimensiones en las decisiones y actividades de una organización. La empresa debe buscar rentabilidad, pero también identificar y gestionar los efectos que produce sobre el entorno y las personas. En una empresa de desarrollo web, decisiones relacionadas con la sostenibilidad serían:
 
 - Elegir proveedores de alojamiento eficientes.
 - Optimizar las aplicaciones para reducir el procesamiento y la transferencia de datos.
