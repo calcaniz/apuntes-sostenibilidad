@@ -1,10 +1,10 @@
 ---
-title: UP01 · Introducción a la sostenibilidad
+title: UP01 · Introducción a la sostenibilidad · Criterios ASG
 ---
 
 Los criterios ASG permiten analizar la sostenibilidad de una organización a partir de tres ámbitos: ambiental, social y gobernanza. También podemos encontrarlos mediante las siglas inglesas ESG (Environmental, Social and Governance).
 
-Estos criterios ayudan a las organizaciones a identificar impactos que no aparecen directamente en sus resultados económicos, pero que puedan afectar a su funcionamiento, reputación y continuidad.
+Estos criterios ayudan a las organizaciones a identificar impactos que no aparecen directamente en sus resultados económicos, pero que pueden afectar a su funcionamiento, reputación y continuidad.
 
 > **Pregunta Reflexiva**
 
@@ -12,7 +12,7 @@ Estos criterios ayudan a las organizaciones a identificar impactos que no aparec
 
 ## 5.1. Dimensión ambiental
 
-La dimensión ambiental estudio cómo afecta la actividad de una organización al entorno natural y qué medidas adopta para reducir ese impacto. Algunos asuntos ambientales son:
+La dimensión ambiental estudia cómo afecta la actividad de una organización al entorno natural y qué medidas adopta para reducir ese impacto. Algunos asuntos ambientales son:
 
 - Consumo de energía y agua.
 - Emisión de gases de efecto invernadero
@@ -35,9 +35,9 @@ Algunos asuntos sociales son:
 - Salud y seguridad
 - Formación y desarrollo profesional
 
-En el desarrollo web, esta dimensión está relacionado con la creación de servicios accesibles, la reducción de la brecha digital, la protección de los datos personales y la prevención de diseños engañosos o discriminatorios
+En el desarrollo web, esta dimensión está relacionada con la creación de servicios accesibles, la reducción de la brecha digital, la protección de los datos personales y la prevención de diseños engañosos o discriminatorios
 
-## 5.3. Dimensión económica
+## 5.3. Dimensión de gobernanza
 
 La gobernanza hace referencia a la forma en que una organización se dirige, toma decisiones y controla su comportamiento. Entre sus principales aspectos se encuentran:
 
@@ -53,20 +53,20 @@ En una empresa tecnológica, una buena gobernanza implica informar de manera cla
 
 !!! actividad "ACTIVIDAD OPCIONAL"
 
-    Enlaza los siguientes valores según su criterio:
+    Relaciona cada criterio con su pregunta principal y su ejemplo tecnológico:
 
     | Criterio | Pregunta principal | Ejemplo tecnológico |
     |---|---|---|
     | **Ambiental** | ¿Cómo afecta a las personas? | Transparencia en el uso de datos |
     | **Social** | ¿Cómo se toman y controlan las decisiones? | Accesibilidad de una aplicación |
-    | **Gobernanza** | ¿Cómo afecta la actividad del planeta? | Consumo energético de servidores |
+    | **Gobernanza** | ¿Cómo afecta la actividad al planeta? | Consumo energético de servidores |
 
 
 ## 5.4. Riesgos y oportunidades ASG
 
-Un asunto ASG puede generar tantos riesgos como oportunidades para la organización. Un riesgo ASG es una situación ambiental, social o de gobernanza que puede perjudicar a la empresa. Puede provocar sanciones, pérdida de clientes, incremento de costes, interrupciones del servicio o daños reputacionales. En cambio, una oportunidad ASG es una circunstancia que permite mejorar los productos, reducir costes, innovar, acceder a nuevos mercados o aumentar la confianza de clientes e inversores.
+Un asunto ASG puede generar riesgos como oportunidades para la organización. Un riesgo ASG es una situación ambiental, social o de gobernanza que puede perjudicar a la empresa. Puede provocar sanciones, pérdida de clientes, incremento de costes, interrupciones del servicio o daños reputacionales. En cambio, una oportunidad ASG es una circunstancia que permite mejorar los productos, reducir costes, innovar, acceder a nuevos mercados o aumentar la confianza de clientes e inversores.
 
 
-> **Pregunta Reflexiva**
+> **Pregunta reflexiva**
 
-> Cuando una empresa decide no actuar ante un problema de sostenibilidad, ¿Está evitando un coste o simplemente aplazándolo?
+> Cuando una empresa decide no actuar ante un problema de sostenibilidad, ¿está evitando un coste o simplemente aplazándolo?

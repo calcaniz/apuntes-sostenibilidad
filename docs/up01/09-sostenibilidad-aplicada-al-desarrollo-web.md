@@ -1,4 +1,8 @@
-Una aplicación web no produce únicamente resultados técnicos o económicos. Las decisiones tomadas durante su diseño, desarrollo y funcionamiento también puede generar impactos ambientales, sociales y de gobernanza.
+---
+title: UP01 · Introducción a la sostenibilidad · Sostenibilidad aplicada al desarrollo web
+---
+
+Una aplicación web no produce únicamente resultados técnicos o económicos. Las decisiones tomadas durante su diseño, desarrollo y funcionamiento también pueden generar impactos ambientales, sociales y de gobernanza.
 
 Por ello, un profesional del desarrollo web debe valorar no solo si una aplicación funciona correctamente, sino también **cómo utiliza los recursos, a qué personas afecta y bajo qué criterios se gestiona.**
 
@@ -23,9 +27,9 @@ La sostenibilidad puede incorporarse en las diferentes fases de un proyecto web:
 5. **Mantenimiento:** corregir errores, actualizar dependencias y controlar los indicadores.
 6. **Retirada:** gestionar correctamente los datos y recursos cuando finalice el servicio.
 
-No todas las aplicaciones necesitan la misma infraestructura ni producen los mismos impactos. Las decisiones deben adaptarse a las características de los usuarios y la finalidad de cada proyecto.
+No todas las aplicaciones necesitan la misma infraestructura ni producen los mismos impactos. Las decisiones deben adaptarse a las características de los usuarios y a la finalidad de cada proyecto.
 
-## 9.3. Aplicación Real
+## 9.3. Aplicación real
 
 En un proyecto web real, podremos analizar aspectos como:
 
@@ -38,8 +42,8 @@ En un proyecto web real, podremos analizar aspectos como:
 
 El objetivo será proponer mejoras realistas y justificarlas mediante criterios ASG e indicadores que permitan comprobar sus resultados.
 
-!!! bloque-descriptivo "Idea Clave"
-    Un aplicación web sostenible no es solamente aquella que consumen menos recursos. También debe ser accesible, segura, transparente y respetuoso con las personas que lo utilizan.
+!!! bloque-descriptivo "Idea clave"
+    Una aplicación web sostenible no es solamente aquella que consume menos recursos. También debe ser accesible, segura, transparente y respetuosa con las personas que la utilizan.
 
 > **Pregunta final**
 >

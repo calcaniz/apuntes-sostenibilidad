@@ -1,3 +1,7 @@
+---
+title: UP01 · Introducción a la sostenibilidad · Medición y comunicación de la sostenibilidad
+---
+
 Las afirmaciones sobre sostenibilidad deben estar respaldadas por datos. Decir que una empresa es "verde", "responsable" o "sostenible" no resulta suficiente si no explica qué impactos tiene, qué medidas ha adoptado y qué resultados ha obtenido.
 
 > **Pregunta para reflexionar**
@@ -18,13 +22,13 @@ Para que resulte útil, un indicador debe ser:
 
 Además, debe acompañarse de tres elementos:
 
-1. Un valor inicial
+1. Un valor inicial.
 2. Un objetivo que se pretende alcanzar.
-3. Una periodicidad de medición
+3. Una periodicidad de medición.
 
 > **Ejemplo**
 >
-> Reducir el peso medio de las páginas web 3M a 1,5MB antes de finalizar el curso.
+> Reducir el peso medio de las páginas web de 3M a 1,5MB antes de finalizar el curso.
 
 ## 7.2. Ejemplos de indicadores en el sector digital
 
@@ -60,7 +64,7 @@ Un **informe de sostenibilidad** es un documento mediante el cual una organizaci
 
 Habitualmente puede incluir:
 
-1. Una descripción de la organización
+1. Una descripción de la organización.
 2. Los grupos de interés identificados.
 3. Los asuntos materiales.
 4. Los principales riesgos y oportunidades.
@@ -77,9 +81,9 @@ La rendición de cuentas implica explicar las decisiones tomadas, mostrar sus re
 
 El **greenwashing**, también denominado **lavado verde**, consiste en presentar una organización, producto o servicio como más sostenible de lo que realmente es.
 
-Puede producirse como una empresa:
+Puede producirse cuando una empresa:
 
-- Utilizar expresiones como <<ecológico>> o <<respetuoso con el planeta>> sin aportar pruebas.
+- Utiliza expresiones como "ecológico" o "respetuoso con el planeta" sin aportar pruebas.
 - Destaca una pequeña mejora y oculta otros impactos importantes.
 - Presenta porcentajes sin indicar los valores de partida.
 - Emplea imágenes o colores relacionados con la naturaleza para crear una apariencia sostenible.
@@ -95,7 +99,7 @@ Para evitarlo, la comunicación debe estar basada en datos, explicar el método 
 
 En un proyecto web se puede aplicar un proceso sencillo:
 
-1. Identificar un impacto relevante
+1. Identificar un impacto relevante.
 2. Seleccionar un indicador.
 3. Medir la situación inicial.
 4. Establecer un objetivo.
@@ -115,4 +119,4 @@ Por ejemplo, un equipo puede medir el peso inicial de una página, optimizar sus
 | Medidas aplicadas {: .table-main-column .table-text-bold } | Comprimir imágenes, eliminar recursos innecesarios y optimizar el código |
 | Resultado final {: .table-main-column .table-text-bold } | 1,3 MB |
 
-De esta marena, la afirmación "hemos mejorado la eficiencia de la página web" queda respaldada por datos concretos y comprobables.
+De esta manera, la afirmación "hemos mejorado la eficiencia de la página web" queda respaldada por datos concretos y comprobables.

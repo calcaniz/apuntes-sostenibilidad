@@ -1,3 +1,6 @@
+---
+title: UP01 · Introducción a la sostenibilidad · Relación curricular
+---
 
 ### 1.1. Identificación de la unidad
 
@@ -5,7 +8,7 @@
 |---|---|
 | **Título** { .table-main-column .table-bg-principal .table-cl-secundario } | UP01 · Sostenibilidad, Agenda 2030 y criterios ASG |
 | **Duración** { .table-main-column .table-bg-principal .table-cl-secundario } | 6 horas |
-| **Resultado** { .table-main-column .table-bg-principal .table-cl-secundario } | RA1 |
+| **Resultado** { .table-main-column .table-bg-principal .table-cl-secundario } | RA01 |
 | **Criterios** { .table-main-column .table-bg-principal .table-cl-secundario } | CE01-a · CE01-b · CE01-c · CE01-d · CE01-e · CE01-f |
 
 ### 1.2. Resultado de aprendizaje
@@ -17,7 +20,7 @@
 
 ### 1.3. Mapa de criterios de evaluación
 
-| CE { .table-main-column .table-content .table-bg-principal .table-cl-secundario} | Evidencia principal { .table-full-container .table-content .table-bg-principal .table-cl-secundario} |
+| CE { .table-main-column .table-content .table-bg-principal .table-cl-secundario} | Descripción { .table-full-container .table-content .table-bg-principal .table-cl-secundario} |
 |---|---|
 | CE01-a { .table-cl-secundario .table-text-bold } | Se ha descrito el concepto de sostenibilidad, estableciendo los marcos internacionales asociados al desarrollo sostenible. |
 | CE01-b { .table-cl-secundario .table-text-bold } | Se han identificado los asuntos ambientales, sociales y de gobernanza que influyen en el desarrollo sostenible de las organizaciones empresariales. |

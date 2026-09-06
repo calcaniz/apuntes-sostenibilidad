@@ -1,17 +1,17 @@
 ---
-title: UP01 · Introducción a la sostenibilidad
+title: UP01 · Introducción a la sostenibilidad · Grupos de interes y materialidad
 ---
 
 Las decisiones de una empresa no afectan únicamente a sus propietarios. También pueden tener consecuencias para sus trabajadores, clientes, proveedores, administraciones públicas y para la sociedad en general.
 
-Por este motivo, para anlizar la sostenibilidad de una organización es necesario identificar a sus **grupos de interés** y conocer qué asuntos consideran importantes.
+Por este motivo, para analizar la sostenibilidad de una organización es necesario identificar a sus **grupos de interés** y conocer qué asuntos consideran importantes.
 
 ### 6.1. Los grupos de interés
 
 Los **grupos de interés**, también llamados *stakeholders*, son las personas, colectivos u organizaciones que:
-- pueden verse afectados por la actividad de una empresa;
-- pueden influir en sus decisiones;
-- o mantienen algún tipo de relación con ella.
+- Pueden verse afectados por la actividad de una empresa.
+- Pueden influir en sus decisiones.
+- Mantienen algún tipo de relación con ella.
 
 Podemos distinguir dos grandes grupos:
 
@@ -25,7 +25,7 @@ Podemos distinguir dos grandes grupos:
 | Representantes laborales | Comunidad local y sociedad |
 | | Organizaciones sociales y ambientales |
 
-Una misma desición puede producir efectos diferentes sobre cada grupo. Por ejemplo, trasladar una aplicación a un proveedor de servicios en la nube puede reducir costes para la empresa, pero también generar dudas sobre el consumo energético, la privacidad de los usuarios o la localización de sus datos.
+Una misma decisión puede producir efectos diferentes sobre cada grupo. Por ejemplo, trasladar una aplicación a un proveedor de servicios en la nube puede reducir costes para la empresa, pero también generar dudas sobre el consumo energético, la privacidad de los usuarios o la localización de sus datos.
 
 > **Pregunta para reflexionar:**
 > Si las decisiones de una empresa afectan a muchas personas, ¿debería responder únicamente ante quienes aportan el dinero?
@@ -34,9 +34,9 @@ Una misma desición puede producir efectos diferentes sobre cada grupo. Por ejem
 
 Una organización no puede actuar al mismo tiempo sobre todos los problemas ambientales, sociales y de gobernanza. Por ello, debe determinar cuáles son los asuntos más relevantes para su actividad y para sus grupos de interés.
 
-En una empresa dedicada al desarrollo web podrían resultar revelantes cuestiones como:
+En una empresa dedicada al desarrollo web podrían resultar relevantes cuestiones como:
 
-- El consumo energético de servidores y datos.
+- El consumo energético de servidores y centros de datos.
 - La accesibilidad de las aplicaciones.
 - La protección de datos personales.
 - La ciberseguridad.
@@ -59,18 +59,18 @@ Para valorar su importancia pueden utilizarse criterios como:
 1. La gravedad del impacto.
 2. El número de personas afectadas.
 3. La probabilidad de que ocurra.
-4. La probabilidad de reparar sus consecuencias.
-5. Su importancia para los grupos de interés
+4. La posibilidad de reparar sus consecuencias.
+5. Su importancia para los grupos de interés.
 6. Su efecto sobre la actividad de la empresa.
 
 ### 6.4. La doble materialidad
 
 La **doble materialidad** estudia los asuntos de sostenibilidad desde dos perspectivas complementarias:
 
-| Perspectiva { .table-full-container .table-cl-secundario .table-bg-principal } | Pregunta principal { .table-cl-secundario .table-bg-principal } | Ejemplo { .table-cl-secundario .table-bg-principal } 
+| Perspectiva { .table-full-container .table-cl-secundario .table-bg-principal } | Pregunta principal { .table-cl-secundario .table-bg-principal } | Ejemplo { .table-cl-secundario .table-bg-principal } |
 |---|---|---|
 | Materialidad del impacto | ¿Cómo afecta la empresa a las personas y al medioambiente? | Consumo energético y emisiones de los servidores |
-| Materialidad financiera | ¿Cómo afectan los problemas de sostenibilidad a la empresa? | Aumento del precio de la energía  o sanciones por incumplimiento |
+| Materialidad financiera | ¿Cómo afectan los problemas de sostenibilidad a la empresa? | Aumento del precio de la energía o sanciones por incumplimiento |
 
-Por ejemplo, una aplicación web poco accesible puede excluir a determinado usuarios. Al mismo tiempo, puede provocar pérdidas de clientes, daño reputacional o problemas legales para la empresa.
+Por ejemplo, una aplicación web poco accesible puede excluir a determinados usuarios. Al mismo tiempo, puede provocar pérdida de clientes, daño reputacional o problemas legales para la empresa.
 

@@ -1,19 +1,23 @@
+---
+title: UP01 · Introducción a la sostenibilidad · Inversión socialmente responsable
+---
+
 Las empresas necesitan financiación para desarrollar sus proyectos. Por ello, las decisiones de quienes aportan capital pueden influir en el comportamiento de las organizaciones.
 
 Cuando los inversores tienen en cuenta los aspectos ambientales, sociales y de gobernanza, las empresas encuentran nuevos motivos para mejorar su desempeño en sostenibilidad.
 
 > **Pregunta para reflexionar**
 >
-> Si una actividad resulta rentable, pero genera costes ambientales o sociales que debe asumir el resto de la sociedad, ¿podemos considerarla buena inversión?
+> Si una actividad resulta rentable, pero genera costes ambientales o sociales que debe asumir el resto de la sociedad, ¿podemos considerarla una buena inversión?
 
 ## 8.1. ¿Qué es la inversión socialmente responsable?
 
-La **inversión socialmente responsable (ISR)** consiste en considerar los criterios **ambientales , sociales y de gobernanza (ASG)** al tomar decisiones de inversión.
+La **inversión socialmente responsable (ISR)** consiste en considerar los criterios **ambientales, sociales y de gobernanza (ASG)** al tomar decisiones de inversión.
 
 Por tanto, antes de invertir en una empresa no se analiza únicamente su posible rentabilidad económica. También se estudian cuestiones como:
 
 - Su consumo de energía y recursos.
-- Sus emisiones y residuos
+- Sus emisiones y residuos.
 - Las condiciones laborales.
 - El respeto a los derechos humanos.
 - La privacidad y seguridad de los usuarios.
@@ -35,7 +39,7 @@ Existen diferentes formas de incorporar la sostenibilidad a las decisiones de in
 | Inversión de impacto {: .table-main-column .table-text-bold } | Buscar una rentabilidad económica y, al mismo tiempo, un impacto ambiental o social positivo y medible. |
 | Participación activa {: .table-main-column .table-text-bold } | Utilizar el diálogo y el derecho a voto para influir en las decisiones de una empresa. |
 
-## 8.3 Principales participantes.
+## 8.3. Principales participantes.
 
 La inversión responsable implica la participación de diferentes actores.
 
@@ -48,7 +52,7 @@ La inversión responsable implica la participación de diferentes actores.
 | Agencias de calificación ASG {: .table-main-column .table-text-bold } | Evalúan el comportamiento de las empresas mediante sus propias metodologías. |
 | Índices de sostenibilidad {: .table-main-column .table-text-bold } | Agrupan empresas que cumplen determinados criterios económicos y ASG. |
 
-Las calificaciones ASG deben interpretarse con precaución. Dos agencias pueden otorgar valoraciones diferentes a una misma empresa por que utilizan indicadores, fuentes y métodos distintos.
+Las calificaciones ASG deben interpretarse con precaución. Dos agencias pueden otorgar valoraciones diferentes a una misma empresa porque utilizan indicadores, fuentes y métodos distintos.
 
 Además, aparecer en un índice de sostenibilidad no garantiza que una empresa sea completamente sostenible.
 
@@ -63,7 +67,7 @@ La incorporación de criterios ASG ayuda a detectar riesgos que podrían pasar i
 | Daños reputacionales | Desarrollo de productos innovadores |
 | Conflictos laborales | Atracción de profesionales |
 | Incidentes de privacidad o seguridad | Aumento de la confianza de los clientes |
-| Pérdida de clientes o inversores | Anticipación a futuros cambios normativos |´
+| Pérdida de clientes o inversores | Anticipación a futuros cambios normativos |
 
 La sostenibilidad puede influir, por tanto, en la capacidad de una empresa para mantenerse, competir y obtener financiación a largo plazo.
 

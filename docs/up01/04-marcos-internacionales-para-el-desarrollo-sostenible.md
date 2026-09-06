@@ -1,5 +1,5 @@
 ---
-title: UP01 · Introducción a la sostenibilidad
+title: UP01 · Introducción a la sostenibilidad · Marcos internacionales para el desarrollo sostenible
 ---
 
 Los problemas relacionados con la sostenibilidad, como el cambio climático, la pérdida de biodiversidad, la pobreza o la desigualdad, superan las fronteras de los países. Por ello, su solución requiere acuerdos y estrategias internacionales que establezcan objetivos comunes.
@@ -16,10 +16,10 @@ La preocupación internacional por los efectos del desarrollo económico aument�
 | 1972 {.table-cl-secundario .table-bg-principal .table-text-bold } | Conferencia de Estocolmo. | Situó los problemas ambientales en la agenda internacional. |
 | 1987 {.table-cl-secundario .table-bg-principal .table-text-bold } | Informe Brundtland. | Consolidó el concepto de desarrollo sostenible. |
 | 1992 {.table-cl-secundario .table-bg-principal .table-text-bold } | Cumbre de la Tierra de Río. | Impulsó la cooperación internacional y la Agenda 21. |
-| 1997 {.table-cl-secundario .table-bg-principal .table-text-bold } | Protocolo Kioto. | Estableció compromisos para reducir emisiones de gases de efecto invernadero.. |
-| 2015 {.table-cl-secundario .table-bg-principal .table-text-bold } | Acuerdo de París. | Reforzó la actuación internacional frente al cambio climático.. |
-| 2015 {.table-cl-secundario .table-bg-principal .table-text-bold } | Agenda 2030. | Estableció los 17 Objetivos de Desarrollo Sostenible.. |
-| 2019 {.table-cl-secundario .table-bg-principal .table-text-bold } | Pacto Verde Europeo | Definió la estrategia de transición ecológica de la Unión Europea.. |
+| 1997 {.table-cl-secundario .table-bg-principal .table-text-bold } | Protocolo de Kioto. | Estableció compromisos para reducir emisiones de gases de efecto invernadero. |
+| 2015 {.table-cl-secundario .table-bg-principal .table-text-bold } | Acuerdo de París. | Reforzó la actuación internacional frente al cambio climático. |
+| 2015 {.table-cl-secundario .table-bg-principal .table-text-bold } | Agenda 2030. | Estableció los 17 Objetivos de Desarrollo Sostenible. |
+| 2019 {.table-cl-secundario .table-bg-principal .table-text-bold } | Pacto Verde Europeo | Definió la estrategia de transición ecológica de la Unión Europeo. |
 
 Estos acuerdos muestran cómo la sostenibilidad ha evolucionado desde una preocupación principalmente ambiental hacia un enfoque que también incorpora aspectos sociales, económicos y de gobernanza.
 
@@ -29,7 +29,7 @@ Entre los marcos actuales más importantes encontramos:
 
 - Acuerdo de París: persigue limitar el calentamiento global mediante la reducción de emisiones y la adaptación al cambio climático.
 - Agenda 2030: establece objetivos comunes relacionados con el planeta, las personas, la prosperidad, la paz y las alianzas.
-- Pacto Verde Europea: orienta la transformación de la Unión Europea hacia una economía más eficiente, circular y climáticamente neutra.
+- Pacto Verde Europeo: orienta la transformación de la Unión Europeo hacia una economía más eficiente, circular y climáticamente neutra.
 - Principios del Pacto Mundial de las Naciones Unidas: promueven que las empresas respeten los derechos humanos, las normas laborales, el medioambiente y la lucha contra la corrupción.
 
 Estos marcos no actúan de forma aislada. Sus objetivos se trasladan progresivamente a las políticas públicas, las normas ambientales y las decisiones de las empresas.
@@ -40,9 +40,9 @@ La Agenda 2030 fue aprobada por las Naciones Unidas en 2015 como un plan de acci
 
 Se estructura alrededor de cinco grandes ámbitos, conocidos como las **cinco P**:
 
-- **Personas:** Eliminar la pobreza y garantizar la dignidad y la igualdad
-- **Planeta:** Proteger los recursos naturales y combatir el cambio climático
-- **Prosperidad:** Favorecer un progreso económico, social y tecnológico sostenible
+- **Personas:** Eliminar la pobreza y garantizar la dignidad y la igualdad.
+- **Planeta:** Proteger los recursos naturales y combatir el cambio climático.
+- **Prosperidad:** Favorecer un progreso económico, social y tecnológico sostenible.
 - **Paz:** Promover sociedades justas, inclusivas y seguras.
 - **Alianzas:** Impulsar la cooperación entre países, empresas y ciudadanía.
 
@@ -61,8 +61,8 @@ Los Objetivos de Desarrollo Sostenible (ODS) concretan la Agenda 2030 en 17 obje
 | **ODS 5. Igualdad de género** | ODS 15. Vida de ecosistemas terrestres | | |
 | **ODS 10. Reducción de las desigualdades** | | | |
 
-Los ODS son interdependientes, de modo que, una acción puede contribuir simultáneamente a varios de ellos. Por ejemplo, mejora la eficiencia energética de un centro de datos puede contribuir a los ODS 7, 9, 12 y 13. Tampoco deben interpretarse como obligaciones independientes. Forman un sistema en el que el progreso económico debe ser compatible con la justicia social y la protección del planeta.
+Los ODS son interdependientes, de modo que una acción puede contribuir simultáneamente a varios de ellos. Por ejemplo, mejora la eficiencia energética de un centro de datos puede contribuir a los ODS 7, 9, 12 y 13. Tampoco deben interpretarse como obligaciones independientes. Forman un sistema en el que el progreso económico debe ser compatible con la justicia social y la protección del planeta.
 
-El desarrollo de aplicaciones web puede contribuir positiva o negativamente en la sostenibilidad. Algunos de los ODS más relacionados con el sector están marcados en negrita en la tabla anterior.
+El desarrollo de aplicaciones web puede contribuir positiva o negativamente a la sostenibilidad. Algunos de los ODS más relacionados con el sector están marcados en negrita en la tabla anterior.
  
 
