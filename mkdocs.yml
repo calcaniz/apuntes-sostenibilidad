@@ -41,11 +41,14 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+extra_css:
+  - assets/stylesheets/extra.css
+
 nav:
   - Inicio: index.md
   - UP01. Introducción a la sostenibilidad:
-      - Presentación: up01/index.md
-      - Introducción: up01/01-introduccion.md
+      - 1. Relación Curricular: up01/index.md
+      - 2. Introducción: up01/02-introduccion.md
       - Desarrollo sostenible: up01/02-desarrollo-sostenible.md
       - Agenda 2030: up01/03-agenda-2030.md
       - Objetivos de Desarrollo Sostenible: up01/04-ods.md

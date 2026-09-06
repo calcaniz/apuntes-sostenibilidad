@@ -60,3 +60,14 @@ Para valorar su importancia pueden utilizarse criterios como:
 5. Su importancia para los grupos de interés
 6. Su efecto sobre la actividad de la empresa.
 
+### 7.4. La doble materialidad
+
+La **doble materialidad** estudia los asuntos de sostenibilidad desde dos perspectivas complementarias:
+
+| Perspectiva | Pregunta principal | Ejemplo |
+|---|---|---|
+| Materialidad del impacto | ¿Cómo afecta la empresa a las personas y al medioambiente? | Consumo energético y emisiones de los servidores |
+| Materialidad financiera | ¿Cómo afectan los problemas de sostenibilidad a la empresa? | Aumento del precio de la energía  o sanciones por incumplimiento |
+
+Por ejemplo, una aplicación web poco accesible puede excluir a determinado usuarios. Al mismo tiempo, puede provocar pérdidas de clientes, daño reputacional o problemas legales para la empresa.
+
