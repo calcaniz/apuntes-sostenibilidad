@@ -30,21 +30,6 @@ theme:
 plugins:
   - search:
       lang: es
-  - print-site:
-      add_to_navigation: true
-      print_page_title: "Versión imprimible"
-      print_page_basename: "imprimir"
-      add_table_of_contents: true
-      toc_title: "Índice"
-      toc_depth: 2
-      enumerate_headings: false
-      enumerate_figures: false
-      add_cover_page: true
-      add_print_site_banner: false
-      add_full_urls: false
-      include_css: true
-      exclude:
-        - index.md
       
 
 markdown_extensions:
