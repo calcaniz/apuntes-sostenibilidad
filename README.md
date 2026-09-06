@@ -9,3 +9,6 @@ python -m mkdocs gh-deploy --force
 
 # Instalar dependencias.
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+# Actualizar contenido.
+.\.venv\Scripts\python.exe -m mkdocs gh-deploy --force
