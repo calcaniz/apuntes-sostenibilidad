@@ -7,13 +7,13 @@ theme:
   language: es
   palette:
     - scheme: default
-      primary: green
+      primary: orange
       accent: light green
       toggle:
         icon: material/weather-night
         name: Activar modo oscuro
     - scheme: slate
-      primary: green
+      primary: orange
       accent: light green
       toggle:
         icon: material/weather-sunny
@@ -41,15 +41,22 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+copyright: >
+  © 2026-2027 Carlos Alcañiz ·
+  Sostenibilidad Aplicada al Sistema Productivo
+
+extra:
+  generator: false
+  
 extra_css:
   - assets/stylesheets/extra.css
 
 nav:
   - Inicio: index.md
-  - UP01. Introducción a la sostenibilidad:
-      - 1. Relación Curricular: up01/index.md
+  - UP01. Sostenibilidad, Agenda 2030 y criterios ASG:
+      - 1. Relación Curricular: up01/01-index.md
       - 2. Introducción: up01/02-introduccion.md
-      - Desarrollo sostenible: up01/02-desarrollo-sostenible.md
-      - Agenda 2030: up01/03-agenda-2030.md
-      - Objetivos de Desarrollo Sostenible: up01/04-ods.md
-      - Grupos de interés y materialidad: up01/07-grupos-de-interes-y-materialidad.md
+      - 3. Sostenibilidad y desarrollo sostenible: up01/03-sostenibilidad-y-desarrollo-sostenible.md
+      - 4. Marcos internacionales para el desarrollo sostenible: up01/04-marcos-internacionales-para-el-desarrollo-sostenible.md
+      - 5. Los criterios ASG: up01/05-criterios-asg.md
+      - 6. Grupos de interés y materialidad: up01/06-grupos-de-interes-y-materialidad.md

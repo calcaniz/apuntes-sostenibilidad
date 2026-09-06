@@ -12,3 +12,6 @@ python -m mkdocs gh-deploy --force
 
 # Actualizar contenido.
 .\.venv\Scripts\python.exe -m mkdocs gh-deploy --force
+
+# Depurar en local.
+.\.venv\Scripts\python.exe -m mkdocs serve

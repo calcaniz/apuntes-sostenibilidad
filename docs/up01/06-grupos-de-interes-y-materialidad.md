@@ -1,10 +1,12 @@
-## 7. Grupos de interés y materialidad
+---
+title: UP01 · Introducción a la sostenibilidad
+---
 
 Las decisiones de una empresa no afectan únicamente a sus propietarios. También pueden tener consecuencias para sus trabajadores, clientes, proveedores, administraciones públicas y para la sociedad en general.
 
 Por este motivo, para anlizar la sostenibilidad de una organización es necesario identificar a sus **grupos de interés** y conocer qué asuntos consideran importantes.
 
-### 7.1. Los grupos de interés
+### 6.1. Los grupos de interés
 
 Los **grupos de interés**, también llamados *stakeholders*, son las personas, colectivos u organizaciones que:
 - pueden verse afectados por la actividad de una empresa;
@@ -13,7 +15,8 @@ Los **grupos de interés**, también llamados *stakeholders*, son las personas, 
 
 Podemos distinguir dos grandes grupos:
 
-| Grupos internos | Grupos externos |
+
+| Grupos internos { .table-full-container .table-cl-secundario .table-bg-principal } | Grupos externos {.table-cl-secundario .table-bg-principal } |
 |---|---|
 | Propietarios y accionistas | Clientes y usuarios |
 | Dirección | Proveedores |
@@ -27,7 +30,7 @@ Una misma desición puede producir efectos diferentes sobre cada grupo. Por ejem
 > **Pregunta para reflexionar:**
 > Si las decisiones de una empresa afectan a muchas personas, ¿debería responder únicamente ante quienes aportan el dinero?
 
-### 7.2. Identificación de los asuntos relevantes
+### 6.2. Identificación de los asuntos relevantes
 
 Una organización no puede actuar al mismo tiempo sobre todos los problemas ambientales, sociales y de gobernanza. Por ello, debe determinar cuáles son los asuntos más relevantes para su actividad y para sus grupos de interés.
 
@@ -45,7 +48,7 @@ En una empresa dedicada al desarrollo web podrían resultar revelantes cuestione
 
 Para identificar estos asuntos, la empresa puede utilizar encuestas, entrevistas, reuniones, análisis de reclamaciones o consultas a clientes, trabajadores y proveedores.
 
-### 7.3. La materialidad
+### 6.3. La materialidad
 
 La **materialidad** permite determinar qué cuestiones de sostenibilidad son suficientemente importantes como para que la empresa deba gestionarlas, medirlas y comunicarlas. 
 
@@ -60,11 +63,11 @@ Para valorar su importancia pueden utilizarse criterios como:
 5. Su importancia para los grupos de interés
 6. Su efecto sobre la actividad de la empresa.
 
-### 7.4. La doble materialidad
+### 6.4. La doble materialidad
 
 La **doble materialidad** estudia los asuntos de sostenibilidad desde dos perspectivas complementarias:
 
-| Perspectiva | Pregunta principal | Ejemplo |
+| Perspectiva { .table-full-container .table-cl-secundario .table-bg-principal } | Pregunta principal { .table-cl-secundario .table-bg-principal } | Ejemplo { .table-cl-secundario .table-bg-principal } 
 |---|---|---|
 | Materialidad del impacto | ¿Cómo afecta la empresa a las personas y al medioambiente? | Consumo energético y emisiones de los servidores |
 | Materialidad financiera | ¿Cómo afectan los problemas de sostenibilidad a la empresa? | Aumento del precio de la energía  o sanciones por incumplimiento |
