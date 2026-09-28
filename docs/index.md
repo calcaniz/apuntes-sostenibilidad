@@ -32,7 +32,7 @@ A lo largo del curso aprenderemos a:
 | Unidad { .table-full-container .table-cl-secundario .table-bg-principal } | Título { .table-cl-secundario .table-bg-principal } | Resultado de aprendizaje { .table-cl-secundario .table-bg-principal } | Duración { .table-cl-secundario .table-bg-principal } |
 |---|---|:---:|:---:|
 | **[UP01](up01/01-index.md)** | Sostenibilidad, Agenda 2030 y criterios ASG | RA1 | 6 h |
-| **UP02** | Retos ambientales y sociales del sector digital | RA2 | 5 h |
+| **[UP02](up02/01-index.md)** | Retos ambientales y sociales del sector digital | RA2 | 5 h |
 | **UP03** | Los ODS en el desempeño profesional de DAW | RA3 | 3 h |
 | **UP04** | Ecodiseño y economía circular en productos digitales | RA4 | 5 h |
 | **UP05** | Actividad informática sostenible | RA5 | 8 h |
