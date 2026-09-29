@@ -22,6 +22,9 @@ La compensación debe utilizarse como última opción. Compensar un daño no equ
 !!! bloque-descriptivo "Idea clave"
     La mejor medida es la que actúa sobre la causa del problema y evita que el impacto llegue a producirse.
 
+
+!!! salto-pagina-pdf ""
+
 ## 6.2. Mitigación y adaptación
 
 Frente a algunos retos, especialmente el cambio climático, se diferencian dos grandes tipos de actuación:
@@ -80,3 +83,6 @@ Una medida adecuada debe:
 
 !!! bloque-descriptivo "Pregunta de reflexión"
     ¿Sería sostenible cambiar todos los ordenadores de una empresa por modelos más eficientes si los anteriores todavía funcionan correctamente?
+
+
+!!! salto-pagina-pdf ""

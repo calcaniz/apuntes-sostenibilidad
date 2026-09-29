@@ -49,6 +49,9 @@ FestWeb necesita diferentes actividades y sectores para funcionar:
 
 La plataforma no funciona de manera aislada. Depende de una cadena de proveedores e infraestructuras que también genera impactos.
 
+
+!!! salto-pagina-pdf ""
+
 ## 8.4. Efectos sobre personas y sectores
 
 FestWeb puede producir impactos positivos:
@@ -99,6 +102,9 @@ La mejora de FestWeb necesita la colaboración de:
 - Las asociaciones relacionadas con la accesibilidad.
 
 Cada actor tiene una responsabilidad diferente, pero las actuaciones deben estar coordinadas.
+
+
+!!! salto-pagina-pdf ""
 
 ## 8.7. Modelo final de análisis
 

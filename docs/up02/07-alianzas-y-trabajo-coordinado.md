@@ -26,6 +26,9 @@ Las alianzas permiten:
 
 Por ejemplo, una empresa puede diseñar dispositivos reparables, pero necesitará proveedores que suministren piezas, administraciones que regulen su gestión y consumidores que los utilicen responsablemente.
 
+
+!!! salto-pagina-pdf ""
+
 ## 7.2. Actores implicados
 
 | Actor { .table-bg-principal .table-cl-secundario .table-text-bold .table-main-column .table-full-container } | Función principal { .table-bg-principal .table-cl-secundario .table-text-bold } |
@@ -40,6 +43,9 @@ Por ejemplo, una empresa puede diseñar dispositivos reparables, pero necesitar�
 | **Organismos internacionales** | Coordinar acuerdos entre países. |
 
 Ninguno de estos actores dispone por sí solo de toda la información, los recursos o la capacidad necesarios.
+
+
+!!! salto-pagina-pdf ""
 
 ## 7.3. Trabajo transversal
 
@@ -89,3 +95,6 @@ Colaborar no significa que todos los participantes realicen la misma tarea, sino
 
 !!! bloque-descriptivo "Pregunta de reflexión"
     ¿Quién debería asumir la mayor responsabilidad sobre un dispositivo al final de su vida útil: el fabricante, la empresa que lo vende, la persona que lo utiliza o la Administración?
+
+
+!!! salto-pagina-pdf ""

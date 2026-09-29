@@ -14,6 +14,7 @@ title: UP02 · Retos ambientales y sociales del sector digital
 | **Resultado de aprendizaje** | RA02 |
 | **Criterios de evaluación** | CE02-a, CE02-b, CE02-c, CE02-d y CE02-e |
 
+!!! salto-pagina-pdf ""
 
 ## 1.2. Resultado de aprendizaje
 
@@ -30,6 +31,8 @@ title: UP02 · Retos ambientales y sociales del sector digital
 | **CE02-d** | Se han identificado las medidas y acciones encaminadas a minimizar los impactos ambientales y sociales. |
 | **CE02-e** | Se ha analizado la importancia de establecer alianzas y trabajar de manera transversal y coordinada para abordar con éxito los retos ambientales y sociales. |
 
+
+!!! salto-pagina-pdf ""
 
 ## 1.4. ¿Qué estudiaremos en esta unidad?
 
@@ -59,3 +62,6 @@ A lo largo de la unidad seguiremos una misma secuencia de análisis:
 
 !!! bloque-descriptivo "Idea clave"
     Los retos ambientales y sociales están relacionados entre sí. Para comprenderlos no basta con identificar el problema: también debemos analizar sus causas, sus consecuencias, las posibles soluciones y las personas u organizaciones que deben participar.
+
+    
+!!! salto-pagina-pdf ""

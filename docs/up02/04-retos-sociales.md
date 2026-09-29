@@ -25,6 +25,9 @@ Entre los principales retos sociales encontramos:
 !!! bloque-descriptivo "Idea clave"
     Una sociedad no puede considerarse sostenible si mejora sus resultados económicos o ambientales dejando atrás a una parte de la población.
 
+
+!!! salto-pagina-pdf ""
+
 ## 4.1. Pobreza y desigualdad
 
 La **pobreza** se produce cuando una persona no dispone de los recursos necesarios para cubrir adecuadamente sus necesidades básicas.
@@ -50,6 +53,9 @@ La **desigualdad**, en cambio, hace referencia a las diferencias existentes entr
 | **Exclusión social** | ¿Puede la persona participar plenamente en la sociedad? | No puede acceder a servicios, empleo o relaciones sociales. |
 
 Una sociedad puede aumentar su riqueza total y, al mismo tiempo, incrementar la desigualdad si los beneficios se concentran en una parte reducida de la población.
+
+
+!!! salto-pagina-pdf ""
 
 ### 4.1.1. Diferentes formas de desigualdad
 
@@ -83,6 +89,9 @@ La **justicia ambiental** defiende que ninguna comunidad debe soportar de manera
 !!! bloque-descriptivo "Pregunta de reflexión"
     Si una actividad beneficia a millones de personas, pero concentra su contaminación en una comunidad vulnerable, ¿podemos considerarla sostenible?
 
+
+!!! salto-pagina-pdf ""
+
 ## 4.3. Trabajo y condiciones laborales
 
 El trabajo permite obtener ingresos, desarrollar capacidades y participar en la sociedad. Sin embargo, no cualquier empleo garantiza unas condiciones de vida dignas.
@@ -115,6 +124,9 @@ Durante la extracción de materias primas, la fabricación de componentes, el mo
 
 Una empresa no debería analizar únicamente las condiciones de sus trabajadores directos. También debe considerar los posibles impactos producidos por proveedores y empresas subcontratadas.
 
+
+!!! salto-pagina-pdf ""
+
 ### 4.3.2. Transformación digital y empleo
 
 La digitalización puede:
@@ -136,6 +148,9 @@ Pero también puede:
 
 !!! bloque-descriptivo "Idea clave"
     La transformación digital es sostenible cuando mejora la actividad económica sin deteriorar los derechos, la seguridad o las oportunidades de las personas trabajadoras.
+
+
+!!! salto-pagina-pdf ""
 
 ## 4.4. La brecha digital
 
@@ -180,6 +195,9 @@ La brecha digital puede dificultar:
 
 Cuando un servicio esencial solo puede utilizarse por Internet, las personas que no tienen acceso o competencias pueden quedar excluidas.
 
+
+!!! salto-pagina-pdf ""
+
 ## 4.5. Accesibilidad digital
 
 La **accesibilidad digital** consiste en diseñar productos y servicios que puedan ser utilizados por todas las personas, incluidas aquellas que presentan alguna discapacidad o limitación.
@@ -206,6 +224,9 @@ Por ejemplo, los subtítulos pueden ayudar a:
 
 !!! bloque-descriptivo "Idea clave"
     La accesibilidad no es una característica opcional destinada a unas pocas personas. Es una condición necesaria para garantizar la igualdad de acceso a los servicios digitales.
+
+
+!!! salto-pagina-pdf ""
 
 ## 4.6. Privacidad y protección de datos
 
@@ -241,6 +262,9 @@ Una gestión responsable debería aplicar principios como:
 - Protegerlos frente a accesos no autorizados.
 - No conservarlos durante más tiempo del necesario.
 - Permitir que las personas ejerzan sus derechos.
+
+
+!!! salto-pagina-pdf ""
 
 ## 4.7. Desinformación y manipulación
 
@@ -286,6 +310,7 @@ Puede aparecer porque:
 - No se han considerado las consecuencias sociales.
 - No existe supervisión humana suficiente.
 
+
 Los sesgos pueden afectar a sistemas utilizados para seleccionar candidatos, conceder créditos, detectar fraudes, mostrar publicidad o recomendar contenidos.
 
 | Situación { .table-full-container .table-cl-secundario .table-bg-principal } | Posible impacto { .table-full-container .table-cl-secundario .table-bg-principal } |
@@ -314,6 +339,8 @@ Algunos posibles impactos son:
 
 No todos estos problemas dependen únicamente de las decisiones individuales. También influyen el diseño de las aplicaciones, sus modelos de negocio y la forma en la que utilizan las notificaciones, las recomendaciones o las recompensas.
 
+
+
 ## 4.10. Relación entre los retos sociales
 
 Los retos sociales están conectados entre sí.
@@ -337,3 +364,5 @@ Por ello, una solución tecnológica no debe evaluarse únicamente por su funcio
 - ¿Qué decisiones automatiza?
 - ¿Quién obtiene sus beneficios?
 - ¿Quién asume sus riesgos?
+
+!!! salto-pagina-pdf ""

@@ -75,6 +75,9 @@ Por ejemplo, una sequía puede reducir la producción agrícola, aumentar el pre
 !!! bloque-descriptivo "Pregunta de reflexión"
     Si la economía depende de los recursos naturales, ¿puede existir crecimiento económico permanente en un planeta con recursos limitados?
 
+
+!!! salto-pagina-pdf ""
+
 ## 5.4. Impactos de la actividad económica
 
 Un **impacto** es una modificación producida por una actividad, producto, servicio o decisión.
@@ -223,6 +226,9 @@ Los impactos ambientales y sociales pueden afectar a las personas de diferentes 
 
 Las personas vulnerables suelen sufrir mayores consecuencias porque disponen de menos recursos para prevenir los impactos, adaptarse o recuperarse.
 
+
+!!! salto-pagina-pdf ""
+
 ## 5.7. Efectos sobre los sectores productivos
 
 Los retos ambientales y sociales pueden afectar al funcionamiento de empresas y sectores completos.
@@ -238,6 +244,8 @@ Los retos ambientales y sociales pueden afectar al funcionamiento de empresas y 
 | **Construcción** | Necesidad de edificios eficientes y adaptados a temperaturas extremas. |
 | **Salud** | Aumento de enfermedades y presión sobre los servicios sanitarios. |
 | **Tecnología** | Escasez de componentes, consumo energético, regulación y brecha digital. |
+
+!!! salto-pagina-pdf ""
 
 ### 5.7.1. Tipos de consecuencias empresariales
 
@@ -273,6 +281,8 @@ En un servicio digital podemos identificar las siguientes etapas:
 10. Retirada de equipos y gestión de residuos.
 
 Aunque una empresa solo desarrolle software, su actividad depende de toda esta cadena.
+
+!!! salto-pagina-pdf ""
 
 ### 5.8.1. Impactos ambientales del sector digital
 
@@ -328,6 +338,8 @@ Una plataforma de formación en línea puede facilitar el acceso a contenidos de
 
 Este ejemplo demuestra que una solución puede producir simultáneamente beneficios e impactos negativos.
 
+!!! salto-pagina-pdf ""
+
 ## 5.10. Método para analizar un impacto
 
 Para relacionar un reto con la actividad económica utilizaremos la siguiente secuencia:
@@ -349,3 +361,6 @@ Para relacionar un reto con la actividad económica utilizaremos la siguiente se
 | ¿A quién afecta? | Usuarios, trabajadores, proveedores y comunidades. |
 | ¿Qué sectores intervienen? | Tecnología, telecomunicaciones, energía y entretenimiento. |
 | ¿Dónde aparece el impacto? | En toda la cadena de valor, no solo durante el uso. |
+
+
+!!! salto-pagina-pdf ""

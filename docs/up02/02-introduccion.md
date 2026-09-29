@@ -20,6 +20,9 @@ No nos limitaremos a enumerar problemas. Para comprender un reto sostenible ser�
 !!! bloque-descriptivo "Pregunta de partida"
     ¿Puede avanzar la digitalización sin aumentar los problemas ambientales y sociales que pretende resolver?
 
+
+!!! salto-pagina-pdf ""
+
 ## 2.1. Del problema al reto
 
 Un **problema** es una situación negativa que produce daños o dificultades. Hablamos de **reto** cuando esa situación requiere una respuesta colectiva, planificada y mantenida en el tiempo.
@@ -34,6 +37,8 @@ Por ejemplo, la generación de residuos electrónicos es un problema. Sin embarg
 | **Resultado** | Cambio obtenido como consecuencia de las medidas adoptadas. | Menor generación de residuos y mayor reutilización. |
 
 Los grandes retos de sostenibilidad no suelen tener una solución única. Sus causas y consecuencias están conectadas y afectan a numerosos territorios, actividades y grupos sociales.
+
+!!! salto-pagina-pdf ""
 
 ## 2.2. Retos ambientales
 
@@ -87,6 +92,9 @@ Por ejemplo, una sequía prolongada puede:
 5. Afectar especialmente a las personas con menos recursos.
 6. Generar desplazamientos de población.
 
+
+!!! salto-pagina-pdf ""
+
 En este caso, un problema inicialmente ambiental termina produciendo consecuencias sociales y económicas.
 
 | Situación { .table-full-container .table-cl-secundario .table-bg-principal } | Dimensión ambiental { .table-full-container .table-cl-secundario .table-bg-principal } | Dimensión social { .table-full-container .table-cl-secundario .table-bg-principal } | Dimensión económica { .table-full-container .table-cl-secundario .table-bg-principal } |
@@ -98,6 +106,8 @@ En este caso, un problema inicialmente ambiental termina produciendo consecuenci
 
 !!! bloque-descriptivo "Pregunta de reflexión"
     Si los efectos de un problema afectan de manera diferente a cada persona, ¿puede considerarse sostenible una solución que mejore el medioambiente, pero aumente la desigualdad?
+
+!!! salto-pagina-pdf ""
 
 ## 2.5. Relación con la actividad económica
 
@@ -122,6 +132,8 @@ La actividad económica puede encontrarse en los dos lados del problema:
 - Puede desarrollar medidas para reducirlo.
 - Puede crear productos y servicios que ayuden a resolverlo.
 
+!!! salto-pagina-pdf ""
+
 ## 2.6. El sector digital también tiene impactos
 
 A menudo se considera que una actividad digital es limpia porque no produce humo o residuos visibles durante su utilización. Sin embargo, cualquier servicio digital depende de una infraestructura física.
@@ -143,6 +155,8 @@ Un servicio digital puede reducir desplazamientos, facilitar el acceso a la info
 !!! bloque-descriptivo "Idea clave"
     Digitalizar una actividad no garantiza que sea sostenible. Para evaluarla debemos considerar tanto los beneficios que proporciona como los impactos ambientales y sociales que genera.
 
+!!! salto-pagina-pdf ""
+
 ## 2.7. Un ejemplo: el ciclo de un teléfono móvil
 
 La utilización de un teléfono móvil permite observar la relación entre los diferentes elementos de un reto sostenible.
@@ -159,6 +173,9 @@ La utilización de un teléfono móvil permite observar la relación entre los d
 
 Este modelo de análisis podrá aplicarse a cualquier otro reto estudiado durante la unidad.
 
+
+!!! salto-pagina-pdf ""
+
 ## 2.8. Cómo analizaremos cada reto
 
 Para evitar estudiar los problemas como una simple lista, utilizaremos siempre la siguiente secuencia:
@@ -173,3 +190,6 @@ Para evitar estudiar los problemas como una simple lista, utilizaremos siempre l
 
 !!! bloque-descriptivo "Síntesis"
     Comprender un reto sostenible significa conocer el problema, sus causas, sus consecuencias y las posibles respuestas. También implica reconocer que ninguna persona, empresa o administración puede resolver por sí sola los grandes retos ambientales y sociales.
+
+    
+!!! salto-pagina-pdf ""

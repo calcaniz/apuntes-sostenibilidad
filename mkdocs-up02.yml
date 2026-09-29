@@ -1,0 +1,44 @@
+INHERIT: mkdocs.yml
+
+plugins:
+  - search:
+      lang: es
+
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "Versión imprimible de la UP02"
+      print_page_basename: "imprimir-up02"
+
+      add_table_of_contents: true
+      toc_title: "Índice"
+      toc_depth: 2
+
+      enumerate_headings: false
+      enumerate_figures: false
+
+      add_cover_page: true
+      cover_page_template: "docs/assets/templates/portada-pdf.tpl"
+
+      add_print_site_banner: false
+      add_full_urls: false
+      include_css: true
+
+nav:
+  - UP02. Retos ambientales y sociales del sector digital:
+      - 1. Relación curricular: up02/01-index.md
+      - 2. Introducción: up02/02-introduccion.md
+      - 3. Retos ambientales: up02/03-retos-ambientales.md
+      - 4. Retos sociales: up02/04-retos-sociales.md
+      - 5. Actividad económica e impactos: up02/05-actividad-economica-e-impactos.md
+      - 6. Medidas para minimizar los impactos: up02/06-medidas-para-minimizar-los-impactos.md
+      - 7. Alianzas y trabajo coordinado: up02/07-alianzas-y-trabajo-coordinado.md
+      - 8. Aplicación al sector digital: up02/08-aplicacion-al-sector-digital.md
+
+extra:
+  generator: false
+
+  pdf:
+    modulo: "Sostenibilidad Aplicada al Sistema Productivo"
+    codigo_up: "UP02"
+    titulo_up: "Retos ambientales y sociales del sector digital"
+    curso: "2026-2027"

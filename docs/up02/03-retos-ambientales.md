@@ -23,6 +23,9 @@ Estos problemas no actúan de manera independiente. El cambio climático puede a
 !!! bloque-descriptivo "Idea clave"
     Los retos ambientales forman un sistema interdependiente: cuando se altera una parte del medio natural, sus consecuencias pueden extenderse a los ecosistemas, las personas y la actividad económica.
 
+
+!!! salto-pagina-pdf ""
+
 ## 3.1. El cambio climático
 
 El **clima** es el conjunto de condiciones atmosféricas habituales de una región observadas durante periodos prolongados. No debe confundirse con el **tiempo atmosférico**, que describe el estado de la atmósfera en un momento concreto.
@@ -34,6 +37,9 @@ El **clima** es el conjunto de condiciones atmosféricas habituales de una regi�
 | **Cambio climático** | Alteración significativa y prolongada de los patrones climáticos. | Aumento de las temperaturas medias y de los fenómenos extremos. |
 
 Que un día haga frío no contradice la existencia del cambio climático. Para estudiar el clima se analizan tendencias observadas durante décadas y en diferentes regiones del planeta.
+
+
+!!! salto-pagina-pdf ""
 
 ### 3.1.1. El efecto invernadero
 
@@ -69,6 +75,8 @@ Entre las principales causas relacionadas con la actividad económica destacan:
 
 La eliminación de bosques agrava el problema porque reduce la capacidad de los ecosistemas para absorber dióxido de carbono.
 
+!!! salto-pagina-pdf ""
+
 ### 3.1.3. Principales consecuencias
 
 El cambio climático puede producir:
@@ -102,6 +110,9 @@ El impacto climático de una aplicación depende, entre otros factores, de la el
 
 Sin embargo, las tecnologías digitales también pueden ayudar a controlar consumos, optimizar procesos, reducir desplazamientos y mejorar la gestión de recursos.
 
+
+!!! salto-pagina-pdf ""
+
 ## 3.2. La pérdida de biodiversidad
 
 La **biodiversidad** es la variedad de seres vivos, ecosistemas y relaciones biológicas presentes en el planeta.
@@ -113,6 +124,7 @@ Comprende:
 - La variedad de ecosistemas.
 - Las relaciones entre los seres vivos y su entorno.
 
+
 La biodiversidad no tiene únicamente un valor estético. Los ecosistemas proporcionan servicios esenciales para la sociedad y para la actividad económica.
 
 | Servicio del ecosistema { .table-full-container .table-cl-secundario .table-bg-principal } | Ejemplo { .table-full-container .table-cl-secundario .table-bg-principal } |
@@ -121,6 +133,9 @@ La biodiversidad no tiene únicamente un valor estético. Los ecosistemas propor
 | **Regulación** | Regulación del clima, control de inundaciones y polinización. |
 | **Soporte** | Formación del suelo y ciclos de nutrientes. |
 | **Cultural** | Paisaje, turismo, ocio y patrimonio natural. |
+
+
+!!! salto-pagina-pdf ""
 
 ### 3.2.1. Causas de la pérdida de biodiversidad
 
@@ -150,6 +165,9 @@ La pérdida de biodiversidad puede provocar:
 !!! bloque-descriptivo "Pregunta de reflexión"
     Si una especie no tiene una utilidad económica conocida, ¿significa que su desaparición no tiene consecuencias?
 
+
+!!! salto-pagina-pdf ""
+
 ### 3.2.3. Relación con la actividad digital
 
 Aunque una aplicación no ocupe físicamente un gran territorio, los dispositivos y las infraestructuras que permiten utilizarla necesitan materiales, energía y espacio.
@@ -171,6 +189,9 @@ Podemos diferenciarlos en:
 | **Inagotables a escala humana** | Están disponibles de manera continua, aunque su aprovechamiento necesita infraestructuras. | Energía solar, eólica o mareomotriz. |
 
 Que un recurso sea renovable no significa que pueda utilizarse sin límites. Un bosque puede regenerarse, pero dejará de hacerlo si la extracción de madera supera su capacidad de recuperación.
+
+
+!!! salto-pagina-pdf ""
 
 ### 3.3.1. La demanda de materias primas
 
@@ -255,6 +276,8 @@ La generación de residuos aumenta cuando:
 
 Una gestión inadecuada puede contaminar el suelo, el agua y el aire, además de provocar la pérdida de materiales que podrían volver a utilizarse.
 
+!!! salto-pagina-pdf ""
+
 ## 3.6. Los residuos electrónicos
 
 Los **residuos de aparatos eléctricos y electrónicos** incluyen los dispositivos que han llegado al final de su utilización o que han sido descartados.
@@ -285,6 +308,9 @@ Estos residuos presentan una doble característica:
 - Cambios en las necesidades de las personas usuarias.
 - Estrategias comerciales que fomentan la sustitución.
 - Abandono de equipos que todavía podrían reutilizarse.
+
+
+!!! salto-pagina-pdf ""
 
 ### 3.6.2. Impactos ambientales y sociales
 
@@ -317,3 +343,6 @@ Los retos estudiados están conectados entre sí.
 Por esta razón, una medida sostenible no debe resolver un problema creando otro diferente.
 
 Por ejemplo, sustituir una tecnología por otra que reduzca las emisiones puede ser positivo, pero será necesario analizar también las materias primas que necesita, su duración, las condiciones de fabricación y su gestión al final de la vida útil.
+
+
+!!! salto-pagina-pdf ""
