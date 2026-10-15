@@ -54,7 +54,7 @@ extra_css:
 
 nav:
   - Inicio: index.md
-  - up01:
+  - UP01:
       - 1. Relación Curricular: up01/01-index.md
       - 2. Introducción: up01/02-introduccion.md
       - 3. Sostenibilidad y desarrollo sostenible: up01/03-sostenibilidad-y-desarrollo-sostenible.md
