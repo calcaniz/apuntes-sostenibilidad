@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El plan ODS de FestWeb · A03.03</title>
+<style>
+:root{
+  --principal:#ff9944; --secundario:#81501c; --claro:#fdf4e9; --borde:#d9c9b6;
+  --ok:#2e7d32; --okbg:#e8f5e9; --ko:#b3261e; --kobg:#fdecea; --texto:#2b2118; --gris:#6b6258;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--texto);background:#fff;font-size:15px;line-height:1.45}
+header{background:var(--secundario);color:#fff;padding:8px 14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header h1{font-size:16px;margin:0;font-weight:600}
+header .prog{font-size:14px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.puntos{background:var(--principal);color:#2b1a05;font-weight:700;border-radius:99px;padding:2px 10px}
+.barra{width:140px;height:8px;background:rgba(255,255,255,.3);border-radius:99px;overflow:hidden}
+.barra i{display:block;height:100%;background:var(--principal);width:0;transition:width .3s}
+.aviso{background:#fff3cd;border-bottom:1px solid #e0b100;color:#5a4300;padding:5px 14px;font-size:13px}
+main{padding:12px;max-width:1180px;margin:0 auto}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
+.tabs button{font:inherit;font-size:13.5px;border:1px solid var(--borde);background:#f6eee2;color:var(--secundario);padding:6px 10px;border-radius:6px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--secundario);color:#fff;border-color:var(--secundario);font-weight:600}
+.tabs button .c{font-size:12px;opacity:.85}
+.intro{background:var(--claro);border-left:4px solid var(--principal);padding:8px 12px;border-radius:4px;margin:0 0 12px;font-size:14px}
+.intro p{margin:0 0 6px}.intro p:last-child{margin:0}
+.btn{font:inherit;border:1px solid #b9ad9f;background:#fff;border-radius:6px;padding:5px 12px;cursor:pointer;color:var(--texto)}
+.btn:hover{background:#f8f1e8}
+.btn.pri{background:var(--principal);border-color:var(--secundario);font-weight:700;color:#2b1a05}
+.btn.mini{font-size:12.5px;padding:2px 8px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.acc{display:flex;gap:8px;margin-top:10px;align-items:center;flex-wrap:wrap}
+.fb{margin-top:8px;font-size:13.5px;border-radius:6px;padding:7px 10px}
+.fb.ok{background:var(--okbg);color:#1b5e20;border:1px solid var(--ok)}
+.fb.ko{background:var(--kobg);color:#7a1a14;border:1px solid var(--ko)}
+.fb.neutro{background:#f4f4f4;border:1px solid #ccc}
+.pista{margin-top:8px;font-size:13.5px;background:#fff8e1;border:1px solid #e0b100;border-radius:6px;padding:7px 10px}
+label.lbl{display:block;font-weight:600;margin:10px 0 4px}
+input[type=text],input[type=number],textarea,select{font:inherit;padding:6px 8px;border:1px solid #b9ad9f;border-radius:6px;width:100%;max-width:520px;background:#fff;color:var(--texto)}
+textarea{max-width:100%;min-height:56px;resize:vertical}
+.cnt{font-size:12px;color:var(--gris)}
+.miembros{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px;max-width:760px}
+.preg{border:1px solid var(--borde);border-radius:8px;padding:10px 12px;margin-bottom:10px}
+.preg.ok{border-color:var(--ok);background:#fafdf9}.preg.ko{border-color:var(--ko);background:#fffafa}
+.preg h3{margin:0 0 8px;font-size:14.5px}
+.ops{display:flex;flex-direction:column;gap:5px}
+.ops button{font:inherit;text-align:left;border:1px solid var(--borde);background:#fff;border-radius:6px;padding:6px 10px;cursor:pointer}
+.ops button:hover:not(:disabled){background:#f8f1e8}
+.ops button:disabled{cursor:default;color:var(--texto)}
+.ops button.elegida.bien{background:var(--okbg);border-color:var(--ok);font-weight:600}
+.ops button.elegida.mal{background:var(--kobg);border-color:var(--ko);font-weight:600}
+.ods{display:inline-block;color:#fff;font-weight:700;font-size:13px;border-radius:6px;padding:3px 9px}
+.odsel{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.odsel label{display:inline-flex;gap:6px;align-items:center;border:1px solid var(--borde);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:13.5px}
+.odsel label:has(input:checked){background:#f6eee2;border-color:var(--secundario);font-weight:600}
+.codigo{font-family:Consolas,Menlo,monospace;letter-spacing:1px;text-transform:uppercase}
+/* Inspección */
+.ficha{border:1px solid var(--borde);border-radius:8px;padding:10px 12px;margin-bottom:12px}
+.ficha.ok{border-color:var(--ok);background:#fafdf9}
+.ficha h3{margin:0 0 8px;font-size:14.5px;display:flex;justify-content:space-between;gap:8px}
+.ficha h3 small{font-weight:400;color:var(--gris)}
+table.f{border-collapse:collapse;width:100%;font-size:13.5px;margin-bottom:8px}
+table.f th{width:150px;text-align:left;color:var(--secundario);background:var(--claro);padding:4px 8px;border:1px solid #eadfce;vertical-align:top}
+table.f td{padding:4px 8px;border:1px solid #eadfce}
+.defs{display:flex;flex-wrap:wrap;gap:6px}
+.defs button{font:inherit;font-size:13.5px;border:1px solid var(--borde);background:#fff;border-radius:6px;padding:4px 10px;cursor:pointer}
+.defs button:hover:not(:disabled){background:#f8f1e8}
+.defs button:disabled{cursor:default;opacity:.6}
+/* Taller */
+.selods{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.selods button{font:inherit;font-weight:700;color:#fff;border:0;border-radius:6px;padding:6px 12px;cursor:pointer;opacity:.6}
+.selods button[aria-selected=true]{opacity:1;outline:3px solid #1565c0;outline-offset:2px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+@media (max-width:860px){.form{grid-template-columns:1fr}}
+.form .full{grid-column:1/-1}
+.form label.lbl{margin-top:8px}
+.form input,.form select,.form textarea{max-width:100%}
+.fila{display:flex;gap:8px}
+.fila>*{flex:1}
+.datos{font-size:13.5px;background:#f3f8f1;border-left:4px solid #3f7e44;border-radius:4px;padding:6px 10px;margin-bottom:8px}
+table.chk{border-collapse:collapse;width:100%;font-size:13.5px;margin-top:8px}
+table.chk td{padding:4px 6px;border-bottom:1px solid #eee;vertical-align:top}
+table.chk td:first-child{width:26px;font-weight:700}
+.si{color:var(--ok)}.no{color:var(--ko)}
+table.res{border-collapse:collapse;width:100%;font-size:13.5px;margin:8px 0}
+table.res th,table.res td{border-bottom:1px solid #eee;padding:4px 6px;text-align:left}
+table.res th{color:var(--secundario)}
+.nombre-pdf{font-family:Consolas,Menlo,monospace;background:#f4f4f4;border:1px solid #ccc;border-radius:6px;padding:6px 10px;margin:6px 0;word-break:break-all;font-size:13.5px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🧭 A03.03 · El plan ODS de FestWeb</h1>
+  <div class="prog"><span class="puntos" id="puntos">0 puntos</span><span id="progTxt"></span><div class="barra"><i id="progBar"></i></div></div>
+</header>
+<div class="aviso" id="avisoSto" hidden>El navegador no permite guardar el progreso. No cierres esta página hasta descargar los informes.</div>
+<main>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="contenido"></div>
+</main>
+
+<script>
+"use strict";
+/* ================= Datos ================= */
+const COLOR={1:"#E5243B",2:"#DDA63A",3:"#4C9F38",4:"#C5192D",5:"#FF3A21",6:"#26BDE2",7:"#E5A800",8:"#A21942",9:"#FD6925",10:"#DD1367",11:"#FD9D24",12:"#BF8B2E",13:"#3F7E44",14:"#0A97D9",15:"#56C02B",16:"#00689D",17:"#19486A"};
+const NOMBRE_ODS={1:"Fin de la pobreza",2:"Hambre cero",3:"Salud y bienestar",4:"Educación de calidad",5:"Igualdad de género",6:"Agua limpia y saneamiento",7:"Energía asequible y no contaminante",8:"Trabajo decente y crecimiento económico",9:"Industria, innovación e infraestructura",10:"Reducción de las desigualdades",11:"Ciudades y comunidades sostenibles",12:"Producción y consumo responsables",13:"Acción por el clima",14:"Vida submarina",15:"Vida de ecosistemas terrestres",16:"Paz, justicia e instituciones sólidas",17:"Alianzas para lograr los objetivos"};
+const ODS_PRIO=[4,5,7,8,9,10,12,16,17];
+const METAS=[
+  {id:"4.4",ods:4,t:"Competencias técnicas y profesionales para el empleo"},
+  {id:"4.5",ods:4,t:"Acceso igualitario a la educación de personas vulnerables y con discapacidad"},
+  {id:"5.5",ods:5,t:"Participación plena de las mujeres e igualdad de oportunidades de liderazgo"},
+  {id:"7.3",ods:7,t:"Mejora de la eficiencia energética"},
+  {id:"8.5",ods:8,t:"Empleo pleno, trabajo decente e igual remuneración"},
+  {id:"8.8",ods:8,t:"Derechos laborales y entornos de trabajo seguros"},
+  {id:"9.1",ods:9,t:"Infraestructuras fiables, sostenibles y resilientes"},
+  {id:"9.c",ods:9,t:"Acceso universal y asequible a las TIC e Internet"},
+  {id:"10.2",ods:10,t:"Inclusión social, económica y política de todas las personas"},
+  {id:"12.2",ods:12,t:"Gestión sostenible y uso eficiente de los recursos naturales"},
+  {id:"12.5",ods:12,t:"Reducción de residuos: prevención, reutilización y reciclaje"},
+  {id:"12.6",ods:12,t:"Prácticas sostenibles e información de sostenibilidad de las empresas"},
+  {id:"16.10",ods:16,t:"Acceso a la información y protección de las libertades fundamentales"},
+  {id:"17.17",ods:17,t:"Alianzas público-privadas y con la sociedad civil"}
+];
+const META=Object.fromEntries(METAS.map(m=>[m.id,m]));
+const DATOS={
+  4:"El alumnado de FP en prácticas no tiene plan formativo ni persona tutora asignada.",
+  5:"Solo 1 de las 9 personas del equipo técnico es mujer y ningún puesto de responsabilidad lo ocupa una mujer.",
+  7:"Los servidores trabajan al 15 % de su capacidad fuera de los picos de venta y la portada reproduce vídeos automáticamente.",
+  8:"Horas extra sin compensar en semanas de festival, mensajes de la dirección a las 23:00 y atención al cliente subcontratada sin revisar sus condiciones laborales.",
+  9:"La web no funciona en móviles de más de cinco años y tarda más de 20 segundos en cargar en muchas zonas rurales.",
+  10:"El formulario de inscripción no se puede completar con teclado; solo el 40 % de las páginas principales funciona bien con teclado.",
+  12:"La portada pesa 4,2 MB, los portátiles se renuevan cada 2 años y acaban en el contenedor general, y FestWeb no publica datos de sus impactos.",
+  16:"El boletín pide DNI, fecha de nacimiento y teléfono a 15.000 personas, aunque solo necesita el correo.",
+  17:"FestWeb tiene un acuerdo con el ayuntamiento para difundir eventos gratuitos entre las personas mayores."
+};
+const RESPONSABLES=["Dirección","Equipo de desarrollo","Equipo de diseño","Sistemas","Recursos humanos","Compras","Comunicación","Atención al cliente"];
+
+const BILLETE=[
+  {id:"b1",p:"Según el apartado 5.1, ¿qué elementos debe incluir una acción sostenible?",o:["Solo la acción y el ODS.","Acción, responsable, plazo, indicador, objetivo y ODS con su meta.","La acción y su presupuesto.","Una intención clara y motivadora."],c:1,
+   e:"Sin responsable nadie la realiza, sin plazo se aplaza y sin indicador ni objetivo nadie sabe si ha funcionado."},
+  {id:"b2",p:"«Mejorar la accesibilidad de la web» es…",o:["Una acción medible.","Un indicador.","Una intención.","Una meta de los ODS."],c:2,
+   e:"Expresa lo que se desea, pero no dice qué se hará, quién, cuándo ni cómo se comprobará."},
+  {id:"b3",p:"¿Cuál es la primera fase de un plan de actuación?",o:["Selección del ODS.","Diagnóstico de la situación actual.","Actuación.","Seguimiento."],c:1,
+   e:"Antes de elegir ODS o acciones hay que conocer la situación inicial, con datos."},
+  {id:"b4",p:"Una buena acción personal debe ser…",o:["Ambiciosa, aunque cueste mantenerla.","Concreta, realista, mantenida en el tiempo y comprobable.","Igual que las acciones de la empresa.","Conocida solo por quien la realiza."],c:1,
+   e:"Un hábito concreto y sostenido tiene más efecto que un gran propósito que se abandona."}
+];
+
+const DEFECTOS=[
+  {id:"responsable",t:"Falta un responsable"},
+  {id:"plazo",t:"El plazo no está concretado"},
+  {id:"indicador",t:"El indicador no mide el resultado de la acción"},
+  {id:"objetivo",t:"El objetivo no tiene un valor que alcanzar"},
+  {id:"meta",t:"La meta no encaja con la acción"}
+];
+const BIEN={responsable:"Esta ficha sí tiene una persona o equipo responsable.",plazo:"El plazo de esta ficha está concretado.",indicador:"El indicador de esta ficha mide lo que cambia con la acción.",objetivo:"El objetivo de esta ficha tiene un valor numérico que alcanzar.",meta:"La meta de esta ficha encaja con lo que hace la acción."};
+const FICHAS=[
+  {id:"f1",accion:"Comprimir las imágenes y eliminar los vídeos automáticos de la portada.",resp:"Equipo de diseño",plazo:"Dos meses",ind:"Número de reuniones del equipo de diseño.",obj:"Pasar de 0 a 4 reuniones.",meta:"12.2",def:"indicador",
+   pista:"¿Saber cuántas reuniones hay dice algo sobre el peso de la portada?",why:"Contar reuniones mide la actividad del equipo, no el resultado. El indicador adecuado sería el peso de la portada en MB."},
+  {id:"f2",accion:"Implantar una política de desconexión digital: sin mensajes de trabajo entre las 20:00 y las 8:00.",resp:"Recursos humanos",plazo:"Cuando sea posible",ind:"Mensajes de trabajo enviados fuera del horario al mes.",obj:"Pasar de 120 a 0 mensajes al mes.",meta:"8.8",def:"plazo",
+   pista:"Leed la fila del plazo: ¿cuándo debe estar hecho?",why:"«Cuando sea posible» no es un plazo: la acción puede aplazarse indefinidamente."},
+  {id:"f3",accion:"Revisar y corregir la navegación por teclado del formulario de inscripción.",resp:"(sin asignar)",plazo:"Un mes",ind:"Porcentaje de pasos del formulario que se pueden completar con teclado.",obj:"Pasar del 40 % al 100 %.",meta:"10.2",def:"responsable",
+   pista:"Si mañana alguien pregunta quién se encarga de esto, ¿qué respondería la empresa?",why:"Sin responsable, nadie se siente obligado a realizar la acción."},
+  {id:"f4",accion:"Pedir solo el correo electrónico para el boletín y borrar los datos personales innecesarios.",resp:"Equipo de desarrollo",plazo:"Tres meses",ind:"Número de datos personales solicitados en el formulario del boletín.",obj:"Reducirlos lo máximo posible.",meta:"16.10",def:"objetivo",
+   pista:"¿Cuántos campos quedarán exactamente? ¿Cómo sabremos que se ha cumplido?",why:"«Lo máximo posible» no es un valor. El objetivo debería ser concreto: pasar de 4 datos a 1."},
+  {id:"f5",accion:"Alargar el uso de los portátiles a cinco años y entregar los antiguos a un gestor autorizado.",resp:"Compras",plazo:"Seis meses",ind:"Porcentaje de equipos retirados que se reutilizan o se entregan a un gestor autorizado.",obj:"Pasar del 0 % al 100 %.",meta:"5.5",def:"meta",
+   pista:"La 5.5 habla de igualdad de género. ¿Qué tiene que ver con los portátiles?",why:"La acción trata de residuos electrónicos: la meta adecuada es la 12.5, no la 5.5."}
+];
+
+const VAGOS=["mejorar","fomentar","concienciar","intentar","promover","potenciar","impulsar","apostar","trabajar","favorecer","sensibilizar","procurar"];
+const UNIDAD=/(%|porcentaje|n[uú]mero|n\.?º|cantidad|\bmb\b|\bgb\b|kwh|horas?|d[ií]as|minutos?|segundos?|€|euros|personas|p[aá]ginas|mensajes|equipos|campos|datos|errores|incidencias|inscripciones|\bkg\b|toneladas|veces|al mes|por mes|al año|por)/i;
+
+const PESTANAS=[{id:"equipo",t:"0. Equipo y expediente"},{id:"billete",t:"1. Billete de entrada"},{id:"inspeccion",t:"2. Inspección de calidad"},{id:"taller",t:"3. Taller de acciones"},{id:"informe",t:"4. Compromiso e informe"}];
+
+/* ================= Estado ================= */
+const CLAVE="sasp-a0303-v1";
+let memoria=null, stoOk=true;
+function vacio(){return {grupo:"",miembros:["","","","",""],codigo:"",ods:[],origen:"",billete:{},insp:{},fichas:{},persona:"",comp:{}};}
+function cargar(){
+  if(memoria)return memoria;
+  try{const s=localStorage.getItem(CLAVE); memoria=s?Object.assign(vacio(),JSON.parse(s)):vacio();}
+  catch(e){stoOk=false; memoria=vacio();}
+  return memoria;
+}
+function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify(memoria));}catch(e){stoOk=false;}}
+function upd(f){f(cargar()); guardar(); cabecera();}
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const odsTag=n=>'<span class="ods" style="background:'+COLOR[n]+'">ODS '+n+'</span>';
+const miembros=o=>o.miembros.map(s=>s.trim()).filter(Boolean);
+function ahora(){const d=new Date(),p=n=>String(n).padStart(2,"0"); return p(d.getDate())+"/"+p(d.getMonth()+1)+"/"+d.getFullYear()+" "+p(d.getHours())+":"+p(d.getMinutes());}
+function hash(s){let h=2166136261; for(let i=0;i<s.length;i++){h^=s.charCodeAt(i); h=Math.imul(h,16777619);} return ("00000000"+(h>>>0).toString(16)).slice(-8).toUpperCase();}
+const primeraPalabra=s=>(String(s||"").trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").match(/^[a-zñ]+/)||[""])[0];
+
+/* ================= Código de expediente (mismo cálculo que la A03.01) ================= */
+function validarCodigo(cod,grupo){
+  const m=String(cod||"").trim().toUpperCase().match(/^A0301-(\d{2})-(\d{2})-(\d{2})-([0-9A-F]{4})$/);
+  if(!m)return {ok:false,msg:"El código no tiene el formato esperado (A0301-08-10-12-XXXX). Copiadlo tal como aparece en el informe de la A03.01."};
+  const e=[m[1],m[2],m[3]].map(Number);
+  if(!e.every(n=>ODS_PRIO.includes(n))||new Set(e).size!==3)return {ok:false,msg:"Los ODS del código no son válidos. Revisad que lo habéis copiado sin errores."};
+  const ord=e.slice().sort((a,b)=>a-b);
+  if(hash(ord.join(",")+"|"+String(grupo||"").trim().toLowerCase()).slice(0,4)!==m[4])return {ok:false,msg:"El código no corresponde a este nombre de consultora. Escribid el nombre exactamente igual que en la A03.01, o elegid los ODS a mano."};
+  return {ok:true,ods:ord};
+}
+
+/* ================= Validación de fichas ================= */
+function revisarFicha(n,f){
+  f=f||{}; const c=[], num=v=>v!==""&&v!=null&&isFinite(Number(String(v).replace(",",".")));
+  const add=(ok,txt)=>c.push({ok,txt});
+  const sit=(f.situacion||"").trim();
+  add(sit.length>=15&&/\d/.test(sit), sit.length<15?"Situación inicial: describid el problema de partida (mínimo 15 caracteres).":(/\d/.test(sit)?"Situación inicial con un dato.":"Situación inicial: incluid al menos un dato numérico. Un diagnóstico sin datos no permite comprobar la mejora."));
+  add(!!f.meta&&META[f.meta]&&META[f.meta].ods===n, f.meta?"Meta "+f.meta+" del ODS "+n+".":"Meta: elegid la meta del ODS "+n+" a la que contribuye la acción.");
+  add((f.riesgo||"").trim().length>=15, (f.riesgo||"").trim().length>=15?"Riesgo u oportunidad identificado.":"Riesgo u oportunidad: explicad qué riesgo evita o qué oportunidad aprovecha (mínimo 15 caracteres).");
+  const ac=(f.accion||"").trim(), pp=primeraPalabra(ac);
+  if(ac.length<20)add(false,"Acción: describid qué se hará exactamente (mínimo 20 caracteres).");
+  else if(VAGOS.includes(pp))add(false,"Acción: empieza por «"+pp+"», que expresa una intención. Decid qué se hará exactamente: revisar, eliminar, implantar, sustituir…");
+  else add(true,"Acción concreta.");
+  add(!!f.resp, f.resp?"Responsable: "+f.resp+".":"Responsable: elegid quién debe realizar la acción.");
+  const pz=Number(f.plazo);
+  add(pz>=1&&pz<=12, pz>=1&&pz<=12?"Plazo de "+pz+(pz===1?" mes.":" meses."):"Plazo: elegid un plazo entre 1 y 12 meses.");
+  const ind=(f.indicador||"").trim();
+  if(ind.length<8)add(false,"Indicador: escribid qué se medirá (mínimo 8 caracteres).");
+  else if(!UNIDAD.test(ind+" "+(f.unidad||"")))add(false,"Indicador: no se ve cómo se mide. Indicad una unidad o un porcentaje (%, MB, horas, número de…).");
+  else add(true,"Indicador medible.");
+  if(!num(f.inicial)||!num(f.objetivo))add(false,"Valores: el valor inicial y el objetivo deben ser números.");
+  else if(Number(String(f.inicial).replace(",","."))===Number(String(f.objetivo).replace(",",".")))add(false,"Valores: el objetivo es igual que el valor inicial. ¿Qué cambio se espera?");
+  else add(true,"Valor inicial y objetivo: "+f.inicial+" → "+f.objetivo+(f.unidad?" "+f.unidad:"")+".");
+  add((f.unidad||"").trim().length>=1, (f.unidad||"").trim()?"Unidad de los valores indicada.":"Unidad: indicad en qué se expresan los valores (%, MB, mensajes…).");
+  return c;
+}
+function revisarCompromiso(c){
+  c=c||{}; const r=[], ac=(c.accion||"").trim(), pp=primeraPalabra(ac);
+  if(ac.length<20)r.push({ok:false,txt:"Acción: describid un hábito concreto (mínimo 20 caracteres)."});
+  else if(VAGOS.includes(pp))r.push({ok:false,txt:"Acción: empieza por «"+pp+"», que expresa una intención. ¿Qué harás exactamente?"});
+  else r.push({ok:true,txt:"Acción concreta."});
+  const pz=(c.plazo||"").trim();
+  r.push(/\d|semana|mes|año|trimestre|curso|diari|cada/i.test(pz)?{ok:true,txt:"Plazo: "+pz+"."}:{ok:false,txt:"Plazo: indica durante cuánto tiempo o hasta cuándo (por ejemplo, «durante tres meses»)."});
+  r.push((c.comprobar||"").trim().length>=15?{ok:true,txt:"Forma de comprobarlo indicada."}:{ok:false,txt:"Comprobación: explica cómo sabrás si lo cumples (mínimo 15 caracteres)."});
+  r.push(c.ods?{ok:true,txt:"ODS "+c.ods+" · "+NOMBRE_ODS[c.ods]+"."}:{ok:false,txt:"ODS: elige con qué ODS se relaciona tu compromiso."});
+  return r;
+}
+const todoOk=l=>l.every(x=>x.ok);
+
+/* ================= Puntos y progreso ================= */
+function puntos(o){
+  let p=0;
+  BILLETE.forEach(q=>{if(o.billete[q.id]===q.c)p+=2;});
+  FICHAS.forEach(f=>{const s=o.insp[f.id]; if(s&&s.ok)p+=s.n===1?5:2;});
+  o.ods.forEach(n=>{const f=o.fichas[n]; if(f&&f.validada)p+=f.rev<=2?15:8;});
+  return p;
+}
+function progreso(o){
+  const tot=BILLETE.length+FICHAS.length+3;
+  const h=BILLETE.filter(q=>o.billete[q.id]!=null).length+FICHAS.filter(f=>o.insp[f.id]&&o.insp[f.id].ok).length+o.ods.filter(n=>o.fichas[n]&&o.fichas[n].validada).length;
+  return {h,tot};
+}
+function cabecera(){
+  const o=cargar(), pr=progreso(o);
+  $("puntos").textContent=puntos(o)+" puntos";
+  $("progTxt").textContent=pr.h+" de "+pr.tot+" tareas";
+  $("progBar").style.width=Math.round(100*pr.h/pr.tot)+"%";
+  $("avisoSto").hidden=stoOk;
+}
+
+/* ================= Pintado ================= */
+let pestana="equipo", odsTaller=null;
+function pintar(){
+  const o=cargar();
+  $("tabs").innerHTML=PESTANAS.map(p=>{
+    let c="";
+    if(p.id==="billete")c=Object.keys(o.billete).length+"/"+BILLETE.length;
+    if(p.id==="inspeccion")c=FICHAS.filter(f=>o.insp[f.id]&&o.insp[f.id].ok).length+"/"+FICHAS.length;
+    if(p.id==="taller")c=o.ods.filter(n=>o.fichas[n]&&o.fichas[n].validada).length+"/"+(o.ods.length||3);
+    if(p.id==="equipo"&&o.ods.length===3)c="✔";
+    return '<button role="tab" data-tab="'+p.id+'" aria-selected="'+(p.id===pestana)+'">'+p.t+(c?' <span class="c">('+c+')</span>':"")+'</button>';}).join("");
+  ({equipo:pEquipo,billete:pBillete,inspeccion:pInsp,taller:pTaller,informe:pInforme})[pestana](o);
+  cabecera();
+}
+function pEquipo(o){
+  let h='<div class="intro"><p><b>Situación.</b> Ha llegado el momento de entregar a FestWeb su <b>plan de actuación</b>: una acción medible para cada uno de los tres ODS que vuestra consultora priorizó en la A03.01, y un compromiso personal de cada persona.</p>'+
+    '<p>Trabajaréis en grupo en este equipo. Al final, <b>cada persona descargará su propio informe</b> con el plan del grupo y su compromiso.</p></div>';
+  h+='<label class="lbl" for="inGrupo">Nombre de la consultora (grupo)</label><input type="text" id="inGrupo" data-campo="grupo" value="'+esc(o.grupo)+'" placeholder="El mismo que en la A03.01">';
+  h+='<label class="lbl">Personas del grupo (nombre y apellidos)</label><div class="miembros">'+o.miembros.map((m,i)=>'<input type="text" data-miembro="'+i+'" value="'+esc(m)+'" placeholder="Persona '+(i+1)+'" autocomplete="off">').join("")+'</div>';
+  h+='<label class="lbl" for="inCodigo">Código de expediente de la A03.01</label><div class="acc" style="margin-top:0"><input type="text" id="inCodigo" class="codigo" value="'+esc(o.codigo)+'" placeholder="A0301-08-10-12-XXXX" style="max-width:300px"><button class="btn pri" id="btnCodigo">Recuperar ODS</button></div><div id="fbCodigo"></div>';
+  if(o.ods.length===3){
+    h+='<div class="fb ok">ODS del plan: '+o.ods.map(odsTag).join(" ")+' <span class="cnt">('+(o.origen==="codigo"?"recuperados con el código de expediente":"elegidos a mano")+')</span></div>';
+  }
+  const man=o.manual||[];
+  h+='<details style="margin-top:12px"'+(man.length?" open":"")+'><summary style="cursor:pointer;font-weight:600">¿No tenéis el código o el grupo es distinto? Elegid los tres ODS a mano</summary><div class="odsel">'+
+    ODS_PRIO.map(n=>'<label><input type="checkbox" data-odsman="'+n+'"'+(man.includes(n)?" checked":"")+'> '+odsTag(n)+' '+esc(NOMBRE_ODS[n])+'</label>').join("")+'</div><div class="cnt">Marcad exactamente tres. El informe indicará que se han elegido a mano.</div></details>';
+  h+='<div class="acc"><button class="btn pri" data-ir="billete">Continuar: billete de entrada →</button></div>';
+  $("contenido").innerHTML=h;
+}
+function pBillete(o){
+  let h='<div class="intro"><p>Cuatro preguntas sobre el vídeo de los apartados 5 y 6, <i>Acciones</i> y <i>Plan de actuación</i>. <b>Solo hay un intento por pregunta.</b></p></div>';
+  BILLETE.forEach((q,i)=>{
+    const r=o.billete[q.id], resp=r!=null;
+    h+='<div class="preg'+(resp?(r===q.c?" ok":" ko"):"")+'"><h3>'+(i+1)+'. '+esc(q.p)+'</h3><div class="ops">'+
+      q.o.map((t,k)=>'<button data-bil="'+q.id+'" data-op="'+k+'"'+(resp?" disabled":"")+' class="'+(resp&&r===k?"elegida "+(k===q.c?"bien":"mal"):"")+'">'+esc(t)+'</button>').join("")+'</div>'+
+      (resp?'<div class="fb '+(r===q.c?"ok":"ko")+'">'+(r===q.c?"Correcto. ":"No es correcto. ")+esc(q.e)+'</div>':"")+'</div>';
+  });
+  h+='<div class="acc"><button class="btn pri" data-ir="inspeccion">Ir a la inspección de calidad →</button></div>';
+  $("contenido").innerHTML=h;
+}
+function pInsp(o){
+  let h='<div class="intro"><p>Otra consultora ha preparado estas cinco fichas de acción para FestWeb. <b>Cada una tiene un defecto.</b> Encontradlo antes de que lleguen a la dirección. Tras dos fallos podréis pedir una pista.</p></div>';
+  FICHAS.forEach((f,i)=>{
+    const s=o.insp[f.id]||{n:0};
+    h+='<div class="ficha'+(s.ok?" ok":"")+'"><h3>Ficha '+(i+1)+' <small>'+(s.ok?"defecto encontrado · "+(s.n===1?5:2)+" pts":(s.n?s.n+" intento"+(s.n>1?"s":""):"pendiente"))+'</small></h3>'+
+      '<table class="f"><tr><th>Acción</th><td>'+esc(f.accion)+'</td></tr><tr><th>Responsable</th><td>'+esc(f.resp)+'</td></tr><tr><th>Plazo</th><td>'+esc(f.plazo)+'</td></tr><tr><th>Indicador</th><td>'+esc(f.ind)+'</td></tr><tr><th>Objetivo</th><td>'+esc(f.obj)+'</td></tr><tr><th>ODS y meta</th><td>Meta '+f.meta+' · '+esc(META[f.meta].t)+'</td></tr></table>';
+    if(s.ok)h+='<div class="fb ok"><b>'+esc(DEFECTOS.find(d=>d.id===f.def).t)+'.</b> '+esc(f.why)+'</div>';
+    else{
+      h+='<div class="defs">'+DEFECTOS.map(d=>'<button data-insp="'+f.id+'" data-def="'+d.id+'"'+((s.fallos||[]).includes(d.id)?" disabled":"")+'>'+esc(d.t)+'</button>').join("")+'</div>';
+      if(s.fb)h+='<div class="fb ko">'+esc(s.fb)+'</div>';
+      if(s.n>=2&&!s.pista)h+='<div class="acc"><button class="btn mini" data-pista="'+f.id+'">Ver pista</button></div>';
+      if(s.pista)h+='<div class="pista"><b>Pista:</b> '+esc(f.pista)+'</div>';
+    }
+    h+='</div>';
+  });
+  h+='<div class="acc"><button class="btn pri" data-ir="taller">Ir al taller de acciones →</button></div>';
+  $("contenido").innerHTML=h;
+}
+function pTaller(o){
+  if(o.ods.length!==3){$("contenido").innerHTML='<div class="fb ko">Primero recuperad los tres ODS con el código de expediente o elegidlos a mano en la pestaña <b>0. Equipo y expediente</b>.</div>'; return;}
+  if(!o.ods.includes(odsTaller))odsTaller=o.ods[0];
+  const n=odsTaller, f=o.fichas[n]||{}, metas=METAS.filter(m=>m.ods===n);
+  let h='<div class="intro"><p>Completad una <b>ficha de acción</b> para cada ODS prioritario. Pulsad <b>Revisar ficha</b>: el validador comprueba que la acción esté completa y sea medible. El contenido (si la acción es adecuada y realista) lo valora el profesorado.</p></div>';
+  h+='<div class="selods">'+o.ods.map(x=>{const fx=o.fichas[x]||{}; return '<button data-taller="'+x+'" aria-selected="'+(x===n)+'" style="background:'+COLOR[x]+'">ODS '+x+(fx.validada?" ✔":"")+'</button>';}).join("")+'</div>';
+  h+='<h3 style="margin:4px 0 6px;font-size:16px">'+odsTag(n)+' '+esc(NOMBRE_ODS[n])+'</h3>';
+  h+='<div class="datos"><b>Datos del expediente de FestWeb:</b> '+esc(DATOS[n])+'</div>';
+  const campo=(k,lbl,tipo,ph,extra)=>'<div class="'+(extra||"")+'"><label class="lbl">'+lbl+'</label>'+(tipo==="area"?'<textarea data-f="'+k+'" placeholder="'+esc(ph)+'">'+esc(f[k]||"")+'</textarea>':'<input type="'+tipo+'" data-f="'+k+'" value="'+esc(f[k]||"")+'" placeholder="'+esc(ph)+'">')+'</div>';
+  h+='<div class="form">';
+  h+=campo("situacion","Situación inicial (con un dato)","area","Por ejemplo: solo el 40 % de las páginas principales se puede usar con teclado.","full");
+  h+='<div><label class="lbl">Meta</label><select data-f="meta"><option value="">Elegid la meta</option>'+metas.map(m=>'<option value="'+m.id+'"'+(f.meta===m.id?" selected":"")+'>'+m.id+' · '+esc(m.t)+'</option>').join("")+'</select></div>';
+  h+='<div><label class="lbl">Responsable</label><select data-f="resp"><option value="">Elegid quién la realiza</option>'+RESPONSABLES.map(r=>'<option'+(f.resp===r?" selected":"")+'>'+esc(r)+'</option>').join("")+'</select></div>';
+  h+=campo("riesgo","Riesgo que evita u oportunidad que aprovecha","area","Por ejemplo: evita la sanción de la Ley de Accesibilidad y permite llegar a más personas.","full");
+  h+=campo("accion","Acción (qué se hará exactamente)","area","Por ejemplo: revisar y corregir la navegación por teclado de las páginas principales.","full");
+  h+='<div><label class="lbl">Plazo</label><select data-f="plazo"><option value="">Elegid el plazo</option>'+Array.from({length:12},(_,i)=>i+1).map(m=>'<option value="'+m+'"'+(String(f.plazo)===String(m)?" selected":"")+'>'+m+(m===1?" mes":" meses")+'</option>').join("")+'</select></div>';
+  h+=campo("indicador","Indicador (qué se mide)","text","Por ejemplo: porcentaje de páginas principales utilizables con teclado.");
+  h+='<div class="full"><label class="lbl">Valor inicial → objetivo</label><div class="fila"><input type="text" data-f="inicial" value="'+esc(f.inicial||"")+'" placeholder="Valor inicial (40)"><input type="text" data-f="objetivo" value="'+esc(f.objetivo||"")+'" placeholder="Objetivo (100)"><input type="text" data-f="unidad" value="'+esc(f.unidad||"")+'" placeholder="Unidad (%)"></div></div>';
+  h+='</div>';
+  h+='<div class="acc"><button class="btn pri" id="btnRevisar">Revisar ficha</button>'+(f.rev?'<span class="cnt">'+f.rev+' revisi'+(f.rev>1?"ones":"ón")+'</span>':"")+(f.validada?'<span class="si"><b>✔ Ficha validada</b></span>':"")+'</div><div id="chk">'+(f.ultima?pintarChecks(f.ultima):"")+'</div>';
+  const pend=o.ods.filter(x=>!(o.fichas[x]&&o.fichas[x].validada));
+  if(!pend.length)h+='<div class="fb ok">Las tres fichas están validadas. Id a la pestaña <b>4. Compromiso e informe</b>.</div>';
+  $("contenido").innerHTML=h;
+}
+function pintarChecks(l){return '<table class="chk">'+l.map(x=>'<tr><td class="'+(x.ok?"si":"no")+'">'+(x.ok?"✔":"✖")+'</td><td>'+esc(x.txt)+'</td></tr>').join("")+'</table>';}
+function revisar(){
+  const n=odsTaller;
+  upd(o=>{const f=o.fichas[n]||(o.fichas[n]={}); const l=revisarFicha(n,f); f.rev=(f.rev||0)+1; f.ultima=l; f.validada=todoOk(l);});
+  pintar();
+}
+
+/* ================= Informe ================= */
+function norm(s){return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9]/g,"");}
+function nombrePDF(a){const p=String(a||"").trim().split(/\s+/).filter(Boolean); return p.length<2?null:"A03.03_"+norm(p[0])+"_"+norm(p.slice(1).join(""))+".pdf";}
+function pInforme(o){
+  const M=miembros(o), pr=progreso(o);
+  let h='<div class="intro"><p>El informe recoge el <b>plan de actuación del grupo</b> y tu <b>compromiso personal</b>. Cada persona selecciona su nombre, completa su compromiso y descarga su PDF.</p></div>';
+  h+='<table class="res"><tr><th>Parte</th><th>Estado</th></tr><tr><td>ODS del plan</td><td>'+(o.ods.length===3?o.ods.map(n=>"ODS "+n).join(", ")+" ("+(o.origen==="codigo"?"código":"a mano")+")":"pendiente")+'</td></tr>'+
+    '<tr><td>Billete de entrada</td><td>'+BILLETE.filter(q=>o.billete[q.id]===q.c).length+' aciertos de '+BILLETE.length+'</td></tr>'+
+    '<tr><td>Inspección de calidad</td><td>'+FICHAS.filter(f=>o.insp[f.id]&&o.insp[f.id].ok).length+' de '+FICHAS.length+' fichas</td></tr>'+
+    '<tr><td>Taller de acciones</td><td>'+o.ods.filter(n=>o.fichas[n]&&o.fichas[n].validada).length+' de 3 fichas validadas</td></tr>'+
+    '<tr><th>Total</th><th>'+pr.h+' de '+pr.tot+' tareas · '+puntos(o)+' puntos</th></tr></table>';
+  if(!M.length){h+='<div class="fb ko">Escribid primero los nombres del grupo en la pestaña <b>0. Equipo y expediente</b>.</div>'; $("contenido").innerHTML=h; return;}
+  const per=M.includes(o.persona)?o.persona:"", c=per?(o.comp[per]||{}):{}, f=per?nombrePDF(per):null;
+  h+='<label class="lbl" for="selPersona">¿Quién descarga ahora su informe?</label><select id="selPersona"><option value="">Selecciona tu nombre</option>'+M.map(x=>'<option'+(x===per?" selected":"")+'>'+esc(x)+'</option>').join("")+'</select>';
+  if(per){
+    h+='<h3 style="font-size:15px;margin:14px 0 4px">Tu compromiso personal</h3><p style="margin:0 0 4px;font-size:14px">Una acción relacionada con tu futura actividad profesional o con tu uso de la tecnología que puedas empezar ya. Debe ser concreta, realista, mantenida en el tiempo y comprobable.</p>';
+    h+='<label class="lbl">¿Qué harás?</label><textarea data-c="accion" placeholder="Por ejemplo: desactivaré la reproducción automática de vídeos y revisaré cada mes el espacio ocupado en la nube.">'+esc(c.accion||"")+'</textarea>';
+    h+='<label class="lbl">¿Durante cuánto tiempo o hasta cuándo?</label><input type="text" data-c="plazo" value="'+esc(c.plazo||"")+'" placeholder="Por ejemplo: durante los próximos tres meses">';
+    h+='<label class="lbl">¿Cómo comprobarás que lo cumples?</label><textarea data-c="comprobar" placeholder="Por ejemplo: anotaré cada mes el espacio ocupado y lo compararé con el valor actual (35 GB).">'+esc(c.comprobar||"")+'</textarea>';
+    h+='<label class="lbl">ODS con el que se relaciona</label><select data-c="ods"><option value="">Elige un ODS</option>'+Object.keys(NOMBRE_ODS).map(k=>'<option value="'+k+'"'+(String(c.ods)===k?" selected":"")+'>ODS '+k+' · '+esc(NOMBRE_ODS[k])+'</option>').join("")+'</select>';
+    h+='<div class="acc"><button class="btn" id="btnRevComp">Revisar mi compromiso</button></div><div id="chkComp">'+(c.ultima?pintarChecks(c.ultima):"")+'</div>';
+    h+='<div class="nombre-pdf">'+esc(f||"A03.03_Nombre_Apellido.pdf")+'</div>';
+    if(!f)h+='<div class="fb ko">El nombre debe incluir al menos un apellido (revisa la pestaña 0).</div>';
+    h+='<div class="acc"><button class="btn pri" id="btnPdf"'+(f&&todoOk(revisarCompromiso(c))?"":" disabled")+'>Descargar mi informe (PDF)</button><span class="cnt">Se activa cuando el compromiso supera la revisión.</span></div><div id="fbInf"></div>';
+  }
+  h+='<div class="acc" style="margin-top:22px"><button class="btn" id="btnReiniciar">Borrar todo el trabajo de este equipo</button></div>';
+  $("contenido").innerHTML=h;
+}
+function cp1252(s){
+  const map={"—":"\x97","–":"\x96","−":"-","“":"\x93","”":"\x94","‘":"\x91","’":"\x92","•":"\x95","…":"\x85","€":"\x80","→":"->","✔":"[x]","✖":"[ ]","«":"\xab","»":"\xbb"};
+  s=String(s).normalize("NFC"); let out="";
+  for(const ch of s){
+    const c=ch.codePointAt(0);
+    if(Object.prototype.hasOwnProperty.call(map,ch))out+=map[ch];
+    else if(c<32)out+=" ";
+    else if(c<127||(c>=160&&c<256))out+=ch;
+    else out+="?";
+  }
+  return out;
+}
+function pdfEsc(s){return s.replace(/\\/g,"\\\\").replace(/\(/g,"\\(").replace(/\)/g,"\\)");}
+function envolver(texto,size,sangria){
+  const max=Math.floor(495/(0.53*size))-(sangria||0), pal=cp1252(texto).split(" "), l=[]; let act="";
+  pal.forEach(w=>{
+    while(w.length>max){if(act){l.push(act);act="";} l.push(w.slice(0,max)); w=w.slice(max);}
+    if((act+" "+w).trim().length>max){l.push(act);act=w;} else act=(act?act+" ":"")+w;
+  });
+  l.push(act); return l;
+}
+function construyePDF(lineas){
+  const pags=[[]]; let y=792; const M=50;
+  lineas.forEach(L=>{
+    const size=L.s||10, lh=size*1.45, sang=L.i||0, fuente=L.b?"F2":"F1";
+    const partes=L.t===""?[""]:envolver(L.t,size,sang);
+    partes.forEach(txt=>{
+      if(y-lh<M){pags.push([]); y=792;}
+      y-=lh;
+      pags[pags.length-1].push("BT /"+fuente+" "+size+" Tf "+(M+sang*size*0.53).toFixed(1)+" "+y.toFixed(1)+" Td ("+pdfEsc(txt)+") Tj ET");
+    });
+  });
+  const n=pags.length, total=4+n*2;
+  const lista=[null,"<< /Type /Catalog /Pages 2 0 R >>",null,
+    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>",
+    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>"];
+  const kids=[];
+  pags.forEach((p,i)=>{
+    const idc=5+i*2, idp=6+i*2, cont=p.join("\n");
+    lista[idc]="<< /Length "+cont.length+" >>\nstream\n"+cont+"\nendstream";
+    lista[idp]="<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents "+idc+" 0 R >>";
+    kids.push(idp+" 0 R");
+  });
+  lista[2]="<< /Type /Pages /Kids ["+kids.join(" ")+"] /Count "+n+" >>";
+  let pdf="%PDF-1.4\n"; const offs=[];
+  for(let k=1;k<=total;k++){offs[k]=pdf.length; pdf+=k+" 0 obj\n"+lista[k]+"\nendobj\n";}
+  const xref=pdf.length;
+  pdf+="xref\n0 "+(total+1)+"\n0000000000 65535 f \n";
+  for(let q=1;q<=total;q++)pdf+=("0000000000"+offs[q]).slice(-10)+" 00000 n \n";
+  pdf+="trailer\n<< /Size "+(total+1)+" /Root 1 0 R >>\nstartxref\n"+xref+"\n%%EOF";
+  const bytes=new Uint8Array(pdf.length);
+  for(let b=0;b<pdf.length;b++)bytes[b]=pdf.charCodeAt(b)&255;
+  return bytes;
+}
+function informe(o,per){
+  const L=[], canon=[];
+  const t=(x,s,b,i)=>{L.push({t:x,s:s,b:b,i:i}); canon.push(x);};
+  t("A03.03 · El plan ODS de FestWeb",14,true);
+  t("Sostenibilidad Aplicada al Sistema Productivo · UP03",10); t("");
+  t("Informe de: "+per,11,true);
+  t("Consultora (grupo): "+(o.grupo.trim()||"(sin nombre)"),10);
+  t("Integrantes: "+miembros(o).join(", "),10);
+  t("Fecha del informe: "+ahora(),10);
+  t("ODS del plan: "+(o.ods.length===3?o.ods.map(n=>"ODS "+n+" ("+NOMBRE_ODS[n]+")").join(", ")+(o.origen==="codigo"?" · recuperados con el código "+o.codigo.trim().toUpperCase():" · elegidos a mano"):"(pendientes)"),10);
+  const pr=progreso(o);
+  t("Tareas completadas: "+pr.h+" de "+pr.tot+"   ·   Puntos del equipo: "+puntos(o),10); t("");
+  t("1. Billete de entrada ("+BILLETE.filter(q=>o.billete[q.id]===q.c).length+"/"+BILLETE.length+" aciertos)",11,true);
+  BILLETE.forEach((q,i)=>{const r=o.billete[q.id]; t((i+1)+". "+q.p,10,false,1); t(r==null?"(sin responder)":(r===q.c?"[x] ":"[ ] ")+q.o[r],9,false,4);});
+  t("");
+  t("2. Inspección de calidad ("+FICHAS.filter(f=>o.insp[f.id]&&o.insp[f.id].ok).length+"/"+FICHAS.length+" fichas)",11,true);
+  FICHAS.forEach((f,i)=>{const s=o.insp[f.id]||{n:0}; t("Ficha "+(i+1)+": "+f.accion,10,false,1);
+    t(s.ok?"[x] "+DEFECTOS.find(d=>d.id===f.def).t+" — "+s.n+" intento"+(s.n===1?"":"s")+(s.pista?", con pista":""):"[ ] Pendiente"+(s.n?" — "+s.n+" intentos":""),9,false,4);});
+  t("");
+  t("3. Plan de actuación del grupo",11,true);
+  o.ods.forEach((n,i)=>{
+    const f=o.fichas[n]||{};
+    t("Acción "+(i+1)+" · ODS "+n+" · "+NOMBRE_ODS[n]+(f.validada?"  [validada]":"  [pendiente de validar]"),10,true,1);
+    t("Situación inicial: "+((f.situacion||"").trim()||"-"),9,false,4);
+    t("Meta: "+(f.meta?f.meta+" · "+META[f.meta].t:"-"),9,false,4);
+    t("Riesgo u oportunidad: "+((f.riesgo||"").trim()||"-"),9,false,4);
+    t("Acción: "+((f.accion||"").trim()||"-"),9,false,4);
+    t("Responsable: "+(f.resp||"-")+"   ·   Plazo: "+(f.plazo?f.plazo+(Number(f.plazo)===1?" mes":" meses"):"-"),9,false,4);
+    t("Indicador: "+((f.indicador||"").trim()||"-"),9,false,4);
+    t("Valor inicial -> objetivo: "+(f.inicial||"-")+" -> "+(f.objetivo||"-")+" "+(f.unidad||""),9,false,4);
+    t("Revisiones del validador: "+(f.rev||0),9,false,4);
+  });
+  if(o.ods.length!==3)t("(ODS del plan pendientes)",9,false,4);
+  t("");
+  const c=o.comp[per]||{};
+  t("4. Compromiso personal de "+per,11,true);
+  t("Qué haré: "+((c.accion||"").trim()),10,false,1);
+  t("Plazo: "+((c.plazo||"").trim()),10,false,1);
+  t("Cómo lo comprobaré: "+((c.comprobar||"").trim()),10,false,1);
+  t("ODS: "+(c.ods?"ODS "+c.ods+" · "+NOMBRE_ODS[c.ods]:"-"),10,false,1);
+  t("");
+  t("Código de comprobación: "+hash(canon.join("|")),9,true);
+  return L;
+}
+function descargar(){
+  const o=cargar(), per=o.persona, f=nombrePDF(per); if(!f)return;
+  const blob=new Blob([construyePDF(informe(o,per))],{type:"application/pdf"}), url=URL.createObjectURL(blob);
+  const a=document.createElement("a"); a.href=url; a.download=f; document.body.appendChild(a); a.click();
+  setTimeout(()=>{document.body.removeChild(a); URL.revokeObjectURL(url);},500);
+  $("fbInf").innerHTML='<div class="fb ok">Informe descargado como <code>'+esc(f)+'</code>. Súbelo a Aules. Si hay más personas en el grupo, que seleccionen ahora su nombre.</div>';
+}
+
+/* ================= Eventos ================= */
+document.addEventListener("click",ev=>{
+  const el=ev.target.closest("button"); if(!el)return;
+  const d=el.dataset;
+  if(d.tab){pestana=d.tab; pintar(); window.scrollTo(0,0); return;}
+  if(d.ir){pestana=d.ir; pintar(); window.scrollTo(0,0); return;}
+  if(d.bil){if(cargar().billete[d.bil]==null){upd(o=>{o.billete[d.bil]=Number(d.op);}); pintar();} return;}
+  if(d.insp){
+    const f=FICHAS.find(x=>x.id===d.insp);
+    upd(o=>{const s=o.insp[f.id]||(o.insp[f.id]={n:0,ok:false,fallos:[],pista:false,fb:""}); if(s.ok)return; s.n++;
+      if(d.def===f.def){s.ok=true; s.fb="";} else {s.fallos=(s.fallos||[]).concat(d.def); s.fb=BIEN[d.def];}});
+    pintar(); return;
+  }
+  if(d.pista){upd(o=>{o.insp[d.pista].pista=true;}); pintar(); return;}
+  if(d.taller){odsTaller=Number(d.taller); pintar(); return;}
+  if(el.id==="btnRevisar"){revisar(); return;}
+  if(el.id==="btnCodigo"){
+    const o=cargar(), r=validarCodigo($("inCodigo").value,o.grupo);
+    if(r.ok){upd(x=>{x.codigo=$("inCodigo").value.trim().toUpperCase(); x.ods=r.ods; x.origen="codigo"; x.manual=[];}); pintar();}
+    else $("fbCodigo").innerHTML='<div class="fb ko">'+esc(r.msg)+'</div>';
+    return;
+  }
+  if(el.id==="btnRevComp"){const o=cargar(); upd(x=>{const c=x.comp[o.persona]||(x.comp[o.persona]={}); c.ultima=revisarCompromiso(c);}); pintar(); return;}
+  if(el.id==="btnPdf"){descargar(); return;}
+  if(el.id==="btnReiniciar"){
+    if(d.seguro){memoria=vacio(); guardar(); pestana="equipo"; odsTaller=null; pintar();}
+    else{d.seguro="1"; el.textContent="Pulsa otra vez para confirmar: se borrará todo";}
+  }
+});
+document.addEventListener("input",ev=>{
+  const el=ev.target, d=el.dataset;
+  if(d.campo){upd(o=>{o[d.campo]=el.value;}); return;}
+  if(d.miembro!==undefined){upd(o=>{o.miembros[Number(d.miembro)]=el.value;}); return;}
+  if(d.f){const n=odsTaller; upd(o=>{const f=o.fichas[n]||(o.fichas[n]={}); f[d.f]=el.value; if(f.validada){f.validada=false;}}); return;}
+  if(d.c){const o=cargar(); upd(x=>{const c=x.comp[o.persona]||(x.comp[o.persona]={}); c[d.c]=el.value;});
+    const b=$("btnPdf"); if(b)b.disabled=!(nombrePDF(o.persona)&&todoOk(revisarCompromiso(o.comp[o.persona]))); return;}
+});
+document.addEventListener("change",ev=>{
+  const el=ev.target, d=el.dataset;
+  if(d.f||d.c){el.dispatchEvent(new Event("input",{bubbles:true})); return;}
+  if(d.odsman){
+    const sel=[...document.querySelectorAll("[data-odsman]:checked")].map(x=>Number(x.dataset.odsman));
+    if(sel.length>3){el.checked=false; return;}
+    upd(o=>{o.manual=sel; if(sel.length===3){o.ods=sel.slice().sort((a,b)=>a-b); o.origen="manual"; o.codigo="";} else if(o.origen==="manual"){o.ods=[]; o.origen="";}});
+    pintar(); return;
+  }
+  if(el.id==="selPersona"){upd(o=>{o.persona=el.value;}); pintar(); return;}
+});
+
+cargar(); pintar();
+</script>
+</body>
+</html>

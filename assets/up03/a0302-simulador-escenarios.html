@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador de escenarios · A03.02</title>
+<style>
+:root{
+  --principal:#ff9944; --secundario:#81501c; --claro:#fdf4e9; --borde:#d9c9b6;
+  --ok:#2e7d32; --okbg:#e8f5e9; --ko:#b3261e; --kobg:#fdecea; --texto:#2b2118; --gris:#6b6258;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--texto);background:#fff;font-size:15px;line-height:1.45}
+header{background:var(--secundario);color:#fff;padding:8px 14px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header h1{font-size:16px;margin:0;font-weight:600}
+.marc{display:flex;gap:6px;flex-wrap:wrap;align-items:center;font-size:13.5px}
+.marc span{background:rgba(255,255,255,.14);border-radius:99px;padding:2px 9px;white-space:nowrap}
+.marc .puntos{background:var(--principal);color:#2b1a05;font-weight:700}
+.aviso{background:#fff3cd;border-bottom:1px solid #e0b100;color:#5a4300;padding:5px 14px;font-size:13px}
+main{padding:12px;max-width:1180px;margin:0 auto}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
+.tabs button{font:inherit;font-size:13.5px;border:1px solid var(--borde);background:#f6eee2;color:var(--secundario);padding:6px 10px;border-radius:6px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--secundario);color:#fff;border-color:var(--secundario);font-weight:600}
+.tabs button:disabled{opacity:.45;cursor:not-allowed}
+.tabs button .c{font-size:12px;opacity:.85}
+.intro{background:var(--claro);border-left:4px solid var(--principal);padding:8px 12px;border-radius:4px;margin:0 0 12px;font-size:14px}
+.intro p{margin:0 0 6px}.intro p:last-child{margin:0}
+.btn{font:inherit;border:1px solid #b9ad9f;background:#fff;border-radius:6px;padding:5px 12px;cursor:pointer;color:var(--texto)}
+.btn:hover{background:#f8f1e8}
+.btn.pri{background:var(--principal);border-color:var(--secundario);font-weight:700;color:#2b1a05}
+.btn.mini{font-size:12.5px;padding:2px 8px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.acc{display:flex;gap:8px;margin-top:10px;align-items:center;flex-wrap:wrap}
+.fb{margin-top:8px;font-size:13.5px;border-radius:6px;padding:7px 10px}
+.fb.ok{background:var(--okbg);color:#1b5e20;border:1px solid var(--ok)}
+.fb.ko{background:var(--kobg);color:#7a1a14;border:1px solid var(--ko)}
+.fb.neutro{background:#f4f4f4;border:1px solid #ccc}
+label.lbl{display:block;font-weight:600;margin:10px 0 4px}
+input[type=text],textarea,select{font:inherit;padding:6px 8px;border:1px solid #b9ad9f;border-radius:6px;width:100%;max-width:520px;background:#fff;color:var(--texto)}
+textarea{max-width:100%;min-height:60px;resize:vertical}
+.cnt{font-size:12px;color:var(--gris)}
+.miembros{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px;max-width:760px}
+.preg{border:1px solid var(--borde);border-radius:8px;padding:10px 12px;margin-bottom:10px}
+.preg.ok{border-color:var(--ok);background:#fafdf9}.preg.ko{border-color:var(--ko);background:#fffafa}
+.preg h3{margin:0 0 8px;font-size:14.5px}
+.ops{display:flex;flex-direction:column;gap:5px}
+.ops button{font:inherit;text-align:left;border:1px solid var(--borde);background:#fff;border-radius:6px;padding:6px 10px;cursor:pointer}
+.ops button:hover:not(:disabled){background:#f8f1e8}
+.ops button:disabled{cursor:default;color:var(--texto)}
+.ops button.elegida.bien{background:var(--okbg);border-color:var(--ok);font-weight:600}
+.ops button.elegida.mal{background:var(--kobg);border-color:var(--ko);font-weight:600}
+/* Línea temporal */
+.linea{display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap}
+.linea div{flex:1;min-width:92px;text-align:center;font-size:12.5px;padding:5px 4px;border-radius:6px;background:#f2ece4;color:var(--gris);border:1px solid var(--borde)}
+.linea div.hecho{background:#e9f3e9;color:#1b5e20;border-color:#9cc59e}
+.linea div.actual{background:var(--secundario);color:#fff;border-color:var(--secundario);font-weight:600}
+/* Turno */
+.noticias{border:1px solid #c9b8a3;border-radius:8px;margin-bottom:12px;overflow:hidden}
+.noticias h3{margin:0;padding:6px 10px;font-size:13.5px;background:#f6eee2;color:var(--secundario)}
+.noticia{padding:7px 10px;border-top:1px solid #eee;font-size:14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.noticia .orig{display:block;font-size:12px;color:var(--gris)}
+.delta{font-size:12.5px;white-space:nowrap}
+.delta b{font-weight:600}
+.pos{color:var(--ok)}.neg{color:var(--ko)}
+.suceso{border:2px solid var(--secundario);border-radius:10px;padding:12px 14px;margin-bottom:12px;background:#fffdfa}
+.suceso .eti{font-size:12.5px;color:var(--gris);text-transform:uppercase;letter-spacing:.5px}
+.suceso h2{margin:2px 0 6px;font-size:18px;color:var(--secundario)}
+.suceso p{margin:0}
+.paso{border:1px solid var(--borde);border-radius:8px;padding:10px 12px;margin-bottom:12px}
+.paso h3{margin:0 0 8px;font-size:14.5px;display:flex;justify-content:space-between;gap:8px}
+.paso h3 small{font-weight:400;color:var(--gris)}
+.paso.bloq{opacity:.5;pointer-events:none}
+.opc{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.opc label{display:inline-flex;gap:5px;align-items:center;border:1px solid var(--borde);border-radius:6px;padding:4px 9px;cursor:pointer;font-size:13.5px;background:#fff}
+.opc label:has(input:checked){background:#f6eee2;border-color:var(--secundario);font-weight:600}
+.opc label:has(input:disabled){cursor:default}
+.tipos{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;margin-top:6px}
+.tipos label{display:flex;gap:6px;align-items:flex-start;border:1px solid var(--borde);border-radius:6px;padding:5px 8px;cursor:pointer;font-size:13.5px}
+.tipos label:has(input:checked){background:#f6eee2;border-color:var(--secundario);font-weight:600}
+.tipos small{display:block;color:var(--gris);font-weight:400;font-size:12px}
+.grupo-t{font-size:12.5px;font-weight:600;color:var(--secundario);margin:8px 0 2px}
+.decis{display:flex;flex-direction:column;gap:6px}
+.decis label{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--borde);border-radius:8px;padding:8px 10px;cursor:pointer}
+.decis label:has(input:checked){background:#f6eee2;border-color:var(--secundario)}
+.decis b{display:block}
+.decis .coste{font-size:12.5px;color:var(--gris)}
+/* Resultado */
+.tarjetas{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:14px}
+.tarjeta{border:1px solid var(--borde);border-radius:10px;padding:10px 12px;background:#fffdfa}
+.tarjeta .v{font-size:24px;font-weight:700;color:var(--secundario)}
+.tarjeta .l{font-size:12.5px;color:var(--gris)}
+.tarjeta .d{font-size:12.5px}
+table.res{border-collapse:collapse;width:100%;font-size:13.5px;margin:8px 0}
+table.res th,table.res td{border-bottom:1px solid #eee;padding:5px 6px;text-align:left;vertical-align:top}
+table.res th{color:var(--secundario)}
+.nombre-pdf{font-family:Consolas,Menlo,monospace;background:#f4f4f4;border:1px solid #ccc;border-radius:6px;padding:6px 10px;margin:6px 0;word-break:break-all;font-size:13.5px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🎲 A03.02 · Simulador de escenarios en FestWeb</h1>
+  <div class="marc" id="marc"></div>
+</header>
+<div class="aviso" id="avisoSto" hidden>El navegador no permite guardar el progreso. No cierres esta página hasta descargar los informes.</div>
+<main>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="contenido"></div>
+</main>
+
+<script>
+"use strict";
+/* ================= Datos ================= */
+const INICIO={caja:100000,rep:50,usu:20000,ods:0};
+const TRIM=["1.º trim. 2027","2.º trim. 2027","3.º trim. 2027","4.º trim. 2027","1.º trim. 2028","2.º trim. 2028"];
+
+const BILLETE=[
+  {id:"b1",p:"Una brecha de seguridad en FestWeb, ¿qué tipos de riesgo puede desencadenar?",o:["Solo un riesgo operativo.","Solo un riesgo reputacional.","A la vez riesgos operativos, normativos, económicos y reputacionales.","Ninguno, si se arregla rápido."],c:2,
+   e:"Los riesgos rara vez aparecen aislados: el servicio falla (operativo), puede haber sanción (normativo), hay costes (económico) y se pierde confianza (reputacional)."},
+  {id:"b2",p:"Para valorar la prioridad de un riesgo se combinan…",o:["El coste y el plazo.","La probabilidad y las consecuencias.","La importancia y la viabilidad.","El ODS y la meta."],c:1,
+   e:"Un riesgo probable y con consecuencias graves se atiende primero. Importancia y viabilidad se usan para priorizar acciones, no riesgos."},
+  {id:"b3",p:"¿En qué se diferencia el análisis de riesgos de la UP03 del de la UP01?",o:["En nada: es el mismo análisis.","La UP03 parte de los objetivos y metas globales y se pregunta qué significan para la empresa.","La UP03 solo analiza oportunidades.","La UP01 no estudiaba riesgos."],c:1,
+   e:"En la UP01 se partía de los asuntos ASG de la empresa; en la UP03 se parte de los ODS y sus metas."},
+  {id:"b4",p:"Desde el 28 de junio de 2025, la Ley 11/2023 obliga a…",o:["Que las webs de las administraciones públicas sean accesibles.","Que determinados productos y servicios, como el comercio electrónico, sean accesibles.","Que todas las empresas publiquen indicadores ASG.","Que las empresas tengan una política de desconexión digital."],c:1,
+   e:"La Ley 11/2023 traspone el Acta Europea de Accesibilidad. Las webs públicas ya estaban obligadas por el RD 1112/2018."}
+];
+
+const TIPOS_R=[
+  {id:"operativo",t:"Operativo",d:"Dificulta el funcionamiento habitual"},
+  {id:"economico",t:"Económico",d:"Aumenta costes o reduce ingresos"},
+  {id:"normativo",t:"Normativo",d:"Obligaciones legales"},
+  {id:"reputacional",t:"Reputacional",d:"Perjudica la confianza"},
+  {id:"social",t:"Social",d:"Afecta a las personas"}];
+const TIPOS_O=[
+  {id:"eficiencia",t:"Eficiencia",d:"Reducir recursos y costes"},
+  {id:"innovacion",t:"Innovación",d:"Nuevos productos o servicios"},
+  {id:"mercados",t:"Acceso a mercados",d:"Nuevos clientes o colectivos"},
+  {id:"talento",t:"Talento",d:"Atraer y retener profesionales"},
+  {id:"financiacion",t:"Financiación",d:"Acceso a inversores o fondos"}];
+const TIPO=Object.fromEntries(TIPOS_R.concat(TIPOS_O).map(x=>[x.id,x]));
+const NAT={riesgo:"Riesgo",oportunidad:"Oportunidad",ambos:"Riesgo y oportunidad"};
+
+const EVENTOS=[
+  {id:"e1",titulo:"Llega la Ley de Accesibilidad",
+   txt:"Desde junio de 2025, la Ley 11/2023 obliga a que el comercio electrónico sea accesible. FestWeb vende entradas en línea y su formulario de inscripción no se puede usar con teclado. La inspección revisará las plataformas de venta de entradas dentro de dos trimestres.",
+   nat:["ambos"], natFb:{riesgo:"Es un riesgo, sí, pero pensad también en las personas que hoy no pueden comprar entradas. ¿Qué ocurriría si pudieran?",oportunidad:"Hay una oportunidad, pero no olvidéis que hay una obligación legal y una inspección anunciada."},
+   natOk:"Riesgo normativo (sanción) y oportunidad de llegar a más personas: el mismo asunto, según cómo se gestione.",
+   tipos:["normativo","mercados"], tipoFb:"¿Qué tipo de riesgo nace de una ley? ¿Y qué ganaría FestWeb si más personas pudieran inscribirse?",
+   ops:[
+     {id:"A",t:"Anticiparse",d:"Auditoría completa de accesibilidad y corrección de todas las páginas.",ef:{caja:-15000,ods:10}},
+     {id:"R",t:"Reaccionar con lo mínimo",d:"Corregir solo el formulario de inscripción.",ef:{caja:-5000,ods:3}},
+     {id:"I",t:"Ignorarlo",d:"No hacer nada por ahora: ya veremos si llega la inspección.",ef:{}}]},
+  {id:"e2",titulo:"La energía sube un 40 %",
+   txt:"El proveedor de alojamiento repercute la subida del precio de la electricidad. Los servidores de FestWeb están dimensionados para el pico de venta de un gran festival y el resto del año trabajan al 15 % de su capacidad.",
+   nat:["ambos"], natFb:{riesgo:"El coste sube, cierto. Pero fijaos en el dato del 15 %: ¿no hay algo que se pueda aprovechar?",oportunidad:"Hay margen de mejora, pero la subida ya está aquí y afecta a la cuenta de resultados."},
+   natOk:"Riesgo económico inmediato y oportunidad de eficiencia: hay mucho consumo desaprovechado.",
+   tipos:["economico","eficiencia"], tipoFb:"¿Qué tipo de riesgo afecta a los costes? ¿Y qué oportunidad ofrece reducir el consumo?",
+   ops:[
+     {id:"A",t:"Anticiparse",d:"Optimizar la web y pasar a servidores escalables que solo crecen en los picos.",ef:{caja:-10000,ods:10}},
+     {id:"R",t:"Reaccionar con lo mínimo",d:"Quitar los vídeos automáticos de la portada y renegociar el contrato el año que viene.",ef:{caja:-1000,ods:3}},
+     {id:"I",t:"Ignorarlo",d:"Pagar la subida y seguir igual.",ef:{}}]},
+  {id:"e3",titulo:"Dos personas del equipo se van",
+   txt:"Las horas extra sin compensar en las semanas de festival y los mensajes de la dirección a las 23:00 han agotado al equipo. Dos personas de desarrollo avisan de que dejarán la empresa. Justo ahora empieza el desarrollo de la aplicación móvil.",
+   nat:["riesgo","ambos"], natFb:{oportunidad:"Que se vaya parte del equipo no es, en sí, una oportunidad. ¿Qué le puede ocurrir al proyecto de la app?"},
+   natOk:"Es un riesgo social y operativo. Si elegisteis «ambos», también es válido: cuidar las condiciones laborales es una oportunidad para atraer y retener talento.",
+   tipos:["social","operativo","talento"], tipoFb:"¿A quién afecta directamente este suceso? ¿Qué le pasa al funcionamiento del equipo si se van dos personas?",
+   ops:[
+     {id:"A",t:"Anticiparse",d:"Política de desconexión digital, compensar las horas extra y reforzar el equipo en los festivales.",ef:{caja:-12000,ods:10,rep:5}},
+     {id:"R",t:"Reaccionar con lo mínimo",d:"Subir el sueldo a esas dos personas para que se queden.",ef:{caja:-6000,ods:2}},
+     {id:"I",t:"Ignorarlo",d:"Contratar a otras personas cuando se vayan.",ef:{}}]},
+  {id:"e4",titulo:"Auditoría de seguridad",
+   txt:"Una auditoría descubre que el boletín de novedades guarda el DNI, la fecha de nacimiento y el teléfono de 15.000 personas, aunque solo hace falta el correo electrónico. Además, la base de datos usa una contraseña antigua.",
+   nat:["riesgo","ambos"], natFb:{oportunidad:"Antes de pensar en oportunidades, ¿qué podría pasar si alguien accede a esos datos?"},
+   natOk:"Es un riesgo normativo (RGPD), operativo y reputacional. Si elegisteis «ambos», también vale: un servicio que protege bien los datos puede diferenciarse.",
+   tipos:["normativo","reputacional","operativo"], tipoFb:"Pensad en el RGPD y en la confianza de las personas usuarias si los datos se filtran.",
+   ops:[
+     {id:"A",t:"Anticiparse",d:"Borrar los datos innecesarios, pedir solo el correo y reforzar la seguridad.",ef:{caja:-6000,ods:8}},
+     {id:"R",t:"Reaccionar con lo mínimo",d:"Cambiar la contraseña y conservar los datos por si acaso.",ef:{caja:-1000,ods:1}},
+     {id:"I",t:"Ignorarlo",d:"Dejarlo para más adelante.",ef:{}}]},
+  {id:"e5",titulo:"Denuncia de greenwashing",
+   txt:"Una creadora de contenido con 200.000 seguidores publica un vídeo: «FestWeb dice ser neutra en carbono porque no imprime entradas. ¿Dónde están los datos?». El vídeo empieza a circular.",
+   nat:["riesgo","ambos"], natFb:{oportunidad:"La empresa está en el punto de mira. ¿Qué está en juego ahora mismo?"},
+   natOk:"Es un riesgo reputacional. Si elegisteis «ambos», también vale: responder con datos reales puede convertir la crisis en una muestra de transparencia.",
+   tipos:["reputacional"], tipoFb:"¿Qué se pierde cuando miles de personas dudan de lo que dice una empresa?",
+   ops:[
+     {id:"A",t:"Anticiparse",d:"Retirar la frase, reconocer el error y publicar los datos reales de consumo con un objetivo de reducción.",ef:{caja:-3000,ods:8,rep:5}},
+     {id:"R",t:"Reaccionar con lo mínimo",d:"Retirar la frase sin dar explicaciones.",ef:{rep:-5}},
+     {id:"I",t:"Ignorarlo",d:"Defender la campaña: seguimos siendo neutros en carbono.",ef:{rep:-15,usu:-1000}}]},
+  {id:"e6",titulo:"El contrato del ayuntamiento",
+   txt:"El ayuntamiento licita la venta de entradas de sus festivales: 60.000 € al año. Exige tres requisitos: plataforma accesible, protección de datos garantizada e indicadores de sostenibilidad publicados.",
+   nat:["oportunidad"], natFb:{riesgo:"Leed de nuevo: ¿qué puede ganar FestWeb con esta convocatoria?",ambos:"Presentarse tiene poco riesgo. Lo esencial aquí es lo que se puede ganar."},
+   natOk:"Es una oportunidad: un cliente nuevo que valora precisamente lo que exigen los ODS.",
+   tipos:["mercados","financiacion"], tipoFb:"¿Qué consigue FestWeb si gana un cliente nuevo de 60.000 € al año?",
+   ops:[
+     {id:"A",t:"Presentarse con la verdad",d:"Presentar los datos reales y un plan de mejora para lo que todavía falta.",ef:{}},
+     {id:"R",t:"Presentarse destacando solo lo positivo",d:"Contar lo que se ha hecho bien y no mencionar lo que falta.",ef:{}},
+     {id:"I",t:"No presentarse",d:"Es demasiado trabajo para un solo contrato.",ef:{}}]}
+];
+const EV=Object.fromEntries(EVENTOS.map(e=>[e.id,e]));
+/* Orden de presentación de las decisiones: cambia en cada trimestre para que no se elija por posición */
+const ORDEN={e1:["R","A","I"],e2:["I","A","R"],e3:["A","I","R"],e4:["R","I","A"],e5:["I","R","A"],e6:["R","I","A"]};
+
+const PESTANAS=[{id:"equipo",t:"0. Equipo"},{id:"billete",t:"1. Billete de entrada"},{id:"simulacion",t:"2. Simulación"},{id:"resultado",t:"3. Resultado"},{id:"informe",t:"4. Informe"}];
+
+/* ================= Simulación (función pura de las decisiones) ================= */
+function op(o,id){return o.cerrados.includes(id)?(o.dec[id]||{}).op:null;}
+function simular(o){
+  const M=Object.assign({},INICIO), not={}, cron=[];
+  const ap=(t,txt,ef,orig)=>{
+    ["caja","usu","ods","rep"].forEach(k=>{if(ef[k])M[k]+=ef[k];}); M.rep=Math.max(0,Math.min(100,M.rep));
+    (not[t]=not[t]||[]).push({txt,ef,orig}); cron.push({t,txt,ef,orig});
+  };
+  for(let t=1;t<=7;t++){
+    // Consecuencias que llegan al empezar el trimestre t
+    const e1=op(o,"e1"), e2=op(o,"e2"), e3=op(o,"e3"), e4=op(o,"e4");
+    if(t>=3&&t<=6&&e2){
+      if(e2==="A")ap(t,"Los servidores escalables reducen la factura de energía.",{caja:4000},"T2 · Energía");
+      else if(e2==="R")ap(t,"La factura de energía sigue alta, aunque algo menos sin los vídeos automáticos.",{caja:-1500},"T2 · Energía");
+      else ap(t,"La subida de la energía sigue encareciendo el alojamiento.",{caja:-3000},"T2 · Energía");
+    }
+    if(t===3&&e1){
+      if(e1==="A")ap(t,"La inspección felicita a FestWeb. Muchas personas que antes no podían inscribirse empiezan a comprar entradas.",{rep:10,usu:3000,caja:6000},"T1 · Accesibilidad");
+      else if(e1==="R")ap(t,"La inspección detecta otras barreras y da un plazo para corregirlas. Hay que pagar correcciones urgentes.",{caja:-4000,usu:1000},"T1 · Accesibilidad");
+      else ap(t,"Sanción por incumplir la Ley de Accesibilidad. La noticia sale en la prensa local.",{caja:-30000,rep:-15,usu:-2000},"T1 · Accesibilidad");
+    }
+    if(t===5&&e3){
+      if(e3==="A")ap(t,"El equipo está estable y la aplicación móvil sale a tiempo.",{usu:4000,caja:8000,rep:3},"T3 · Plantilla");
+      else if(e3==="R")ap(t,"Las dos personas se quedan, pero el problema de fondo sigue: otra persona se marcha y la app se retrasa.",{usu:1000,caja:-3000},"T3 · Plantilla");
+      else ap(t,"Se marchan dos personas más. Hay que seleccionar y formar a cuatro, la app se retrasa y aparecen malas opiniones en portales de empleo.",{caja:-8000,rep:-8},"T3 · Plantilla");
+    }
+    if(t===6&&e4){
+      if(e4==="A")ap(t,"Un ataque informático afecta a varias plataformas de eventos. FestWeb apenas se ve afectada: ya no guardaba datos innecesarios.",{rep:10,ods:3},"T4 · Seguridad");
+      else if(e4==="R")ap(t,"Un ataque informático consigue parte de la base de datos. La contraseña nueva limita el daño, pero hay que notificarlo.",{caja:-10000,rep:-8},"T4 · Seguridad");
+      else ap(t,"Se filtran los DNI y los teléfonos de 15.000 personas. Sanción por incumplir el RGPD.",{caja:-35000,rep:-20,usu:-3000},"T4 · Seguridad");
+    }
+    if(t===7)break;
+    // Decisión del trimestre t
+    const ev=EVENTOS[t-1], d=op(o,ev.id);
+    if(!d)break;
+    const opc=ev.ops.find(x=>x.id===d);
+    if(Object.keys(opc.ef).length)ap(t,"Decisión: "+opc.d,opc.ef,"T"+t+" · "+ev.titulo);
+    if(ev.id==="e6"){
+      const r=contrato(o);
+      ap(t,r.txt,r.ef,"T6 · Contrato");
+    }
+    if(t===6)ap(7,"Fin de la simulación.",{},"");
+  }
+  return {M,not,cron};
+}
+function cumplimiento(o){
+  const s={acc:{A:1,R:0.5,I:0}[op(o,"e1")]||0, dat:{A:1,R:0.5,I:0}[op(o,"e4")]||0, tra:{A:1,R:0.5,I:0}[op(o,"e5")]||0};
+  s.total=s.acc+s.dat+s.tra; return s;
+}
+function contrato(o){
+  const s=cumplimiento(o), d=op(o,"e6");
+  if(d==="I")return {txt:"Otra empresa se queda el contrato del ayuntamiento.",ef:{}};
+  if(d==="A"){
+    if(s.total>=2.5)return {txt:"¡Contrato adjudicado! El ayuntamiento destaca la transparencia y el cumplimiento de los tres requisitos.",ef:{caja:60000,rep:10,ods:5}};
+    if(s.total>=1.5)return {txt:"El ayuntamiento adjudica a FestWeb uno de los dos lotes: valora la honestidad del plan de mejora.",ef:{caja:30000,rep:5,ods:2}};
+    return {txt:"La oferta es honesta, pero no cumple los requisitos. El ayuntamiento valora el plan y os anima a presentaros a la próxima convocatoria.",ef:{rep:2}};
+  }
+  if(s.total>=2.5)return {txt:"Contrato adjudicado: FestWeb cumplía los requisitos, aunque la oferta no mostraba lo que falta por mejorar.",ef:{caja:60000,rep:5}};
+  return {txt:"La comisión comprueba que faltan requisitos que la oferta no mencionaba y la descalifica por información incompleta.",ef:{rep:-8}};
+}
+
+/* ================= Estado ================= */
+const CLAVE="sasp-a0302-v1";
+let memoria=null, stoOk=true;
+function vacio(){return {grupo:"",miembros:["","","","",""],billete:{},an:{},dec:{},cerrados:[],indiv:{},persona:""};}
+function cargar(){
+  if(memoria)return memoria;
+  try{const s=localStorage.getItem(CLAVE); memoria=s?Object.assign(vacio(),JSON.parse(s)):vacio();}
+  catch(e){stoOk=false; memoria=vacio();}
+  return memoria;
+}
+function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify(memoria));}catch(e){stoOk=false;}}
+function upd(f){f(cargar()); guardar(); cabecera();}
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const miles=n=>{const s=String(Math.abs(Math.round(n))).replace(/\B(?=(\d{3})+(?!\d))/g,"."); return (n<0?"−":"")+s;};
+const euros=n=>miles(n)+" €";
+function ahora(){const d=new Date(),p=n=>String(n).padStart(2,"0"); return p(d.getDate())+"/"+p(d.getMonth()+1)+"/"+d.getFullYear()+" "+p(d.getHours())+":"+p(d.getMinutes());}
+const miembros=o=>o.miembros.map(s=>s.trim()).filter(Boolean);
+function deltaTxt(ef,plano){
+  const parts=[], f=(v,txt)=>parts.push(plano?(v>0?"+":"")+txt:'<b class="'+(v>0?"pos":"neg")+'">'+(v>0?"+":"")+esc(txt)+'</b>');
+  if(ef.caja)f(ef.caja,euros(ef.caja).replace("−","-")+(plano?" caja":""));
+  if(ef.rep)f(ef.rep,ef.rep+(plano?" reputación":" ⭐"));
+  if(ef.usu)f(ef.usu,miles(ef.usu).replace("−","-")+(plano?" personas usuarias":" 👥"));
+  if(ef.ods)f(ef.ods,ef.ods+(plano?" impacto ODS":" 🌍"));
+  return parts.join(plano?", ":" ");
+}
+
+let pestana="equipo";
+
+/* ================= Puntos ================= */
+function ptsAn(a){if(!a||!a.ok)return 0; return a.n===1?5:2;}
+function puntos(o){
+  let p=0;
+  BILLETE.forEach(q=>{if(o.billete[q.id]===q.c)p+=2;});
+  EVENTOS.forEach(e=>{const a=o.an[e.id]||{}; p+=ptsAn(a.nat)+ptsAn(a.tipo);});
+  return p;
+}
+function turnoActual(o){return Math.min(o.cerrados.length+1,7);}
+function cabecera(){
+  const o=cargar(), {M}=simular(o);
+  $("marc").innerHTML='<span class="puntos">'+puntos(o)+' puntos</span><span title="Caja">💶 '+euros(M.caja)+'</span><span title="Reputación (0-100)">⭐ '+M.rep+'</span><span title="Personas usuarias">👥 '+miles(M.usu)+'</span><span title="Impacto ODS">🌍 '+M.ods+'</span>';
+  $("avisoSto").hidden=stoOk;
+}
+
+/* ================= Pintado ================= */
+function pintar(){
+  const o=cargar(), fin=o.cerrados.length===6;
+  $("tabs").innerHTML=PESTANAS.map(p=>{
+    let c=""; if(p.id==="billete")c=Object.keys(o.billete).length+"/"+BILLETE.length; if(p.id==="simulacion")c=o.cerrados.length+"/6"; if(p.id==="equipo"&&miembros(o).length)c=miembros(o).length+" pers.";
+    const dis=p.id==="resultado"&&!fin;
+    return '<button role="tab" data-tab="'+p.id+'" aria-selected="'+(p.id===pestana)+'"'+(dis?" disabled":"")+'>'+p.t+(c?' <span class="c">('+c+')</span>':"")+'</button>';}).join("");
+  ({equipo:pEquipo,billete:pBillete,simulacion:pSim,resultado:pResultado,informe:pInforme})[pestana](o);
+  cabecera();
+}
+function pEquipo(o){
+  let h='<div class="intro"><p><b>Situación.</b> FestWeb ha quedado satisfecha con vuestro análisis de ODS y os encarga algo más arriesgado: <b>dirigir la empresa durante seis trimestres</b> (2027-2028). En cada trimestre ocurrirá algo que tendréis que analizar y decidir.</p>'+
+    '<p>Algunas decisiones tienen <b>consecuencias inmediatas</b> y otras <b>llegan más tarde</b>. Lo que hoy parece un ahorro puede salir caro dentro de unos meses.</p>'+
+    '<p>Trabajaréis en grupo en este equipo. Al final, <b>cada persona descargará su propio informe</b> y lo subirá a Aules.</p></div>';
+  h+='<label class="lbl" for="inGrupo">Nombre de la consultora (grupo)</label><input type="text" id="inGrupo" data-campo="grupo" value="'+esc(o.grupo)+'" placeholder="El mismo que en la A03.01">';
+  h+='<label class="lbl">Personas del grupo (nombre y apellidos)</label><div class="miembros">'+o.miembros.map((m,i)=>'<input type="text" data-miembro="'+i+'" value="'+esc(m)+'" placeholder="Persona '+(i+1)+'" autocomplete="off">').join("")+'</div>';
+  h+='<div class="intro" style="margin-top:14px"><p><b>Marcadores de FestWeb</b> (arriba): 💶 caja, ⭐ reputación (0-100), 👥 personas usuarias y 🌍 impacto ODS. Empezáis con 100.000 €, 50 de reputación, 20.000 personas usuarias e impacto 0.</p>'+
+    '<p><b>Puntos del equipo:</b> premian el <b>análisis</b> (2 por acierto en el billete; 5 por clasificar bien cada suceso a la primera, 2 si cuesta más). Las <b>decisiones</b> no dan puntos: sus efectos se ven en los marcadores.</p></div>';
+  h+='<div class="acc"><button class="btn pri" data-ir="billete">Empezar: billete de entrada →</button></div>';
+  $("contenido").innerHTML=h;
+}
+function pBillete(o){
+  let h='<div class="intro"><p>Cuatro preguntas sobre el vídeo del apartado 4, <i>Riesgos y oportunidades</i>. <b>Solo hay un intento por pregunta</b>: comentadlo antes de responder.</p></div>';
+  BILLETE.forEach((q,i)=>{
+    const r=o.billete[q.id], resp=r!=null;
+    h+='<div class="preg'+(resp?(r===q.c?" ok":" ko"):"")+'"><h3>'+(i+1)+'. '+esc(q.p)+'</h3><div class="ops">'+
+      q.o.map((t,k)=>'<button data-bil="'+q.id+'" data-op="'+k+'"'+(resp?" disabled":"")+' class="'+(resp&&r===k?"elegida "+(k===q.c?"bien":"mal"):"")+'">'+esc(t)+'</button>').join("")+'</div>'+
+      (resp?'<div class="fb '+(r===q.c?"ok":"ko")+'">'+(r===q.c?"Correcto. ":"No es correcto. ")+esc(q.e)+'</div>':"")+'</div>';
+  });
+  h+='<div class="acc"><button class="btn pri" data-ir="simulacion">Ir a la simulación →</button></div>';
+  $("contenido").innerHTML=h;
+}
+function lineaTiempo(o,t){
+  return '<div class="linea">'+TRIM.map((n,i)=>'<div class="'+(o.cerrados.includes(EVENTOS[i].id)?"hecho":(i+1===t?"actual":""))+'">T'+(i+1)+' · '+n+'</div>').join("")+'</div>';
+}
+function pSim(o){
+  const t=turnoActual(o);
+  let h=lineaTiempo(o,t);
+  if(t===7){h+='<div class="fb ok">Habéis completado los seis trimestres. Consultad el <b>resultado</b> de vuestra gestión.</div><div class="acc"><button class="btn pri" data-ir="resultado">Ver el resultado →</button></div>'; $("contenido").innerHTML=h; return;}
+  const ev=EVENTOS[t-1], {not}=simular(o), a=o.an[ev.id]||{}, d=o.dec[ev.id]||{};
+  const llegan=not[t]||[];
+  h+='<div class="noticias"><h3>📰 Noticias del trimestre</h3>'+(llegan.length?llegan.map(n=>'<div class="noticia"><span>'+esc(n.txt)+'<span class="orig">Consecuencia de: '+esc(n.orig)+'</span></span><span class="delta">'+deltaTxt(n.ef)+'</span></div>').join(""):'<div class="noticia"><span>Sin novedades de trimestres anteriores.</span></div>')+'</div>';
+  h+='<div class="suceso"><div class="eti">Trimestre '+t+' · '+TRIM[t-1]+'</div><h2>'+esc(ev.titulo)+'</h2><p>'+esc(ev.txt)+'</p></div>';
+  // Paso 1: naturaleza
+  const natOk=a.nat&&(a.nat.ok||a.nat.n>=2);
+  h+='<div class="paso"><h3>1. ¿Qué representa para FestWeb? <small>'+(a.nat&&a.nat.n?a.nat.n+" intento"+(a.nat.n>1?"s":""):"")+'</small></h3>';
+  h+='<div class="opc">'+Object.keys(NAT).map(k=>'<label><input type="radio" name="nat" value="'+k+'"'+(a.nat&&a.nat.resp===k?" checked":"")+(natOk?" disabled":"")+'> '+NAT[k]+'</label>').join("")+'</div>';
+  if(!natOk)h+='<div class="acc"><button class="btn pri" data-comp="nat">Comprobar</button></div>';
+  if(a.nat&&a.nat.fb)h+='<div class="fb '+(a.nat.ok?"ok":"ko")+'">'+esc(a.nat.fb)+'</div>';
+  h+='</div>';
+  // Paso 2: tipo
+  const tipoOk=a.tipo&&(a.tipo.ok||a.tipo.n>=2);
+  h+='<div class="paso'+(natOk?"":" bloq")+'"><h3>2. ¿De qué tipo es, principalmente? <small>'+(a.tipo&&a.tipo.n?a.tipo.n+" intento"+(a.tipo.n>1?"s":""):"Elegid uno")+'</small></h3>';
+  const tl=arr=>'<div class="tipos">'+arr.map(x=>'<label><input type="radio" name="tipo" value="'+x.id+'"'+(a.tipo&&a.tipo.resp===x.id?" checked":"")+(tipoOk?" disabled":"")+'><span>'+x.t+'<small>'+x.d+'</small></span></label>').join("")+'</div>';
+  h+='<div class="grupo-t">Tipos de riesgo</div>'+tl(TIPOS_R)+'<div class="grupo-t">Tipos de oportunidad</div>'+tl(TIPOS_O);
+  if(!tipoOk&&natOk)h+='<div class="acc"><button class="btn pri" data-comp="tipo">Comprobar</button></div>';
+  if(a.tipo&&a.tipo.fb)h+='<div class="fb '+(a.tipo.ok?"ok":"ko")+'">'+esc(a.tipo.fb)+'</div>';
+  h+='</div>';
+  // Paso 3: decisión
+  const listo=natOk&&tipoOk, j=d.just||"";
+  h+='<div class="paso'+(listo?"":" bloq")+'"><h3>3. ¿Qué decidís?</h3><div class="decis">'+ORDEN[ev.id].map(k=>ev.ops.find(x=>x.id===k)).map(x=>'<label><input type="radio" name="dec" value="'+x.id+'"'+(d.op===x.id?" checked":"")+'><span><b>'+esc(x.d)+'</b>'+(Object.keys(x.ef).length?'<span class="coste">Efecto inmediato: '+deltaTxt(x.ef,true)+'</span>':'<span class="coste">Sin coste inmediato</span>')+'</span></label>').join("")+'</div>';
+  h+='<label class="lbl" for="inJust">¿Por qué? (una frase)</label><textarea id="inJust" placeholder="Justificad la decisión: qué riesgo evitáis o qué oportunidad aprovecháis.">'+esc(j)+'</textarea><div class="cnt" id="cntJust">'+j.trim().length+' caracteres (mínimo 20)</div>';
+  h+='<div class="acc"><button class="btn pri" id="btnCerrar"'+(listo&&d.op&&j.trim().length>=20?"":" disabled")+'>Cerrar el trimestre '+t+' →</button><span class="cnt">La decisión no se podrá cambiar.</span></div></div>';
+  $("contenido").innerHTML=h;
+}
+function comprobar(paso){
+  const o=cargar(), t=turnoActual(o), ev=EVENTOS[t-1], sel=document.querySelector('input[name="'+paso+'"]:checked');
+  const a=o.an[ev.id]||(o.an[ev.id]={});
+  const s=a[paso]||(a[paso]={n:0,ok:false,resp:"",fb:""});
+  if(!sel){s.fb="Elegid primero una opción."; s.ok=false; pintar(); return;}
+  upd(()=>{
+    s.n++; s.resp=sel.value;
+    if(paso==="nat"){
+      if(ev.nat.includes(sel.value)){s.ok=true; s.fb=ev.natOk;}
+      else s.fb=(ev.natFb[sel.value]||"Releed el suceso con atención.")+(s.n>=2?" Podéis continuar: el análisis quedará como no resuelto en el informe.":"");
+    }else{
+      if(ev.tipos.includes(sel.value)){s.ok=true; s.fb="Correcto: "+TIPO[sel.value].t.toLowerCase()+". "+(ev.tipos.length>1?"También se podía considerar: "+ev.tipos.filter(x=>x!==sel.value).map(x=>TIPO[x].t.toLowerCase()).join(", ")+".":"");}
+      else s.fb=ev.tipoFb+(s.n>=2?" Podéis continuar: el análisis quedará como no resuelto en el informe.":"");
+    }
+  });
+  pintar();
+}
+function cerrar(){
+  const o=cargar(), t=turnoActual(o), ev=EVENTOS[t-1];
+  upd(o=>{if(!o.cerrados.includes(ev.id))o.cerrados.push(ev.id);});
+  pintar(); window.scrollTo(0,0);
+}
+function pResultado(o){
+  const {M,cron}=simular(o);
+  const card=(v,l,d)=>'<div class="tarjeta"><div class="v">'+v+'</div><div class="l">'+l+'</div><div class="d">'+d+'</div></div>';
+  const dif=(a,b,f)=>{const x=a-b; return x===0?"sin cambios":'<span class="'+(x>0?"pos":"neg")+'">'+(x>0?"+":"")+f(x)+' respecto al inicio</span>';};
+  let h='<div class="intro"><p>Este es el estado de FestWeb tras seis trimestres. Comparad vuestros marcadores con los de los otros grupos en la puesta en común.</p></div>';
+  h+='<div class="tarjetas">'+card(euros(M.caja),"💶 Caja",dif(M.caja,INICIO.caja,euros))+card(M.rep+" / 100","⭐ Reputación",dif(M.rep,INICIO.rep,String))+card(miles(M.usu),"👥 Personas usuarias",dif(M.usu,INICIO.usu,miles))+card(M.ods,"🌍 Impacto ODS",dif(M.ods,INICIO.ods,String))+'</div>';
+  h+='<h3 style="font-size:15px;margin:6px 0">Cronología de consecuencias</h3><table class="res"><tr><th>Trimestre</th><th>Qué ocurrió</th><th>Origen</th><th>Efecto</th></tr>'+
+    cron.filter(c=>c.orig).map(c=>'<tr><td>T'+c.t+'</td><td>'+esc(c.txt)+'</td><td>'+esc(c.orig)+'</td><td>'+deltaTxt(c.ef)+'</td></tr>').join("")+'</table>';
+  const s=cumplimiento(o);
+  h+='<div class="intro" style="margin-top:12px"><p><b>Para la puesta en común:</b> ¿qué decisión «barata» os salió cara más adelante? ¿Qué decisión que parecía un gasto se convirtió en una oportunidad? Requisitos del ayuntamiento cumplidos: '+(s.total===3?"los tres":String(s.total).replace(".",",")+" de 3")+'.</p></div>';
+  h+='<div class="acc"><button class="btn pri" data-ir="informe">Ir al informe →</button></div>';
+  $("contenido").innerHTML=h;
+}
+
+/* ================= Informe ================= */
+function norm(s){return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9]/g,"");}
+function nombrePDF(a){const p=String(a||"").trim().split(/\s+/).filter(Boolean); return p.length<2?null:"A03.02_"+norm(p[0])+"_"+norm(p.slice(1).join(""))+".pdf";}
+function pInforme(o){
+  const M=miembros(o), {M:m}=simular(o);
+  let h='<div class="intro"><p>El informe recoge el <b>análisis y las decisiones del grupo</b> en cada trimestre, el resultado final y una <b>respuesta individual</b>. Cada persona selecciona su nombre, responde y descarga su PDF. Se puede descargar aunque no se haya terminado la simulación.</p></div>';
+  h+='<table class="res"><tr><th>Parte</th><th>Estado</th></tr><tr><td>Billete de entrada</td><td>'+BILLETE.filter(q=>o.billete[q.id]===q.c).length+' aciertos de '+BILLETE.length+'</td></tr>'+
+    '<tr><td>Simulación</td><td>'+o.cerrados.length+' de 6 trimestres</td></tr><tr><td>Marcadores</td><td>'+euros(m.caja)+' · reputación '+m.rep+' · '+miles(m.usu)+' personas usuarias · impacto ODS '+m.ods+'</td></tr>'+
+    '<tr><th>Puntos del equipo</th><th>'+puntos(o)+'</th></tr></table>';
+  if(!M.length){h+='<div class="fb ko">Escribid primero los nombres del grupo en la pestaña <b>0. Equipo</b>.</div>'; $("contenido").innerHTML=h; return;}
+  const per=M.includes(o.persona)?o.persona:"", txt=per?(o.indiv[per]||""):"", f=per?nombrePDF(per):null;
+  h+='<label class="lbl" for="selPersona">¿Quién descarga ahora su informe?</label><select id="selPersona"><option value="">Selecciona tu nombre</option>'+M.map(x=>'<option'+(x===per?" selected":"")+'>'+esc(x)+'</option>').join("")+'</select>';
+  if(per){
+    h+='<label class="lbl" for="inIndiv">Pregunta individual</label><p style="margin:0 0 6px;font-size:14px">¿Qué decisión del grupo convirtió un riesgo en una oportunidad? ¿Qué decisión tomarías de otra manera y por qué?</p>'+
+      '<textarea id="inIndiv">'+esc(txt)+'</textarea><div class="cnt" id="cntIndiv">'+txt.trim().length+' caracteres (mínimo 80)</div>';
+    h+='<div class="nombre-pdf">'+esc(f||"A03.02_Nombre_Apellido.pdf")+'</div>';
+    if(!f)h+='<div class="fb ko">El nombre debe incluir al menos un apellido (revisa la pestaña 0. Equipo).</div>';
+    h+='<div class="acc"><button class="btn pri" id="btnPdf"'+(f&&txt.trim().length>=80?"":" disabled")+'>Descargar mi informe (PDF)</button></div><div id="fbInf"></div>';
+  }
+  h+='<div class="acc" style="margin-top:22px"><button class="btn" id="btnReiniciar">Borrar todo el trabajo de este equipo</button></div>';
+  $("contenido").innerHTML=h;
+}
+function cp1252(s){
+  const map={"—":"\x97","–":"\x96","−":"-","“":"\x93","”":"\x94","‘":"\x91","’":"\x92","•":"\x95","…":"\x85","€":"\x80","→":"->","✔":"[x]","«":"\xab","»":"\xbb"};
+  s=String(s).normalize("NFC"); let out="";
+  for(const ch of s){
+    const c=ch.codePointAt(0);
+    if(Object.prototype.hasOwnProperty.call(map,ch))out+=map[ch];
+    else if(c<32)out+=" ";
+    else if(c<127||(c>=160&&c<256))out+=ch;
+    else out+="?";
+  }
+  return out;
+}
+function pdfEsc(s){return s.replace(/\\/g,"\\\\").replace(/\(/g,"\\(").replace(/\)/g,"\\)");}
+function envolver(texto,size,sangria){
+  const max=Math.floor(495/(0.53*size))-(sangria||0), pal=cp1252(texto).split(" "), l=[]; let act="";
+  pal.forEach(w=>{
+    while(w.length>max){if(act){l.push(act);act="";} l.push(w.slice(0,max)); w=w.slice(max);}
+    if((act+" "+w).trim().length>max){l.push(act);act=w;} else act=(act?act+" ":"")+w;
+  });
+  l.push(act); return l;
+}
+function construyePDF(lineas){
+  const pags=[[]]; let y=792; const M=50;
+  lineas.forEach(L=>{
+    const size=L.s||10, lh=size*1.45, sang=L.i||0, fuente=L.b?"F2":"F1";
+    const partes=L.t===""?[""]:envolver(L.t,size,sang);
+    partes.forEach(txt=>{
+      if(y-lh<M){pags.push([]); y=792;}
+      y-=lh;
+      pags[pags.length-1].push("BT /"+fuente+" "+size+" Tf "+(M+sang*size*0.53).toFixed(1)+" "+y.toFixed(1)+" Td ("+pdfEsc(txt)+") Tj ET");
+    });
+  });
+  const n=pags.length, total=4+n*2;
+  const lista=[null,"<< /Type /Catalog /Pages 2 0 R >>",null,
+    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>",
+    "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>"];
+  const kids=[];
+  pags.forEach((p,i)=>{
+    const idc=5+i*2, idp=6+i*2, cont=p.join("\n");
+    lista[idc]="<< /Length "+cont.length+" >>\nstream\n"+cont+"\nendstream";
+    lista[idp]="<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents "+idc+" 0 R >>";
+    kids.push(idp+" 0 R");
+  });
+  lista[2]="<< /Type /Pages /Kids ["+kids.join(" ")+"] /Count "+n+" >>";
+  let pdf="%PDF-1.4\n"; const offs=[];
+  for(let k=1;k<=total;k++){offs[k]=pdf.length; pdf+=k+" 0 obj\n"+lista[k]+"\nendobj\n";}
+  const xref=pdf.length;
+  pdf+="xref\n0 "+(total+1)+"\n0000000000 65535 f \n";
+  for(let q=1;q<=total;q++)pdf+=("0000000000"+offs[q]).slice(-10)+" 00000 n \n";
+  pdf+="trailer\n<< /Size "+(total+1)+" /Root 1 0 R >>\nstartxref\n"+xref+"\n%%EOF";
+  const bytes=new Uint8Array(pdf.length);
+  for(let b=0;b<pdf.length;b++)bytes[b]=pdf.charCodeAt(b)&255;
+  return bytes;
+}
+function hash(s){let h=2166136261; for(let i=0;i<s.length;i++){h^=s.charCodeAt(i); h=Math.imul(h,16777619);} return ("00000000"+(h>>>0).toString(16)).slice(-8).toUpperCase();}
+function informe(o,per){
+  const L=[], canon=[], {M,cron}=simular(o);
+  const t=(x,s,b,i)=>{L.push({t:x,s:s,b:b,i:i}); canon.push(x);};
+  const est=a=>!a||!a.n?"sin responder":(a.ok?"[x] correcto":"[ ] no resuelto")+" ("+a.n+" intento"+(a.n===1?"":"s")+")";
+  t("A03.02 · Simulador de escenarios en FestWeb",14,true);
+  t("Sostenibilidad Aplicada al Sistema Productivo · UP03",10); t("");
+  t("Informe de: "+per,11,true);
+  t("Consultora (grupo): "+(o.grupo.trim()||"(sin nombre)"),10);
+  t("Integrantes: "+miembros(o).join(", "),10);
+  t("Fecha del informe: "+ahora(),10);
+  t("Trimestres completados: "+o.cerrados.length+" de 6   ·   Puntos del equipo: "+puntos(o),10); t("");
+  t("1. Billete de entrada ("+BILLETE.filter(q=>o.billete[q.id]===q.c).length+"/"+BILLETE.length+" aciertos)",11,true);
+  BILLETE.forEach((q,i)=>{const r=o.billete[q.id]; t((i+1)+". "+q.p,10,false,1); t(r==null?"(sin responder)":(r===q.c?"[x] ":"[ ] ")+q.o[r],9,false,4);});
+  t("");
+  t("2. Análisis y decisiones por trimestre",11,true);
+  EVENTOS.forEach((ev,i)=>{
+    const a=o.an[ev.id]||{}, d=o.dec[ev.id]||{}, cerr=o.cerrados.includes(ev.id);
+    t("T"+(i+1)+" · "+TRIM[i]+" · "+ev.titulo,10,true,1);
+    t("Naturaleza: "+(a.nat&&a.nat.resp?NAT[a.nat.resp]:"-")+" — "+est(a.nat),9,false,4);
+    t("Tipo principal: "+(a.tipo&&a.tipo.resp?TIPO[a.tipo.resp].t:"-")+" — "+est(a.tipo),9,false,4);
+    if(cerr){const x=ev.ops.find(y=>y.id===d.op); t("Decisión: "+x.d+" ("+x.t.toLowerCase()+")",9,false,4); t("Justificación: "+(d.just||"").trim(),9,false,4);}
+    else t("Decisión: pendiente",9,false,4);
+  });
+  t("");
+  t("3. Resultado",11,true);
+  t("Caja: "+euros(M.caja)+"   ·   Reputación: "+M.rep+"/100   ·   Personas usuarias: "+miles(M.usu)+"   ·   Impacto ODS: "+M.ods,10,false,1);
+  t("Cronología de consecuencias:",10,true,1);
+  const cc=cron.filter(c=>c.orig);
+  if(!cc.length)t("(sin consecuencias todavía)",9,false,4);
+  cc.forEach(c=>t("T"+c.t+" · "+c.txt+" (origen: "+c.orig+"; "+deltaTxt(c.ef,true)+")",9,false,4));
+  t("");
+  t("4. Respuesta individual de "+per,11,true);
+  t("¿Qué decisión convirtió un riesgo en una oportunidad? ¿Qué decisión tomarías de otra manera y por qué?",10,false,1);
+  t((o.indiv[per]||"").trim(),10,false,1);
+  t("");
+  t("Código de comprobación: "+hash(canon.join("|")),9,true);
+  return L;
+}
+function descargar(){
+  const o=cargar(), per=o.persona, f=nombrePDF(per); if(!f)return;
+  const blob=new Blob([construyePDF(informe(o,per))],{type:"application/pdf"}), url=URL.createObjectURL(blob);
+  const a=document.createElement("a"); a.href=url; a.download=f; document.body.appendChild(a); a.click();
+  setTimeout(()=>{document.body.removeChild(a); URL.revokeObjectURL(url);},500);
+  $("fbInf").innerHTML='<div class="fb ok">Informe descargado como <code>'+esc(f)+'</code>. Súbelo a Aules. Si hay más personas en el grupo, que seleccionen ahora su nombre.</div>';
+}
+
+/* ================= Eventos ================= */
+function estadoCerrar(){
+  const o=cargar(), t=turnoActual(o); if(t>6)return;
+  const ev=EVENTOS[t-1], a=o.an[ev.id]||{}, d=o.dec[ev.id]||{}, b=$("btnCerrar");
+  const listo=a.nat&&(a.nat.ok||a.nat.n>=2)&&a.tipo&&(a.tipo.ok||a.tipo.n>=2);
+  if(b)b.disabled=!(listo&&d.op&&(d.just||"").trim().length>=20);
+}
+document.addEventListener("click",ev=>{
+  const el=ev.target.closest("button"); if(!el)return;
+  const d=el.dataset;
+  if(d.tab){pestana=d.tab; pintar(); window.scrollTo(0,0); return;}
+  if(d.ir){pestana=d.ir; pintar(); window.scrollTo(0,0); return;}
+  if(d.bil){if(cargar().billete[d.bil]==null){upd(o=>{o.billete[d.bil]=Number(d.op);}); pintar();} return;}
+  if(d.comp){comprobar(d.comp); return;}
+  if(el.id==="btnCerrar"){cerrar(); return;}
+  if(el.id==="btnPdf"){descargar(); return;}
+  if(el.id==="btnReiniciar"){
+    if(d.seguro){memoria=vacio(); guardar(); pestana="equipo"; pintar();}
+    else{d.seguro="1"; el.textContent="Pulsa otra vez para confirmar: se borrará todo";}
+  }
+});
+document.addEventListener("input",ev=>{
+  const el=ev.target, d=el.dataset;
+  if(d.campo){upd(o=>{o[d.campo]=el.value;}); return;}
+  if(d.miembro!==undefined){upd(o=>{o.miembros[Number(d.miembro)]=el.value;}); return;}
+  if(el.id==="inJust"){const o=cargar(), id=EVENTOS[turnoActual(o)-1].id; upd(x=>{(x.dec[id]=x.dec[id]||{}).just=el.value;}); $("cntJust").textContent=el.value.trim().length+" caracteres (mínimo 20)"; estadoCerrar(); return;}
+  if(el.id==="inIndiv"){const o=cargar(); upd(x=>{x.indiv[o.persona]=el.value;}); $("cntIndiv").textContent=el.value.trim().length+" caracteres (mínimo 80)";
+    const b=$("btnPdf"); if(b)b.disabled=!(nombrePDF(o.persona)&&el.value.trim().length>=80); return;}
+});
+document.addEventListener("change",ev=>{
+  const el=ev.target;
+  if(el.name==="dec"){const o=cargar(), id=EVENTOS[turnoActual(o)-1].id; upd(x=>{(x.dec[id]=x.dec[id]||{}).op=el.value;}); estadoCerrar(); return;}
+  if(el.id==="selPersona"){upd(o=>{o.persona=el.value;}); pintar(); return;}
+});
+
+cargar(); pintar();
+</script>
+</body>
+</html>
