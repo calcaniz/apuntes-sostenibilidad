@@ -1,5 +1,5 @@
 ---
-title: UP02 · Alianzas y trabajo coordinado
+title: UP02 · Retos ambientales y sociales del sector digital · Alianzas y trabajo coordinado
 ---
 
 # 7. Alianzas y trabajo coordinado
@@ -35,7 +35,7 @@ Por ejemplo, una empresa puede diseñar dispositivos reparables, pero necesitar�
 |---|---|
 | **Administraciones públicas** | Aprobar normas, controlar su cumplimiento y ofrecer servicios públicos. |
 | **Empresas** | Transformar productos, servicios, procesos y cadenas de suministro. |
-| **Trabajadores** | Aplicar las medidas y aportar conocimiento sobre los procesos. |
+| **Personas trabajadoras** | Aplicar las medidas y aportar conocimiento sobre los procesos. |
 | **Ciudadanía** | Consumir responsablemente y participar en las decisiones. |
 | **Centros educativos y universidades** | Formar, investigar y difundir conocimientos. |
 | **Organizaciones sociales** | Representar a colectivos y detectar necesidades sociales. |

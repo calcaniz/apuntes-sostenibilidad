@@ -1,5 +1,5 @@
 ---
-title: UP02 · Retos ambientales
+title: UP02 · Retos ambientales y sociales del sector digital · Retos ambientales
 ---
 
 # 3. Retos ambientales
@@ -184,7 +184,7 @@ Podemos diferenciarlos en:
 
 | Tipo { .table-main-column .table-cl-secundario .table-bg-principal } | Características { .table-full-container .table-cl-secundario .table-bg-principal } | Ejemplos { .table-full-container .table-cl-secundario .table-bg-principal } |
 |---|---|---|
-| **Renovables** | Pueden regenerarse si su consumo no supera su capacidad de recuperación. | Agua, madera y energía solar. |
+| **Renovables** | Pueden regenerarse si su consumo no supera su capacidad de recuperación. | Agua, bosques, pesca y suelo fértil. |
 | **No renovables** | Existen en cantidades limitadas y su regeneración requiere periodos extremadamente largos. | Petróleo, gas y minerales. |
 | **Inagotables a escala humana** | Están disponibles de manera continua, aunque su aprovechamiento necesita infraestructuras. | Energía solar, eólica o mareomotriz. |
 

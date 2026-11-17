@@ -1,14 +1,15 @@
 ---
-title: UP01 · Introducción a la sostenibilidad · Inversión socialmente responsable
+title: UP01 · Sostenibilidad, Agenda 2030 y criterios ASG · Inversión socialmente responsable
 ---
+
+# 8. Inversión socialmente responsable
 
 Las empresas necesitan financiación para desarrollar sus proyectos. Por ello, las decisiones de quienes aportan capital pueden influir en el comportamiento de las organizaciones.
 
 Cuando los inversores tienen en cuenta los aspectos ambientales, sociales y de gobernanza, las empresas encuentran nuevos motivos para mejorar su desempeño en sostenibilidad.
 
-> **Pregunta para reflexionar**
->
-> Si una actividad resulta rentable, pero genera costes ambientales o sociales que debe asumir el resto de la sociedad, ¿podemos considerarla una buena inversión?
+!!! bloque-descriptivo "Pregunta de reflexión"
+    Si una actividad resulta rentable, pero genera costes ambientales o sociales que debe asumir el resto de la sociedad, ¿podemos considerarla una buena inversión?
 
 ## 8.1. ¿Qué es la inversión socialmente responsable?
 
@@ -20,7 +21,7 @@ Por tanto, antes de invertir en una empresa no se analiza únicamente su posible
 - Sus emisiones y residuos.
 - Las condiciones laborales.
 - El respeto a los derechos humanos.
-- La privacidad y seguridad de los usuarios.
+- La privacidad y seguridad de las personas usuarias.
 - La transparencia de sus decisiones.
 - La existencia de comportamientos éticos.
 
@@ -43,7 +44,7 @@ Existen diferentes formas de incorporar la sostenibilidad a las decisiones de in
 
 !!! salto-pagina-pdf ""
 
-## 8.3. Principales participantes.
+## 8.3. Principales participantes
 
 La inversión responsable implica la participación de diferentes actores.
 
@@ -87,14 +88,21 @@ Un inversor que analiza una empresa tecnológica podría estudiar aspectos como:
 - Las condiciones laborales de su plantilla.
 
 !!! bloque-descriptivo "Ejemplo"
-    Dos empresas ofrecen servicios digitales similares y presentan una rentabilidad parecida. Sin embargo, una de ellas utiliza infraestructuras más eficientes, protege mejor los datos de sus usuarios y publica información verificable sobre sus impactos. Estos aspectos pueden hacer que resulte más atractiva para un inversor responsable.
+    Dos empresas ofrecen servicios digitales similares y presentan una rentabilidad parecida. Sin embargo, una de ellas utiliza infraestructuras más eficientes, protege mejor los datos de las personas usuarias y publica información verificable sobre sus impactos. Estos aspectos pueden hacer que resulte más atractiva para un inversor responsable.
 
 ## 8.6. Limitaciones de la inversión responsable
 
-La inversión socialmente responsable también presenta dificultades. Por ello, los inversores deben comprobar la calidad de la información y evitar tomar decisiones basadas únicamente en etiquetas, campañas publicitarias o puntuaciones aisladas.
+La inversión socialmente responsable también presenta dificultades:
 
-> **Pregunta para reflexionar**
->
-> Cuando elegimos dónde invertir nuestro dinero, ¿somos únicamente espectadores o también participamos en la construcción del modelo de sociedad que financiamos?
+- La información ASG publicada por las empresas no siempre es completa, comparable o verificable.
+- Las agencias de calificación utilizan metodologías diferentes y pueden llegar a conclusiones distintas.
+- Algunos productos financieros se presentan como sostenibles sin justificarlo suficientemente (*greenwashing*).
+- Los impactos sociales resultan más difíciles de medir que los económicos o los ambientales.
+- La búsqueda de rentabilidad a corto plazo puede entrar en conflicto con objetivos de sostenibilidad a largo plazo.
+
+Por ello, los inversores deben comprobar la calidad de la información y evitar tomar decisiones basadas únicamente en etiquetas, campañas publicitarias o puntuaciones aisladas.
+
+!!! bloque-descriptivo "Pregunta de reflexión"
+    Cuando elegimos dónde invertir nuestro dinero, ¿somos únicamente espectadores o también participamos en la construcción del modelo de sociedad que financiamos?
 
 !!! salto-pagina-pdf ""

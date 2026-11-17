@@ -1,5 +1,5 @@
 ---
-title: UP02 · Introducción
+title: UP02 · Retos ambientales y sociales del sector digital · Introducción
 ---
 
 # 2. Introducción
@@ -16,9 +16,6 @@ No nos limitaremos a enumerar problemas. Para comprender un reto sostenible ser�
 - ¿Cómo afecta a las personas y a los sectores productivos?
 - ¿Qué medidas pueden reducir sus consecuencias?
 - ¿Quién debe participar en su solución?
-
-!!! bloque-descriptivo "Pregunta de partida"
-    ¿Puede avanzar la digitalización sin aumentar los problemas ambientales y sociales que pretende resolver?
 
 
 !!! salto-pagina-pdf ""
@@ -101,7 +98,7 @@ En este caso, un problema inicialmente ambiental termina produciendo consecuenci
 |---|---|---|---|
 | Sequía | Reducción del agua disponible. | Dificultad de acceso al agua y a los alimentos. | Pérdidas agrícolas y aumento de precios. |
 | Contaminación | Degradación del aire, agua o suelo. | Enfermedades y reducción de la calidad de vida. | Costes sanitarios y pérdida de productividad. |
-| Residuos electrónicos | Contaminación y pérdida de materiales. | Riesgos para trabajadores y comunidades. | Desaprovechamiento de materias primas valiosas. |
+| Residuos electrónicos | Contaminación y pérdida de materiales. | Riesgos para las personas trabajadoras y las comunidades. | Desaprovechamiento de materias primas valiosas. |
 | Brecha digital | Mayor consumo derivado de infraestructuras desiguales. | Exclusión de personas sin acceso o competencias. | Menores oportunidades laborales y empresariales. |
 
 !!! bloque-descriptivo "Pregunta de reflexión"
@@ -121,11 +118,12 @@ Podemos representar esta relación mediante una secuencia básica:
 | **Producción** | ¿Cómo se fabrica o desarrolla el producto? |
 | **Distribución** | ¿Cómo llega hasta las personas usuarias? |
 | **Utilización** | ¿Qué recursos consume durante su uso? |
+| **Mantenimiento** | ¿Cómo se conserva, repara o actualiza? |
 | **Retirada** | ¿Qué sucede cuando deja de utilizarse? |
 
 En todas estas fases pueden producirse impactos. Por ejemplo, un teléfono móvil necesita minerales, energía, fábricas, transporte, redes de comunicación y centros de datos. Cuando deja de utilizarse, también debe ser reparado, reutilizado o gestionado como residuo.
 
-La actividad económica puede encontrarse en los dos lados del problema:
+La actividad económica puede desempeñar diferentes papeles frente a un problema:
 
 - Puede ser una de las causas del impacto.
 - Puede sufrir sus consecuencias.
@@ -180,13 +178,13 @@ Este modelo de análisis podrá aplicarse a cualquier otro reto estudiado durant
 
 Para evitar estudiar los problemas como una simple lista, utilizaremos siempre la siguiente secuencia:
 
-1. **Identificar el reto.**
-2. **Investigar sus causas.**
-3. **Relacionarlo con la actividad económica.**
-4. **Analizar sus impactos ambientales y sociales.**
-5. **Determinar a qué personas y sectores afecta.**
-6. **Proponer medidas para minimizarlo.**
-7. **Identificar qué actores deben colaborar.**
+1. **Reto:** identificar el problema.
+2. **Causas:** investigar por qué se produce.
+3. **Actividad económica:** relacionarlo con las actividades que lo provocan o intensifican.
+4. **Impactos:** analizar sus consecuencias ambientales y sociales.
+5. **Personas y sectores:** determinar a quiénes afecta.
+6. **Medidas:** proponer acciones para minimizarlo.
+7. **Alianzas:** identificar qué actores deben colaborar.
 
 !!! bloque-descriptivo "Síntesis"
     Comprender un reto sostenible significa conocer el problema, sus causas, sus consecuencias y las posibles respuestas. También implica reconocer que ninguna persona, empresa o administración puede resolver por sí sola los grandes retos ambientales y sociales.

@@ -55,7 +55,7 @@ extra_css:
 nav:
   - Inicio: index.md
   - UP01:
-      - 1. Relación Curricular: up01/01-index.md
+      - 1. Relación curricular: up01/01-index.md
       - 2. Introducción: up01/02-introduccion.md
       - 3. Sostenibilidad y desarrollo sostenible: up01/03-sostenibilidad-y-desarrollo-sostenible.md
       - 4. Marcos internacionales para el desarrollo sostenible: up01/04-marcos-internacionales-para-el-desarrollo-sostenible.md
@@ -63,7 +63,7 @@ nav:
       - 6. Grupos de interés y materialidad: up01/06-grupos-de-interes-y-materialidad.md
       - 7. Medición y comunicación de la sostenibilidad: up01/07-medicion-y-comunicacion-de-la-sostenibilidad.md
       - 8. Inversión socialmente responsable: up01/08-inversion-socialmente-responsable.md
-      - 9. Sostenibilidad Aplicada al desarrollo Web: up01/09-sostenibilidad-aplicada-al-desarrollo-web.md
+      - 9. Sostenibilidad aplicada al desarrollo web: up01/09-sostenibilidad-aplicada-al-desarrollo-web.md
   - UP02:
       - 1. Relación curricular: up02/01-index.md
       - 2. Introducción: up02/02-introduccion.md
@@ -77,6 +77,9 @@ nav:
       - 1. Relación curricular: up03/01-index.md
       - 2. Introducción: up03/02-introduccion.md
       - 3. ODS y actividad profesional: up03/03-ods-actividad-profesional.md
+      - A03.01. Detectives de ODS en FestWeb: up03/a0301-detectives-ods.md
       - 4. Riesgos y oportunidades: up03/04-riesgos-oportunidades.md
+      - A03.02. Simulador de escenarios en FestWeb: up03/a0302-simulador-escenarios.md
       - 5. Acciones profesionales y personales: up03/05-acciones-profesionales-personales.md
       - 6. Plan de actuación: up03/06-plan-de-actuacion.md
+      - A03.03. El plan ODS de FestWeb: up03/a0303-plan-ods.md

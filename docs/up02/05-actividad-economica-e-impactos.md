@@ -1,5 +1,5 @@
 ---
-title: UP02 · Actividad económica e impactos
+title: UP02 · Retos ambientales y sociales del sector digital · Actividad económica e impactos
 ---
 
 # 5. Actividad económica e impactos
@@ -93,7 +93,7 @@ Los impactos pueden clasificarse atendiendo a diferentes criterios.
 
 Una misma actividad puede generar impactos positivos y negativos al mismo tiempo.
 
-Por ejemplo, el teletrabajo puede reducir desplazamientos, pero también aumentar el consumo doméstico de energía, dificultar la desconexión laboral o trasladar costes desde la empresa hacia el trabajador.
+Por ejemplo, el teletrabajo puede reducir desplazamientos, pero también aumentar el consumo doméstico de energía, dificultar la desconexión laboral o trasladar costes desde la empresa hacia la persona trabajadora.
 
 ### 5.4.2. Impactos directos e indirectos
 
@@ -116,7 +116,7 @@ Por ejemplo:
 - Un vertido puede contaminar un río de una localidad.
 - Las emisiones generadas en diferentes países contribuyen al cambio climático global.
 - Una interrupción en la fabricación de componentes puede afectar a empresas de todo el mundo.
-- Una plataforma digital puede influir simultáneamente sobre millones de usuarios.
+- Una plataforma digital puede influir simultáneamente sobre millones de personas usuarias.
 
 ### 5.4.4. Impactos inmediatos y a largo plazo
 
@@ -178,7 +178,7 @@ Algunos ejemplos son:
 - Creación de infraestructuras útiles para la comunidad.
 
 !!! bloque-descriptivo "Pregunta de reflexión"
-    ¿Un producto es realmente barato si parte de su coste lo pagan los trabajadores, la comunidad o las generaciones futuras?
+    ¿Un producto es realmente barato si parte de su coste lo pagan las personas trabajadoras, la comunidad o las generaciones futuras?
 
 ## 5.6. Efectos sobre las personas
 
@@ -211,7 +211,7 @@ Los impactos ambientales y sociales pueden afectar a las personas de diferentes 
 - Necesidad de formación continua.
 - Desigualdad en el acceso al empleo.
 - Precarización.
-- Desplazamiento de trabajadores o actividades.
+- Desplazamiento de personas trabajadoras o actividades.
 - Aparición de empleos relacionados con la transición sostenible.
 
 ### 5.6.4. Derechos y participación
@@ -259,7 +259,7 @@ Los impactos pueden provocar:
 - Nuevas obligaciones legales.
 - Pérdida de reputación.
 - Dificultad para contratar profesionales.
-- Conflictos con trabajadores o comunidades.
+- Conflictos con la plantilla o con las comunidades.
 - Pérdida de clientes.
 - Necesidad de transformar productos y procesos.
 
@@ -334,7 +334,7 @@ Una plataforma de formación en línea puede facilitar el acceso a contenidos de
 | **Impacto social positivo** | Acceso flexible a la formación. |
 | **Impacto social negativo** | Exclusión de personas sin conexión, dispositivos o competencias. |
 | **Sectores afectados** | Educación, telecomunicaciones, tecnología y energía. |
-| **Personas afectadas** | Alumnado, profesorado, trabajadores técnicos y familias. |
+| **Personas afectadas** | Alumnado, profesorado, personal técnico y familias. |
 
 Este ejemplo demuestra que una solución puede producir simultáneamente beneficios e impactos negativos.
 
@@ -358,7 +358,7 @@ Para relacionar un reto con la actividad económica utilizaremos la siguiente se
 | ¿Qué actividad se realiza? | Prestación de un servicio de vídeo. |
 | ¿Qué recursos necesita? | Energía, dispositivos, redes y servidores. |
 | ¿Qué impactos produce? | Consumo energético y acceso a contenidos. |
-| ¿A quién afecta? | Usuarios, trabajadores, proveedores y comunidades. |
+| ¿A quién afecta? | Personas usuarias, plantilla, proveedores y comunidades. |
 | ¿Qué sectores intervienen? | Tecnología, telecomunicaciones, energía y entretenimiento. |
 | ¿Dónde aparece el impacto? | En toda la cadena de valor, no solo durante el uso. |
 

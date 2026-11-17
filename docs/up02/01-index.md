@@ -1,18 +1,17 @@
 ---
-title: UP02 · Retos ambientales y sociales del sector digital
+title: UP02 · Retos ambientales y sociales del sector digital · Relación curricular
 ---
 
 # 1. Relación curricular
 
 ## 1.1. Identificación de la unidad
 
-| Elemento { .table-full-container .table-cl-secundario .table-bg-principal } | Descripción { .table-full-container .table-cl-secundario .table-bg-principal }|
+| Cabecera { .table-oculta .table-full-container .table-content } | Cabecera |
 |---|---|
-| **Unidad de programación** | UP02 · Retos ambientales y sociales del sector digital |
-| **Duración** | 5 horas |
-| **Evaluación** | Primera evaluación |
-| **Resultado de aprendizaje** | RA02 |
-| **Criterios de evaluación** | CE02-a, CE02-b, CE02-c, CE02-d y CE02-e |
+| **Título** { .table-main-column .table-bg-principal .table-cl-secundario } | UP02 · Retos ambientales y sociales del sector digital |
+| **Duración** { .table-main-column .table-bg-principal .table-cl-secundario } | 5 horas |
+| **Resultado** { .table-main-column .table-bg-principal .table-cl-secundario } | RA02 |
+| **Criterios** { .table-main-column .table-bg-principal .table-cl-secundario } | CE02-a, CE02-b, CE02-c, CE02-d y CE02-e |
 
 !!! salto-pagina-pdf ""
 
@@ -23,7 +22,7 @@ title: UP02 · Retos ambientales y sociales del sector digital
 
 ## 1.3. Criterios de evaluación
 
-| Código { .table-main-column .table-cl-secundario .table-bg-principal } | Criterio de evaluación { .table-full-container .table-cl-secundario .table-bg-principal }|
+| Criterio { .table-main-column .table-cl-secundario .table-bg-principal } | Descripción { .table-full-container .table-cl-secundario .table-bg-principal }|
 |---|---|
 | **CE02-a** | Se han identificado los principales retos ambientales y sociales. |
 | **CE02-b** | Se han relacionado los retos ambientales y sociales con el desarrollo de la actividad económica. |
@@ -44,7 +43,7 @@ Finalmente, identificaremos medidas para reducir sus impactos y analizaremos por
 
 ## 1.5. Pregunta de partida
 
-!!! bloque-descriptivo "Reflexión inicial"
+!!! bloque-descriptivo "Pregunta de partida"
     ¿Puede avanzar la digitalización sin aumentar los problemas ambientales y sociales que pretende resolver?
 
 ## 1.6. Recorrido de la unidad
@@ -56,7 +55,8 @@ A lo largo de la unidad seguiremos una misma secuencia de análisis:
 | **Reto** | ¿Qué problema ambiental o social existe? |
 | **Causas** | ¿Por qué se produce? |
 | **Actividad económica** | ¿Qué actividades lo provocan o intensifican? |
-| **Impactos** | ¿Cómo afecta a las personas y a los sectores productivos? |
+| **Impactos** | ¿Qué consecuencias ambientales y sociales produce? |
+| **Personas y sectores** | ¿A quiénes afecta? |
 | **Medidas** | ¿Qué acciones pueden reducirlo? |
 | **Alianzas** | ¿Qué actores deben colaborar para resolverlo? |
 

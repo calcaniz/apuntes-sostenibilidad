@@ -13,8 +13,8 @@ La tecnología digital forma parte de casi todas nuestras actividades, pero su f
 
 En este módulo aprenderemos a analizar esos impactos y a incorporar criterios **ambientales, sociales y de gobernanza (ASG)** en las decisiones profesionales relacionadas con el desarrollo web.
 
-> **Pregunta de partida:**  
-> ¿Podemos considerar progreso aquello que mejora nuestra vida hoy si, al mismo tiempo, limita las posibilidades de quienes vivirán mañana?
+!!! bloque-descriptivo "Pregunta de partida"
+    ¿Podemos considerar progreso aquello que mejora nuestra vida hoy si, al mismo tiempo, limita las posibilidades de quienes vivirán mañana?
 
 ## ¿Qué aprenderemos?
 
@@ -31,12 +31,12 @@ A lo largo del curso aprenderemos a:
 
 | Unidad { .table-full-container .table-cl-secundario .table-bg-principal } | Título { .table-cl-secundario .table-bg-principal } | Resultado de aprendizaje { .table-cl-secundario .table-bg-principal } | Duración { .table-cl-secundario .table-bg-principal } |
 |---|---|:---:|:---:|
-| **[UP01](up01/01-index.md)** | Sostenibilidad, Agenda 2030 y criterios ASG | RA1 | 6 h |
-| **[UP02](up02/01-index.md)** | Retos ambientales y sociales del sector digital | RA2 | 5 h |
-| **UP03** | Los ODS en el desempeño profesional de DAW | RA3 | 3 h |
-| **UP04** | Ecodiseño y economía circular en productos digitales | RA4 | 5 h |
-| **UP05** | Actividad informática sostenible | RA5 | 8 h |
-| **UP06** | Plan de sostenibilidad de una empresa tecnológica | RA6 | 7 h |
+| **[UP01](up01/01-index.md)** | Sostenibilidad, Agenda 2030 y criterios ASG | RA01 | 6 h |
+| **[UP02](up02/01-index.md)** | Retos ambientales y sociales del sector digital | RA02 | 5 h |
+| **[UP03](up03/01-index.md)** | Los ODS en el desempeño profesional y personal | RA03 | 3 h |
+| **UP04** | Ecodiseño y economía circular en productos digitales | RA04 | 5 h |
+| **UP05** | Actividad informática sostenible | RA05 | 8 h |
+| **UP06** | Plan de sostenibilidad de una empresa tecnológica | RA06 | 7 h |
 |  | **Total** |  | **34 h** |
 
 ## ¿Cómo trabajaremos?

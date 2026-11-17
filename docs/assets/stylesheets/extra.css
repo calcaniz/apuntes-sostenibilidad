@@ -108,6 +108,20 @@
 }
 
 
+/* Bloque de actividad */
+.md-typeset .admonition.actividad {
+  border-color: var(--color-secundario);
+}
+.md-typeset .actividad > .admonition-title {
+  background-color: var(--color-principal-light);
+  color: var(--color-secundario);
+}
+.md-typeset .actividad > .admonition-title::before {
+  background-color: var(--color-secundario);
+  -webkit-mask-image: var(--md-admonition-icon--example);
+  mask-image: var(--md-admonition-icon--example);
+}
+
 /* Imágenes completas */
 .md-typeset img.imagen-contenido {
   display: block;

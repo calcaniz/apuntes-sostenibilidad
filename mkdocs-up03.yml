@@ -1,0 +1,43 @@
+INHERIT: mkdocs.yml
+
+plugins:
+  - search:
+      lang: es
+
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "Versión imprimible de la UP03"
+      print_page_basename: "imprimir-up03"
+
+      add_table_of_contents: true
+      toc_title: "Índice"
+      toc_depth: 2
+
+      enumerate_headings: false
+      enumerate_figures: false
+
+      add_cover_page: true
+      cover_page_template: "docs/assets/templates/portada-pdf.tpl"
+
+      add_print_site_banner: false
+      add_full_urls: false
+      include_css: true
+
+# Solo teoría: las actividades (A03.0x) no se incluyen en el PDF.
+nav:
+  - UP03. Los ODS en el desempeño profesional y personal:
+      - 1. Relación curricular: up03/01-index.md
+      - 2. Introducción: up03/02-introduccion.md
+      - 3. ODS y actividad profesional: up03/03-ods-actividad-profesional.md
+      - 4. Riesgos y oportunidades: up03/04-riesgos-oportunidades.md
+      - 5. Acciones profesionales y personales: up03/05-acciones-profesionales-personales.md
+      - 6. Plan de actuación: up03/06-plan-de-actuacion.md
+
+extra:
+  generator: false
+
+  pdf:
+    modulo: "Sostenibilidad Aplicada al Sistema Productivo"
+    codigo_up: "UP03"
+    titulo_up: "Los ODS en el desempeño profesional y personal"
+    curso: "2026-2027"

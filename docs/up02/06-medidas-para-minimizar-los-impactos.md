@@ -1,5 +1,5 @@
 ---
-title: UP02 · Medidas para minimizar los impactos
+title: UP02 · Retos ambientales y sociales del sector digital · Medidas para minimizar los impactos
 ---
 
 # 6. Medidas para minimizar los impactos
@@ -46,7 +46,7 @@ Los grandes retos ambientales y sociales no pueden resolverse únicamente median
 | Nivel { .table-bg-principal .table-cl-secundario .table-text-bold .table-main-column .table-full-container } | Posibles actuaciones { .table-bg-principal .table-cl-secundario .table-text-bold } |
 |---|---|
 | **Personal** | Consumir responsablemente, reparar dispositivos y reducir residuos. |
-| **Empresarial** | Mejorar procesos, proteger a los trabajadores y seleccionar proveedores responsables. |
+| **Empresarial** | Mejorar procesos, proteger a las personas trabajadoras y seleccionar proveedores responsables. |
 | **Público** | Aprobar normas, ofrecer servicios, controlar su cumplimiento e impulsar incentivos. |
 | **Internacional** | Establecer acuerdos comunes para problemas que superan las fronteras. |
 

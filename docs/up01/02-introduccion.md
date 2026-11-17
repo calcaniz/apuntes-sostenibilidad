@@ -1,5 +1,5 @@
 ---
-title: UP01 · Introducción a la sostenibilidad · Introducción
+title: UP01 · Sostenibilidad, Agenda 2030 y criterios ASG · Introducción
 ---
 
 # 2. Introducción
@@ -14,8 +14,7 @@ Para responder a todos estos retos, diferentes organismos internacionales han de
 
 A lo largo de esta unidad estudiaremos el concepto de sostenibilidad, sus principales marcos internacionales y los criterios ASG. También aprenderemos a identificar los grupos de interés de una organización, reconocer sus riesgos y oportunidades, utilizar indicadores para medir su desempeño y comprender cómo influye la sostenibilidad en las decisiones de inversión.
 
-> **Pregunta de autorreflexión**
-
-> ¿Podemos considerar progreso aquello que mejora nuestra vida hoy si, al mismo tiempo, limita las posibilidades de quienes vivirán mañana?
+!!! bloque-descriptivo "Pregunta de partida"
+    ¿Podemos considerar progreso aquello que mejora nuestra vida hoy si, al mismo tiempo, limita las posibilidades de quienes vivirán mañana?
 
 !!! salto-pagina-pdf ""

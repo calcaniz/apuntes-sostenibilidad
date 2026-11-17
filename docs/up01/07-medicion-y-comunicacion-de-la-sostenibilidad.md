@@ -1,12 +1,13 @@
 ---
-title: UP01 · Introducción a la sostenibilidad · Medición y comunicación de la sostenibilidad
+title: UP01 · Sostenibilidad, Agenda 2030 y criterios ASG · Medición y comunicación de la sostenibilidad
 ---
+
+# 7. Medición y comunicación de la sostenibilidad
 
 Las afirmaciones sobre sostenibilidad deben estar respaldadas por datos. Decir que una empresa es "verde", "responsable" o "sostenible" no resulta suficiente si no explica qué impactos tiene, qué medidas ha adoptado y qué resultados ha obtenido.
 
-> **Pregunta para reflexionar**
->
-> Si una empresa afirma ser sostenible, pero no mide ni publica sus impactos, ¿cómo podemos comprobarlo?
+!!! bloque-descriptivo "Pregunta de reflexión"
+    Si una empresa afirma ser sostenible, pero no mide ni publica sus impactos, ¿cómo podemos comprobarlo?
 
 ## 7.1. Indicadores de sostenibilidad
 
@@ -26,9 +27,8 @@ Además, debe acompañarse de tres elementos:
 2. Un objetivo que se pretende alcanzar.
 3. Una periodicidad de medición.
 
-> **Ejemplo**
->
-> Reducir el peso medio de las páginas web de 3M a 1,5MB antes de finalizar el curso.
+!!! bloque-descriptivo "Ejemplo"
+    Reducir el peso medio de las páginas web de 3 MB (valor inicial) a 1,5 MB (objetivo) antes de finalizar el curso, midiéndolo una vez al mes (periodicidad).
 
 !!! salto-pagina-pdf ""
 
@@ -40,7 +40,7 @@ Además, debe acompañarse de tres elementos:
 | Ambiental {: .table-main-column .table-text-bold } | Optimización web | Peso medio de las páginas y número de peticiones |
 | Ambiental {: .table-main-column .table-text-bold } | Equipos informáticos | Porcentaje de equipos reutilizados o reciclados |
 | Social {: .table-main-column .table-text-bold } | Accesibilidad | Número de errores de accesibilidad detectados |
-| Social {: .table-main-column .table-text-bold } | Formación | Horas de formación por trabajador |
+| Social {: .table-main-column .table-text-bold } | Formación | Horas de formación por persona trabajadora |
 | Social {: .table-main-column .table-text-bold } | Privacidad | Número de incidentes relacionados con datos personales |
 | Gobernanza {: .table-main-column .table-text-bold } | Ciberseguridad | Incidentes de seguridad registrados y resueltos |
 | Gobernanza {: .table-main-column .table-text-bold } | Proveedores | Porcentaje de proveedores evaluados |
@@ -93,9 +93,8 @@ Puede producirse cuando una empresa:
 
 Para evitarlo, la comunicación debe estar basada en datos, explicar el método de medición y mostrar tanto los avances como los aspectos pendientes de mejorar.
 
-> **Pregunta para reflexionar**
->
-> ¿Informar únicamente de los resultados positivos es comunicar sostenibilidad o hacer publicidad?
+!!! bloque-descriptivo "Pregunta de reflexión"
+    ¿Informar únicamente de los resultados positivos es comunicar sostenibilidad o hacer publicidad?
 
 !!! salto-pagina-pdf ""
 

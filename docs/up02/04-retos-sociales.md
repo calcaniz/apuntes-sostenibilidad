@@ -1,5 +1,5 @@
 ---
-title: UP02 · Retos sociales
+title: UP02 · Retos ambientales y sociales del sector digital · Retos sociales
 ---
 
 # 4. Retos sociales
@@ -122,7 +122,7 @@ Durante la extracción de materias primas, la fabricación de componentes, el mo
 - Limitación de derechos laborales.
 - Falta de transparencia sobre los proveedores.
 
-Una empresa no debería analizar únicamente las condiciones de sus trabajadores directos. También debe considerar los posibles impactos producidos por proveedores y empresas subcontratadas.
+Una empresa no debería analizar únicamente las condiciones de su plantilla directa. También debe considerar los posibles impactos producidos por proveedores y empresas subcontratadas.
 
 
 !!! salto-pagina-pdf ""
@@ -141,7 +141,7 @@ Pero también puede:
 
 - Eliminar o transformar determinados puestos.
 - Exigir nuevas competencias.
-- Aumentar el control sobre los trabajadores.
+- Aumentar el control sobre las personas trabajadoras.
 - Difuminar los límites entre trabajo y descanso.
 - Generar nuevas formas de empleo precario.
 - Excluir a quienes no puedan adaptarse tecnológicamente.
@@ -213,14 +213,14 @@ Una aplicación puede generar barreras si:
 - El texto es difícil de leer.
 - No funciona con tecnologías de apoyo.
 
-La accesibilidad beneficia a las personas con discapacidad, pero también a usuarios con conexiones lentas, dispositivos antiguos, lesiones temporales o situaciones que dificultan la interacción.
+La accesibilidad beneficia a las personas con discapacidad, pero también a personas usuarias con conexiones lentas, dispositivos antiguos, lesiones temporales o situaciones que dificultan la interacción.
 
 Por ejemplo, los subtítulos pueden ayudar a:
 
 - Personas con discapacidad auditiva.
-- Usuarios que no pueden activar el sonido.
+- Personas que no pueden activar el sonido.
 - Personas que están aprendiendo un idioma.
-- Usuarios situados en entornos ruidosos.
+- Personas situadas en entornos ruidosos.
 
 !!! bloque-descriptivo "Idea clave"
     La accesibilidad no es una característica opcional destinada a unas pocas personas. Es una condición necesaria para garantizar la igualdad de acceso a los servicios digitales.
@@ -360,7 +360,7 @@ Por ello, una solución tecnológica no debe evaluarse únicamente por su funcio
 - ¿Quién puede utilizarla?
 - ¿Quién queda excluido?
 - ¿Qué datos necesita?
-- ¿Cómo afecta a los trabajadores?
+- ¿Cómo afecta a las personas trabajadoras?
 - ¿Qué decisiones automatiza?
 - ¿Quién obtiene sus beneficios?
 - ¿Quién asume sus riesgos?

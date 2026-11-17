@@ -1,5 +1,5 @@
 ---
-title: UP02 · Aplicación al sector digital
+title: UP02 · Retos ambientales y sociales del sector digital · Aplicación al sector digital
 ---
 
 # 8. Aplicación al sector digital
@@ -10,7 +10,7 @@ Para analizar correctamente una solución digital debemos considerar tanto sus b
 
 ## 8.1. Caso de estudio: FestWeb
 
-FestWeb es una plataforma utilizada para publicar eventos y vender entradas.
+FestWeb es una aplicación web que permite publicar eventos, buscarlos y filtrarlos, registrarse e inscribirse en ellos.
 
 La empresa quiere ampliar el servicio e incorporar:
 
@@ -18,7 +18,7 @@ La empresa quiere ampliar el servicio e incorporar:
 - Emisión de algunos eventos mediante vídeo.
 - Aplicación para dispositivos móviles.
 - Recomendaciones personalizadas.
-- Almacenamiento de información sobre usuarios y eventos.
+- Almacenamiento de información sobre personas usuarias y eventos.
 - Atención al cliente mediante servicios externos.
 
 El crecimiento de la plataforma puede generar nuevas oportunidades, pero también aumenta sus posibles impactos.
@@ -31,7 +31,7 @@ El crecimiento de la plataforma puede generar nuevas oportunidades, pero tambié
 | **Ambiental** | Renovación de equipos y generación de residuos electrónicos. |
 | **Social** | Exclusión de personas sin conexión o competencias digitales. |
 | **Social** | Falta de accesibilidad de la aplicación. |
-| **Social** | Riesgos relacionados con la privacidad de los usuarios. |
+| **Social** | Riesgos relacionados con la privacidad de las personas usuarias. |
 | **Social** | Condiciones laborales del servicio externo de atención al cliente. |
 
 ## 8.3. Relación con la actividad económica
@@ -45,7 +45,7 @@ FestWeb necesita diferentes actividades y sectores para funcionar:
 | **Energía** | Funcionamiento de dispositivos y centros de datos. |
 | **Fabricación** | Producción de servidores y dispositivos electrónicos. |
 | **Cultura y ocio** | Organización y promoción de eventos. |
-| **Servicios** | Atención a usuarios y gestión de pagos. |
+| **Servicios** | Atención a personas usuarias y gestión de pagos. |
 
 La plataforma no funciona de manera aislada. Depende de una cadena de proveedores e infraestructuras que también genera impactos.
 
@@ -68,7 +68,7 @@ También puede producir impactos negativos:
 - Recopilar más datos de los necesarios.
 - Aumentar el consumo energético.
 - Generar dependencia de proveedores tecnológicos.
-- Perjudicar a usuarios si el servicio no es accesible.
+- Perjudicar a personas usuarias si el servicio no es accesible.
 - Trasladar malas condiciones laborales a empresas subcontratadas.
 
 !!! bloque-descriptivo "Idea clave"
@@ -113,11 +113,12 @@ Para analizar cualquier producto o servicio digital podemos utilizar esta tabla:
 | Elemento { .table-bg-principal .table-cl-secundario .table-text-bold .table-main-column .table-full-container } | Pregunta { .table-bg-principal .table-cl-secundario .table-text-bold } |
 |---|---|
 | **Reto** | ¿Qué problema ambiental o social existe? |
-| **Actividad económica** | ¿Qué actividad lo provoca o está relacionada? |
-| **Impacto** | ¿Qué consecuencias produce? |
-| **Personas y sectores** | ¿Quiénes resultan afectados? |
-| **Medidas** | ¿Qué acciones pueden reducir el impacto? |
-| **Alianzas** | ¿Qué actores deben colaborar? |
+| **Causas** | ¿Por qué se produce? |
+| **Actividad económica** | ¿Qué actividades lo provocan o intensifican? |
+| **Impactos** | ¿Qué consecuencias ambientales y sociales produce? |
+| **Personas y sectores** | ¿A quiénes afecta? |
+| **Medidas** | ¿Qué acciones pueden reducirlo? |
+| **Alianzas** | ¿Qué actores deben colaborar para resolverlo? |
 
 ## 8.8. Conclusión
 

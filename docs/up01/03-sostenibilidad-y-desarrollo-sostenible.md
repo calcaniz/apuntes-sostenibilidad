@@ -1,18 +1,20 @@
 ---
-title: UP01 · Introducción a la sostenibilidad · Sostenibilidad y desarrollo sostenible
+title: UP01 · Sostenibilidad, Agenda 2030 y criterios ASG · Sostenibilidad y desarrollo sostenible
 ---
+
+# 3. Sostenibilidad y desarrollo sostenible
 
 La sostenibilidad busca mantener un equilibrio entre las necesidades humanas, la actividad económica y la conservación del entorno. Una decisión sostenible no se limita a resolver un problema inmediato, sino que también considera sus consecuencias futuras sobre las personas y el planeta.
 
-## 3.1.  Concepto
+## 3.1. Concepto
 
 La sostenibilidad es la capacidad de satisfacer las necesidades actuales utilizando los recursos de forma responsable, sin impedir que las generaciones futuras puedan satisfacer las suyas. Esto implica analizar las consecuencias de nuestras decisiones a largo plazo. Por ejemplo, sustituir constantemente los equipos informáticos puede mejorar temporalmente el rendimiento de una empresa, pero también incrementa el consumo de materias primas y la generación de residuos electrónicos.
 
 Una actividad será más sostenible cuanto mejor consiga:
 
 - Utilizar eficientemente la energía y los materiales.
-- Reducir la generación de residuos
-- Proteger el entorno natural
+- Reducir la generación de residuos.
+- Proteger el entorno natural.
 - Respetar los derechos y el bienestar de las personas.
 - Mantener su viabilidad económica a largo plazo.
 
@@ -39,9 +41,7 @@ La sostenibilidad se apoya en tres dimensiones interrelacionadas:
 | Económica {.table-cl-secundario .table-bg-principal .table-text-bold } | Garantizar que la actividad pueda mantenerse de forma viable a largo plazo. | Diseñar servicios digitales eficientes y sostenibles económicamente. |
 
 
-*Figura 1. Dimensiones de la sostenibilidad.*
-
-Una decisión no puede considerarse plenamente sostenible si solo atiende a una de estas dimensiones. Por ejemplo, una aplicación con un consumo energético muy bajo no sería completamente sostenible si vulnera la privacidad de sus usuarios o genera condiciones laborales injustas.
+Una decisión no puede considerarse plenamente sostenible si solo atiende a una de estas dimensiones. Por ejemplo, una aplicación con un consumo energético muy bajo no sería completamente sostenible si vulnera la privacidad de las personas usuarias o genera condiciones laborales injustas.
 
 ## 3.4. Sostenibilidad empresarial
 
@@ -51,6 +51,6 @@ La sostenibilidad empresarial consiste en integrar estas tres dimensiones en las
 - Optimizar las aplicaciones para reducir el procesamiento y la transferencia de datos.
 - Alargar la vida útil de los equipos informáticos.
 - Garantizar la accesibilidad de los servicios digitales.
-- Proteger los datos y la privacidad de los usuarios.
+- Proteger los datos y la privacidad de las personas usuarias.
 
-La sostenibilidad deja así de ser una acción aislada – como reciclar papel o apagar las luces – para convertirse en un criterio que debe estar presente en toda la estrategia de la organización
+La sostenibilidad deja así de ser una acción aislada – como reciclar papel o apagar las luces – para convertirse en un criterio que debe estar presente en toda la estrategia de la organización.

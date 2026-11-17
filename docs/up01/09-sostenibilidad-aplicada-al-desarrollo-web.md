@@ -1,6 +1,8 @@
 ---
-title: UP01 · Introducción a la sostenibilidad · Sostenibilidad aplicada al desarrollo web
+title: UP01 · Sostenibilidad, Agenda 2030 y criterios ASG · Sostenibilidad aplicada al desarrollo web
 ---
+
+# 9. Sostenibilidad aplicada al desarrollo web
 
 Una aplicación web no produce únicamente resultados técnicos o económicos. Las decisiones tomadas durante su diseño, desarrollo y funcionamiento también pueden generar impactos ambientales, sociales y de gobernanza.
 
@@ -29,7 +31,7 @@ La sostenibilidad puede incorporarse en las diferentes fases de un proyecto web:
 5. **Mantenimiento:** corregir errores, actualizar dependencias y controlar los indicadores.
 6. **Retirada:** gestionar correctamente los datos y recursos cuando finalice el servicio.
 
-No todas las aplicaciones necesitan la misma infraestructura ni producen los mismos impactos. Las decisiones deben adaptarse a las características de los usuarios y a la finalidad de cada proyecto.
+No todas las aplicaciones necesitan la misma infraestructura ni producen los mismos impactos. Las decisiones deben adaptarse a las características de las personas usuarias y a la finalidad de cada proyecto.
 
 ## 9.3. Aplicación real
 
@@ -37,7 +39,7 @@ En un proyecto web real, podremos analizar aspectos como:
 
 - El peso y el número de recursos utilizados por sus páginas.
 - La accesibilidad de la interfaz.
-- Los datos personales solicitados a los usuarios.
+- Los datos personales solicitados a las personas usuarias.
 - Las medidas de seguridad aplicadas.
 - Los servicios y proveedores contratados.
 - La información que se comunica sobre sus compromisos de sostenibilidad.
@@ -47,6 +49,5 @@ El objetivo será proponer mejoras realistas y justificarlas mediante criterios 
 !!! bloque-descriptivo "Idea clave"
     Una aplicación web sostenible no es solamente aquella que consume menos recursos. También debe ser accesible, segura, transparente y respetuosa con las personas que la utilizan.
 
-> **Pregunta final**
->
-> Como futuros profesionales del desarrollo web, ¿debemos limitarnos a construir lo que nos solicitan o también valorar las consecuencias de aquello que construimos?
+!!! bloque-descriptivo "Pregunta de reflexión final"
+    Como futuros profesionales del desarrollo web, ¿debemos limitarnos a construir lo que nos solicitan o también valorar las consecuencias de aquello que construimos?
